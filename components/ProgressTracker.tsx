@@ -1,5 +1,6 @@
 'use client';
 
+import { useProgress } from '@/hooks/useProgress';
 import { Week } from '@/types/curriculum';
 
 interface ProgressTrackerProps {
@@ -7,9 +8,17 @@ interface ProgressTrackerProps {
 }
 
 export default function ProgressTracker({ weeks }: ProgressTrackerProps) {
-  // Calculate overall progress (simplified - you can enhance this with actual tracking)
+  const { getWeekProgress } = useProgress();
+  
+  // Calculate overall progress
   const totalDays = weeks.reduce((sum, week) => sum + week.days.length, 0);
   const totalShortcuts = weeks.reduce((sum, week) => sum + (week.metrics?.shortcutsLearned || 0), 0);
+  
+  // Calculate completed weeks (weeks with at least 1 day completed)
+  const completedWeeks = weeks.filter(week => {
+    const progress = getWeekProgress(week.week, week.days.length);
+    return progress.completedDays > 0;
+  }).length;
 
   return (
     <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-700">
@@ -30,7 +39,7 @@ export default function ProgressTracker({ weeks }: ProgressTrackerProps) {
 
         {/* Weeks Progress */}
         <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-5 border border-green-500/30">
-          <div className="text-3xl font-bold text-green-400 mb-2">{weeks.length}/4</div>
+          <div className="text-3xl font-bold text-green-400 mb-2">{completedWeeks}/{weeks.length}</div>
           <div className="text-gray-300 text-sm">Tuần hoàn thành</div>
         </div>
       </div>
@@ -38,22 +47,25 @@ export default function ProgressTracker({ weeks }: ProgressTrackerProps) {
       {/* Weekly Progress Bars */}
       <div className="mt-6 space-y-4">
         <h3 className="text-lg font-semibold text-gray-300 mb-3">Tiến độ từng tuần</h3>
-        {weeks.map((week) => (
-          <div key={week.week} className="space-y-2">
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-gray-300">Tuần {week.week}: {week.title}</span>
-              <span className="text-gray-400">{week.metrics?.mouseUsage || 'N/A'}</span>
+        {weeks.map((week) => {
+          const weekProgress = getWeekProgress(week.week, week.days.length);
+          return (
+            <div key={week.week} className="space-y-2">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-300">Tuần {week.week}: {week.title}</span>
+                <span className="text-gray-400">{weekProgress.progress.toFixed(0)}%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
+                  style={{
+                    width: `${weekProgress.progress}%`
+                  }}
+                />
+              </div>
             </div>
-            <div className="w-full bg-gray-700 rounded-full h-2">
-              <div
-                className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
-                style={{
-                  width: `${((week.week / 4) * 100)}%`
-                }}
-              />
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

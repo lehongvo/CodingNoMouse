@@ -2139,7 +2139,7 @@ lazygit
             "Performance optimized"
           ]
         },
-        createWeekendDay("Thứ 6", "Weekend Practice - Git & Vim", {
+        createWeekendDay("Thứ 7", "Weekend Practice - Git & Vim", {
           dailyGoals: [
             "✅ 12h practice với lazygit và VSCode Vim",
             "✅ Complete real projects",
@@ -2282,6 +2282,1120 @@ lazygit
               }
             ]
           }
+        })
+      ]
+    },
+    {
+      week: 4,
+      title: "MASTERY - Moonlander & Review",
+      goals: [
+        "Mouse usage: < 5%",
+        "Phím tắt mastered: 100+",
+        "Comfort level: 9/10",
+        "Speed: Same or better than before"
+      ],
+      metrics: {
+        mouseUsage: "< 5%",
+        shortcutsLearned: 100,
+        comfortLevel: "9/10"
+      },
+      days: [
+        {
+          day: "Thứ 2",
+          title: "Moonlander Keyboard - Setup",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Setup Moonlander keyboard với QMK/ZSA",
+            "✅ Customize layout cho coding workflow",
+            "✅ Master thumb clusters và layers",
+            "✅ Practice typing với Moonlander"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Setup Moonlander",
+            content: [
+              "Unbox và connect Moonlander",
+              "Cài đặt ZSA Configurator hoặc QMK",
+              "Hiểu về Moonlander layout và thumb clusters",
+              "Setup basic layout cho coding",
+              "Test và calibrate keys"
+            ],
+            detailedSetup: [
+              "Bước 1: Unbox Moonlander và connect via USB-C",
+              "Bước 2: Download ZSA Configurator từ zsa.io",
+              "Bước 3: Flash default firmware",
+              "Bước 4: Test tất cả keys và thumb clusters",
+              "Bước 5: Calibrate thumb clusters",
+              "Bước 6: Tạo custom layout",
+              "Bước 7: Map keys cho coding workflow",
+              "Bước 8: Setup layers (Base, Navigation, Numbers)"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice với Moonlander",
+            content: [
+              "Practice typing với Moonlander layout",
+              "Luyện lại tất cả skills đã học",
+              "Adapt workflow cho Moonlander"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Moonlander Basics",
+                duration: "30 phút",
+                tasks: [
+                  "Typing test với Moonlander - target: 40+ WPM",
+                  "Practice home row position - 10 phút",
+                  "Practice thumb clusters - 50 lần mỗi thumb",
+                  "Switch giữa layers - 100 lần"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Window Management",
+                duration: "30 phút",
+                tasks: [
+                  "Setup yabai shortcuts trên Moonlander layers",
+                  "Practice window focus - 80 lần",
+                  "Practice window move - 60 lần",
+                  "Switch spaces với thumb clusters - 50 lần"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Terminal & Zellij",
+                duration: "30 phút",
+                tasks: [
+                  "Practice Zellij shortcuts với Moonlander",
+                  "Ctrl+p, n (new pane) - 50 lần",
+                  "Ctrl+p, h/j/k/l (navigate) - 100 lần",
+                  "Ctrl+t, h/l (switch tabs) - 80 lần"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Vim Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Practice hjkl navigation - 150 lần",
+                  "Practice text objects - 100 lần",
+                  "Practice f/F/t/T - 120 lần",
+                  "Code refactoring với Moonlander"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Complete Workflow",
+            content: [
+              "Practice complete coding workflow",
+              "Combine tất cả tools với Moonlander",
+              "Optimize layout cho workflow"
+            ],
+            exercises: [
+              {
+                title: "REVIEW & INTEGRATION",
+                tasks: [
+                  "Complete workflow với Moonlander",
+                  "Practice tất cả shortcuts",
+                  "Fine-tune Moonlander layout",
+                  "Document custom keybindings"
+                ]
+              }
+            ]
+          },
+          shortcuts: [
+            { key: "Thumb clusters", description: "Layer switching và modifiers" },
+            { key: "Layer 1 + hjkl", description: "Arrow keys" },
+            { key: "Layer 2 + top row", description: "Numbers 1-0" },
+            { key: "Layer 3 + top row", description: "Function keys F1-F12" }
+          ],
+          goals: [
+            "Master Moonlander layout",
+            "Adapt tất cả skills cho Moonlander",
+            "Typing speed: 40+ WPM"
+          ]
+        },
+        {
+          day: "Thứ 3",
+          title: "Moonlander Practice - Review All Skills",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Practice lại tất cả window management với Moonlander",
+            "✅ Practice lại tất cả terminal/Zellij với Moonlander",
+            "✅ Practice lại tất cả Vim motions với Moonlander",
+            "✅ Complete coding workflow với Moonlander"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Review Week 1-2 Skills",
+            content: [
+              "Practice window management (yabai) với Moonlander",
+              "Practice terminal multiplexer (Zellij) với Moonlander",
+              "Practice browser navigation (Vimium) với Moonlander",
+              "Practice file management (fzf, lf) với Moonlander"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Review All Skills",
+            content: [
+              "Practice Git workflow (lazygit) với Moonlander",
+              "Practice Vim motions (VSCode Vim) với Moonlander",
+              "Combine tất cả tools trong real workflow"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP: Review All Skills",
+                tasks: [
+                  "Window management: Setup workspace - 20 lần",
+                  "Zellij: Create layout - 15 lần",
+                  "Vimium: Navigation - 100 lần",
+                  "fzf/lf: File operations - 80 operations",
+                  "lazygit: Git workflow - 30 commits",
+                  "VSCode Vim: Refactor - 200+ lines"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Moonlander Optimization",
+            content: [
+              "Fine-tune Moonlander layout",
+              "Document workflow",
+              "Plan advanced customization"
+            ],
+            exercises: [
+              {
+                title: "OPTIMIZATION",
+                tasks: [
+                  "Identify keys còn uncomfortable",
+                  "Adjust thumb cluster positions",
+                  "Optimize layer switching",
+                  "Test typing speed - target: 50+ WPM",
+                  "Document final layout"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Master tất cả skills với Moonlander",
+            "Typing speed: 50+ WPM",
+            "Complete workflow không cần reach cho keys"
+          ]
+        },
+        {
+          day: "Thứ 4",
+          title: "Advanced Customization",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Advanced skhd bindings",
+            "✅ Custom Zellij layouts",
+            "✅ Advanced lf commands",
+            "✅ Custom scripts và aliases"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Advanced skhd",
+            content: [
+              "Tạo complex bindings cho skhd",
+              "App-specific bindings",
+              "Window size presets",
+              "Multi-monitor support"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Custom Layouts & Commands",
+            content: [
+              "Create Zellij layouts cho different projects",
+              "Create custom lf commands",
+              "Create custom scripts",
+              "Setup aliases"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP: Customization",
+                tasks: [
+                  "Tạo 5 Zellij layouts",
+                  "Tạo 10 custom lf commands",
+                  "Tạo 5 custom scripts",
+                  "Setup 10 aliases",
+                  "Test tất cả customizations"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review & Optimize",
+            content: [
+              "Review tất cả customizations",
+              "Optimize workflow",
+              "Document setup"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Test tất cả custom bindings",
+                  "Review scripts và optimize",
+                  "Document final setup"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Advanced customizations hoàn chỉnh",
+            "Custom scripts cho daily workflow",
+            "Optimized setup cho coding"
+          ]
+        },
+        {
+          day: "Thứ 5",
+          title: "Real World Practice",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Code real features không dùng chuột",
+            "✅ Track và optimize mouse usage",
+            "✅ Complete coding tasks",
+            "✅ Master keyboard-only workflow"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Real Projects Practice",
+            content: [
+              "Code real features cho work/personal projects",
+              "Track mouse usage (target: < 5%)",
+              "Time các tasks",
+              "Identify và fix bottlenecks"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Daily Practice",
+            content: [
+              "Continue working on real projects",
+              "Practice tất cả skills",
+              "Optimize workflow realtime"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP: Real Project Work",
+                tasks: [
+                  "Code feature hoàn chỉnh - track time và mouse usage",
+                  "Practice git workflow với lazygit - 10 commits",
+                  "Refactor code với Vim motions - 200+ lines",
+                  "Browse docs với Vimium - 20 pages",
+                  "File management với lf - 50 operations",
+                  "Target: Mouse usage < 5%, Speed same or better"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review & Prepare",
+            content: [
+              "Review daily progress",
+              "Identify improvements",
+              "Prepare cho weekend"
+            ],
+            exercises: [
+              {
+                title: "DAILY REVIEW",
+                tasks: [
+                  "Log metrics: Time, mouse usage, bottlenecks",
+                  "Note improvements made",
+                  "Plan optimizations cho ngày mai"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Real world mastery",
+            "Mouse usage < 5%",
+            "Workflow optimized"
+          ]
+        },
+        createWeekendDay("Thứ 7", "Weekend Practice - Mastery", {
+          dailyGoals: [
+            "✅ 12h practice với tất cả tools",
+            "✅ Complete real projects",
+            "✅ Build muscle memory",
+            "✅ Optimize workflow"
+          ],
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Deep practice với tất cả tools",
+              "Combine trong real projects",
+              "Speed training"
+            ],
+            exercises: [
+              {
+                title: "PRACTICE SESSION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice tất cả shortcuts - 500+ repetitions",
+                  "Complete real coding tasks",
+                  "Build muscle memory",
+                  "Track progress và improvements"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Real project work",
+              "Combine tất cả tools",
+              "Optimize workflow",
+              "Create custom solutions"
+            ],
+            exercises: [
+              {
+                title: "REAL PROJECT WORK (4h)",
+                duration: "4h",
+                tasks: [
+                  "Work on real project",
+                  "Use tất cả tools exclusively",
+                  "Track mouse usage (target: < 5%)",
+                  "Document workflow improvements"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Advanced practice",
+              "Customization",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "ADVANCED & REFLECTION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice advanced features",
+                  "Create custom scripts",
+                  "Document workflow",
+                  "Reflect on progress",
+                  "Plan improvements"
+                ]
+              }
+            ]
+          }
+        }),
+        createWeekendDay("Chủ nhật", "Weekend Challenge - Complete Project", {
+          dailyGoals: [
+            "✅ Complete project từ đầu đến cuối",
+            "✅ Use tất cả tools exclusively",
+            "✅ Mouse usage < 5%",
+            "✅ Document complete workflow"
+          ],
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Project planning",
+              "Research và setup",
+              "Initial implementation"
+            ],
+            exercises: [
+              {
+                title: "PROJECT SETUP & PLANNING (4h)",
+                duration: "4h",
+                tasks: [
+                  "Plan project structure",
+                  "Research requirements",
+                  "Setup project",
+                  "Initial implementation",
+                  "Git workflow setup"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Implementation",
+              "Testing",
+              "Debugging"
+            ],
+            exercises: [
+              {
+                title: "IMPLEMENTATION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Implement features",
+                  "Use tất cả tools throughout",
+                  "Test và debug",
+                  "Git workflow",
+                  "Track mouse usage"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Completion",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "COMPLETION & REFLECTION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Complete project",
+                  "Write documentation",
+                  "Reflect on workflow",
+                  "Document improvements",
+                  "Prepare cho tuần 5"
+                ]
+              }
+            ]
+          }
+        })
+      ]
+    },
+    {
+      week: 5,
+      title: "ADVANCED MASTERY - Week 5",
+      goals: [
+        "Mouse usage: < 3%",
+        "Phím tắt mastered: 120+",
+        "Comfort level: 9.5/10",
+        "Speed: Faster than before"
+      ],
+      metrics: {
+        mouseUsage: "< 3%",
+        shortcutsLearned: 120,
+        comfortLevel: "9.5/10"
+      },
+      days: [
+        {
+          day: "Thứ 2",
+          title: "Speed Optimization",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Optimize tất cả workflows",
+            "✅ Reduce keystrokes",
+            "✅ Increase typing speed",
+            "✅ Eliminate bottlenecks"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Analyze & Optimize",
+            content: [
+              "Analyze current workflow",
+              "Identify bottlenecks",
+              "Optimize shortcuts",
+              "Reduce keystrokes"
+            ],
+            detailedSetup: [
+              "Bước 1: Record workflow sessions để identify bottlenecks",
+              "Bước 2: Measure time cho mỗi common task",
+              "Bước 3: Identify slow operations (mouse usage, slow shortcuts)",
+              "Bước 4: Create custom shortcuts cho frequent operations",
+              "Bước 5: Optimize yabai/skhd bindings",
+              "Bước 6: Optimize Zellij layouts",
+              "Bước 7: Create aliases và scripts cho repetitive tasks",
+              "Bước 8: Test optimized workflow và measure improvements"
+            ],
+            concepts: [
+              "Workflow optimization: Identify và eliminate inefficiencies",
+              "Bottleneck analysis: Find slowest parts của workflow",
+              "Keystroke reduction: Minimize số lần gõ phím cho common tasks",
+              "Shortcut optimization: Create custom shortcuts cho frequent operations",
+              "Muscle memory: Practice optimized shortcuts để build muscle memory",
+              "Speed measurement: Track time để measure improvements"
+            ],
+            troubleshooting: [
+              "Nếu workflow vẫn chậm: Identify specific bottlenecks",
+              "Nếu shortcuts conflict: Review và remap conflicting shortcuts",
+              "Nếu muscle memory chưa build: Practice more với optimized shortcuts",
+              "Nếu không thấy improvement: Re-analyze workflow và try different optimizations"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice Optimized",
+            content: [
+              "Practice optimized workflows",
+              "Speed training",
+              "Timed challenges"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Workflow Analysis",
+                duration: "30 phút",
+                tasks: [
+                  "Record 10 common tasks và measure time",
+                  "Identify 5 bottlenecks",
+                  "Create optimized shortcuts cho each bottleneck",
+                  "Test optimized shortcuts - 50 repetitions mỗi shortcut",
+                  "Measure improvement - target: 20% faster"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Shortcut Optimization",
+                duration: "30 phút",
+                tasks: [
+                  "Review tất cả shortcuts đang dùng",
+                  "Identify shortcuts có thể optimize",
+                  "Create 10 new optimized shortcuts",
+                  "Practice new shortcuts - 100 repetitions",
+                  "Replace old shortcuts với optimized ones"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Training",
+                duration: "30 phút",
+                tasks: [
+                  "Practice optimized workflow - 20 complete cycles",
+                  "Timed challenge: Complete task < baseline time",
+                  "Practice muscle memory - 200 repetitions",
+                  "Measure và track improvements",
+                  "Target: 30% faster than baseline"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Optimization",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với optimized workflow",
+                  "Track time cho each task",
+                  "Identify remaining bottlenecks",
+                  "Create additional optimizations",
+                  "Document final optimized workflow"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review optimizations",
+              "Measure improvements",
+              "Plan next steps"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Compare baseline vs optimized times",
+                  "Document improvements achieved",
+                  "Identify areas for further optimization",
+                  "Plan optimizations cho tuần 6"
+                ]
+              }
+            ]
+          },
+          goals: ["Workflow optimized, speed increased"],
+          learningResources: [
+            { title: "Keyboard Shortcut Optimization", description: "Best practices cho optimizing keyboard shortcuts" },
+            { title: "Workflow Analysis", description: "Techniques để analyze và optimize workflows" }
+          ],
+          bestPractices: [
+            "Measure baseline trước khi optimize",
+            "Focus on frequent operations first",
+            "Create shortcuts cho operations bạn làm nhiều nhất",
+            "Practice optimized shortcuts để build muscle memory",
+            "Track improvements để validate optimizations"
+          ],
+          commonMistakes: [
+            "Optimize quá nhiều cùng lúc - nên optimize từng phần",
+            "Không measure baseline - không biết có improvement không",
+            "Không practice đủ - optimized shortcuts không thành muscle memory",
+            "Ignore bottlenecks - focus vào wrong areas"
+          ]
+        },
+        {
+          day: "Thứ 3",
+          title: "Advanced Vim Mastery",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master advanced Vim motions",
+            "✅ Complex refactoring",
+            "✅ Macros mastery",
+            "✅ Vim plugins integration"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Advanced Vim",
+            content: [
+              "Learn advanced Vim motions",
+              "Complex text objects",
+              "Advanced macros",
+              "Vim plugins"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice Advanced",
+            content: [
+              "Practice advanced motions",
+              "Complex refactoring tasks",
+              "Macro automation",
+              "Plugin workflows"
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review advanced features",
+              "Document techniques",
+              "Plan practice"
+            ]
+          },
+          goals: ["Advanced Vim mastery achieved"]
+        },
+        {
+          day: "Thứ 4",
+          title: "Advanced Git Mastery",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master advanced git operations",
+            "✅ Complex branching strategies",
+            "✅ Advanced rebase workflows",
+            "✅ Git automation"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Advanced Git",
+            content: [
+              "Learn advanced git operations",
+              "Complex branching strategies",
+              "Advanced rebase workflows",
+              "Git hooks và automation"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice Advanced",
+            content: [
+              "Practice advanced git workflows",
+              "Complex branching scenarios",
+              "Advanced rebase operations",
+              "Git automation scripts"
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review advanced git",
+              "Document workflows",
+              "Plan improvements"
+            ]
+          },
+          goals: ["Advanced git mastery achieved"]
+        },
+        {
+          day: "Thứ 5",
+          title: "Complete Workflow Mastery",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master complete workflow",
+            "✅ Zero mouse usage",
+            "✅ Maximum efficiency",
+            "✅ Muscle memory perfection"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Workflow Practice",
+            content: [
+              "Practice complete workflow",
+              "Eliminate all mouse usage",
+              "Optimize every step",
+              "Build perfect muscle memory"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Real World Mastery",
+            content: [
+              "Real project work",
+              "Complete workflow execution",
+              "Zero mouse challenge",
+              "Speed optimization"
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review mastery level",
+              "Document achievements",
+              "Plan maintenance"
+            ]
+          },
+          goals: ["Complete workflow mastery achieved"]
+        },
+        createWeekendDay("Thứ 7", "Weekend Practice - Week 5", {
+          dailyGoals: [
+            "✅ 12h advanced practice",
+            "✅ Master all advanced features",
+            "✅ Zero mouse usage",
+            "✅ Maximum speed"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Advanced practice session"] },
+          afternoon: { title: "Chiều (4h)", content: ["Real project work"] },
+          evening: { title: "Tối (4h)", content: ["Mastery refinement"] }
+        }),
+        createWeekendDay("Chủ nhật", "Weekend Challenge - Week 5", {
+          dailyGoals: [
+            "✅ Complete advanced project",
+            "✅ Zero mouse usage",
+            "✅ Maximum efficiency",
+            "✅ Mastery demonstration"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Project planning"] },
+          afternoon: { title: "Chiều (4h)", content: ["Implementation"] },
+          evening: { title: "Tối (4h)", content: ["Completion & reflection"] }
+        })
+      ]
+    },
+    {
+      week: 6,
+      title: "EXPERT LEVEL - Week 6",
+      goals: [
+        "Mouse usage: < 1%",
+        "Phím tắt mastered: 150+",
+        "Comfort level: 10/10",
+        "Speed: Expert level"
+      ],
+      metrics: {
+        mouseUsage: "< 1%",
+        shortcutsLearned: 150,
+        comfortLevel: "10/10"
+      },
+      days: [
+        {
+          day: "Thứ 2",
+          title: "Expert Workflow",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Expert level workflow",
+            "✅ Zero mouse usage",
+            "✅ Expert speed",
+            "✅ Perfect muscle memory"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Expert practice"] },
+          afternoon: { title: "Chiều (2h)", content: ["Expert challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Expert level achieved"]
+        },
+        {
+          day: "Thứ 3",
+          title: "Expert Vim",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Expert Vim mastery",
+            "✅ Complex automation",
+            "✅ Perfect efficiency",
+            "✅ Zero errors"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Expert Vim"] },
+          afternoon: { title: "Chiều (2h)", content: ["Expert practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Expert Vim achieved"]
+        },
+        {
+          day: "Thứ 4",
+          title: "Expert Git",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Expert git mastery",
+            "✅ Complex workflows",
+            "✅ Perfect automation",
+            "✅ Zero mistakes"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Expert git"] },
+          afternoon: { title: "Chiều (2h)", content: ["Expert practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Expert git achieved"]
+        },
+        {
+          day: "Thứ 5",
+          title: "Expert Complete",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Expert complete mastery",
+            "✅ Zero mouse usage",
+            "✅ Expert speed",
+            "✅ Perfect workflow"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Expert complete"] },
+          afternoon: { title: "Chiều (2h)", content: ["Expert challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Expert complete mastery achieved"]
+        },
+        createWeekendDay("Thứ 7", "Weekend Practice - Week 6", {
+          dailyGoals: [
+            "✅ 12h expert practice",
+            "✅ Perfect all skills",
+            "✅ Zero mouse usage",
+            "✅ Expert speed"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Expert practice"] },
+          afternoon: { title: "Chiều (4h)", content: ["Expert work"] },
+          evening: { title: "Tối (4h)", content: ["Expert refinement"] }
+        }),
+        createWeekendDay("Chủ nhật", "Weekend Challenge - Week 6", {
+          dailyGoals: [
+            "✅ Complete expert project",
+            "✅ Zero mouse usage",
+            "✅ Expert efficiency",
+            "✅ Perfect demonstration"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Expert planning"] },
+          afternoon: { title: "Chiều (4h)", content: ["Expert implementation"] },
+          evening: { title: "Tối (4h)", content: ["Expert completion"] }
+        })
+      ]
+    },
+    {
+      week: 7,
+      title: "MASTER LEVEL - Week 7",
+      goals: [
+        "Mouse usage: 0%",
+        "Phím tắt mastered: 180+",
+        "Comfort level: 10/10",
+        "Speed: Master level"
+      ],
+      metrics: {
+        mouseUsage: "0%",
+        shortcutsLearned: 180,
+        comfortLevel: "10/10"
+      },
+      days: [
+        {
+          day: "Thứ 2",
+          title: "Master Workflow",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master level workflow",
+            "✅ Zero mouse usage",
+            "✅ Master speed",
+            "✅ Perfect execution"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Master practice"] },
+          afternoon: { title: "Chiều (2h)", content: ["Master challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Master level achieved"]
+        },
+        {
+          day: "Thứ 3",
+          title: "Master Vim",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master Vim mastery",
+            "✅ Perfect automation",
+            "✅ Master efficiency",
+            "✅ Zero errors"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Master Vim"] },
+          afternoon: { title: "Chiều (2h)", content: ["Master practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Master Vim achieved"]
+        },
+        {
+          day: "Thứ 4",
+          title: "Master Git",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master git mastery",
+            "✅ Perfect workflows",
+            "✅ Master automation",
+            "✅ Zero mistakes"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Master git"] },
+          afternoon: { title: "Chiều (2h)", content: ["Master practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Master git achieved"]
+        },
+        {
+          day: "Thứ 5",
+          title: "Master Complete",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Master complete mastery",
+            "✅ Zero mouse usage",
+            "✅ Master speed",
+            "✅ Perfect workflow"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Master complete"] },
+          afternoon: { title: "Chiều (2h)", content: ["Master challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Master complete mastery achieved"]
+        },
+        createWeekendDay("Thứ 7", "Weekend Practice - Week 7", {
+          dailyGoals: [
+            "✅ 12h master practice",
+            "✅ Perfect all skills",
+            "✅ Zero mouse usage",
+            "✅ Master speed"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Master practice"] },
+          afternoon: { title: "Chiều (4h)", content: ["Master work"] },
+          evening: { title: "Tối (4h)", content: ["Master refinement"] }
+        }),
+        createWeekendDay("Chủ nhật", "Weekend Challenge - Week 7", {
+          dailyGoals: [
+            "✅ Complete master project",
+            "✅ Zero mouse usage",
+            "✅ Master efficiency",
+            "✅ Perfect demonstration"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Master planning"] },
+          afternoon: { title: "Chiều (4h)", content: ["Master implementation"] },
+          evening: { title: "Tối (4h)", content: ["Master completion"] }
+        })
+      ]
+    },
+    {
+      week: 8,
+      title: "GRAND MASTER - Week 8",
+      goals: [
+        "Mouse usage: 0%",
+        "Phím tắt mastered: 200+",
+        "Comfort level: 10/10",
+        "Speed: Grand Master level"
+      ],
+      metrics: {
+        mouseUsage: "0%",
+        shortcutsLearned: 200,
+        comfortLevel: "10/10"
+      },
+      days: [
+        {
+          day: "Thứ 2",
+          title: "Grand Master Workflow",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Grand Master level workflow",
+            "✅ Zero mouse usage",
+            "✅ Grand Master speed",
+            "✅ Perfect execution"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Grand Master practice"] },
+          afternoon: { title: "Chiều (2h)", content: ["Grand Master challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Grand Master level achieved"]
+        },
+        {
+          day: "Thứ 3",
+          title: "Grand Master Vim",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Grand Master Vim mastery",
+            "✅ Perfect automation",
+            "✅ Grand Master efficiency",
+            "✅ Zero errors"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Grand Master Vim"] },
+          afternoon: { title: "Chiều (2h)", content: ["Grand Master practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Grand Master Vim achieved"]
+        },
+        {
+          day: "Thứ 4",
+          title: "Grand Master Git",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Grand Master git mastery",
+            "✅ Perfect workflows",
+            "✅ Grand Master automation",
+            "✅ Zero mistakes"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Grand Master git"] },
+          afternoon: { title: "Chiều (2h)", content: ["Grand Master practice"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Grand Master git achieved"]
+        },
+        {
+          day: "Thứ 5",
+          title: "Grand Master Complete",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Grand Master complete mastery",
+            "✅ Zero mouse usage",
+            "✅ Grand Master speed",
+            "✅ Perfect workflow"
+          ],
+          morning: { title: "Sáng (1.5h)", content: ["Grand Master complete"] },
+          afternoon: { title: "Chiều (2h)", content: ["Grand Master challenges"] },
+          evening: { title: "Tối (30 phút)", content: ["Review"] },
+          goals: ["Grand Master complete mastery achieved"]
+        },
+        createWeekendDay("Thứ 7", "Weekend Practice - Week 8", {
+          dailyGoals: [
+            "✅ 12h Grand Master practice",
+            "✅ Perfect all skills",
+            "✅ Zero mouse usage",
+            "✅ Grand Master speed"
+          ],
+          morning: { title: "Sáng (4h)", content: ["Grand Master practice"] },
+          afternoon: { title: "Chiều (4h)", content: ["Grand Master work"] },
+          evening: { title: "Tối (4h)", content: ["Grand Master refinement"] }
+        }),
+        createWeekendDay("Chủ nhật", "FINAL CHALLENGE - 8h Coding Marathon", {
+          dailyGoals: [
+            "✅ Complete 8h coding marathon",
+            "✅ Mouse usage 0%",
+            "✅ Build complete feature từ đầu",
+            "✅ Maintain flow state"
+          ],
+          morning: {
+            title: "Sáng (4h): Planning & Implementation",
+            content: [
+              "Planning & research",
+              "Setup project structure",
+              "Implement feature",
+              "Git workflow"
+            ],
+            exercises: [
+              {
+                title: "PHASE 1-2: Planning & Implementation (4h)",
+                duration: "4h",
+                tasks: [
+                  "Research requirements, plan architecture, setup project",
+                  "Code feature với tất cả tools, use tất cả shortcuts",
+                  "Git workflow throughout"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h): Completion & Documentation",
+            content: [
+              "Complete implementation",
+              "Testing & debugging",
+              "Code review prep",
+              "Documentation"
+            ],
+            exercises: [
+              {
+                title: "PHASE 3-4: Completion & Polish (4h)",
+                duration: "4h",
+                tasks: [
+                  "Finish implementation, testing comprehensive",
+                  "Code review preparation, write documentation",
+                  "Final git workflow, reflection và notes"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h): Celebration & Reflection",
+            content: [
+              "Celebrate achievement",
+              "Final reflection",
+              "Document mastery",
+              "Plan future improvements"
+            ],
+            exercises: [
+              {
+                title: "CELEBRATION & REFLECTION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Celebrate 8 weeks of mastery",
+                  "Reflect on journey",
+                  "Document achievements",
+                  "Plan future improvements",
+                  "Share knowledge với others"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Complete feature từ đầu đến cuối",
+            "Mouse usage 0%",
+            "Flow state maintained",
+            "Fast như hoặc nhanh hơn previous workflow"
+          ]
         })
       ]
     }
