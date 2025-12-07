@@ -13,6 +13,7 @@ export interface DayContent {
   day: string;
   title: string;
   totalHours?: number;
+  motivationalQuote?: string; // Câu động lực cho ngày này
   morning?: {
     title?: string;
     duration?: string;
@@ -52,6 +53,13 @@ export interface Week {
     mouseUsage: string;
     shortcutsLearned: number;
     comfortLevel: string;
+  };
+  finalProject?: {
+    title: string;
+    description: string;
+    requirements: string[];
+    deliverables: string[];
+    estimatedHours: number;
   };
 }
 

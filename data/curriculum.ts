@@ -39,11 +39,30 @@ export const curriculum: Curriculum = {
         shortcutsLearned: 35,
         comfortLevel: "5/10"
       },
+      finalProject: {
+        title: "Personal Productivity Dashboard",
+        description: "Xây dựng một dashboard quản lý công việc cá nhân hoàn toàn bằng keyboard, sử dụng tất cả tools đã học trong tuần 1 (yabai, skhd, Zellij, Raycast)",
+        requirements: [
+          "Setup project với Raycast",
+          "Quản lý windows với yabai",
+          "Sử dụng Zellij cho terminal sessions",
+          "Code hoàn toàn không dùng chuột",
+          "Git workflow với keyboard-only"
+        ],
+        deliverables: [
+          "Working dashboard application",
+          "Documentation về setup và usage",
+          "Git repository với commit history",
+          "Screenshots/video demo workflow"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Setup + yabai + skhd",
           totalHours: 4,
+          motivationalQuote: "💪 Mỗi bước nhỏ hôm nay là nền tảng cho tương lai của con bạn. Bạn đang làm gương cho con về sự kiên trì và không ngừng học hỏi!",
           dailyGoals: [
             "✅ Cài đặt thành công yabai và skhd",
             "✅ Tạo và test config cơ bản",
@@ -261,6 +280,7 @@ skhd --stop-service`
           day: "Thứ 3",
           title: "Zellij - Terminal Multiplexer",
           totalHours: 4,
+          motivationalQuote: "🌟 Khi bạn học, bạn không chỉ cải thiện bản thân mà còn truyền cảm hứng cho gia đình. Con bạn sẽ thấy bố mẹ luôn cố gắng!",
           dailyGoals: [
             "✅ Cài đặt và config Zellij",
             "✅ Master 10 thao tác cơ bản Zellij",
@@ -467,6 +487,7 @@ zellij kill-session <session-name>`
           day: "Thứ 4",
           title: "Raycast - App Launcher & Productivity",
           totalHours: 4,
+          motivationalQuote: "🚀 Mỗi phím tắt bạn học hôm nay sẽ tiết kiệm thời gian cho gia đình mai sau. Đầu tư vào bản thân là đầu tư tốt nhất!",
           dailyGoals: [
             "✅ Setup Raycast hoàn chỉnh",
             "✅ Master 10 Raycast commands",
@@ -560,6 +581,7 @@ zellij kill-session <session-name>`
           day: "Thứ 5",
           title: "Practice Tổng Hợp - yabai + Zellij + Raycast",
           totalHours: 4,
+          motivationalQuote: "💡 Thành công không đến từ một đêm, mà từ những ngày kiên trì. Hôm nay bạn đang xây dựng tương lai tốt hơn!",
           dailyGoals: [
             "✅ Combine tất cả tools đã học",
             "✅ Complete workflow không dùng chuột",
@@ -649,6 +671,7 @@ zellij kill-session <session-name>`
           day: "Thứ 6",
           title: "Advanced yabai & Zellij",
           totalHours: 4,
+          motivationalQuote: "⚡ Năng lượng bạn bỏ ra hôm nay sẽ tạo ra momentum cho những ngày tiếp theo. Hãy giữ vững!",
           dailyGoals: [
             "✅ Advanced yabai features",
             "✅ Advanced Zellij layouts",
@@ -696,6 +719,7 @@ zellij kill-session <session-name>`
           ]
         },
         createWeekendDay("Thứ 7", "INTENSIVE PRACTICE - Tuần 1", {
+          motivationalQuote: "❤️ Gia đình là động lực, nhưng bạn cũng cần thời gian cho bản thân. 12 giờ học cuối tuần này là đầu tư xứng đáng cho tương lai!",
           dailyGoals: [
             "✅ Practice tất cả skills tuần 1",
             "✅ Complete projects không dùng chuột",
@@ -806,6 +830,7 @@ zellij kill-session <session-name>`
           ]
         }),
         createWeekendDay("Chủ nhật", "REVIEW & CHALLENGE - Tuần 1", {
+          motivationalQuote: "🎯 Mục tiêu không phải là hoàn hảo, mà là tiến bộ mỗi ngày. Bạn đang làm rất tốt! Tuần 1 sắp hoàn thành!",
           dailyGoals: [
             "✅ Review toàn bộ tuần 1",
             "✅ Complete challenge project",
@@ -906,8 +931,25 @@ zellij kill-session <session-name>`
         "85% thời gian không dùng chuột",
         "Browse web mượt mà không chuột",
         "File management không cần Finder",
-        "fzf thành reflex tự nhiên"
       ],
+      finalProject: {
+        title: "Web Research & File Organization Tool",
+        description: "Xây dựng tool để research web và organize files hoàn toàn bằng keyboard, sử dụng Vimium, fzf, và lf",
+        requirements: [
+          "Browse web research với Vimium",
+          "Organize files với lf và fzf",
+          "Create automation scripts",
+          "Workflow hoàn toàn keyboard-only",
+          "Document workflow và shortcuts"
+        ],
+        deliverables: [
+          "Working tool với web research capabilities",
+          "File organization system",
+          "Automation scripts",
+          "Documentation và workflow guide"
+        ],
+        estimatedHours: 8
+      },
       metrics: {
         mouseUsage: "15%",
         shortcutsLearned: 65,
@@ -918,6 +960,7 @@ zellij kill-session <session-name>`
           day: "Thứ 2",
           title: "Vimium - Browser Navigation",
           totalHours: 4,
+          motivationalQuote: "🔥 Bạn đang chứng minh rằng không bao giờ quá muộn để học điều mới. Đây là bài học quý giá cho con bạn!",
           dailyGoals: [
             "✅ Cài đặt Vimium/Vimari thành công",
             "✅ Master 15 phím tắt Vimium",
@@ -1076,6 +1119,7 @@ zellij kill-session <session-name>`
           day: "Thứ 3",
           title: "fzf - Fuzzy Finder",
           totalHours: 4,
+          motivationalQuote: "💎 Thời gian bạn đầu tư vào bản thân hôm nay sẽ mang lại lợi ích cho cả gia đình trong tương lai!",
           dailyGoals: [
             "✅ Cài đặt và config fzf",
             "✅ Master 5 phím tắt fzf",
@@ -1215,6 +1259,7 @@ $(brew --prefix)/opt/fzf/install  # Setup keybindings
           day: "Thứ 4",
           title: "lf - File Manager",
           totalHours: 4,
+          motivationalQuote: "🌱 Mỗi kỹ năng mới bạn học là một hạt giống cho tương lai tốt đẹp hơn. Hãy tiếp tục gieo trồng!",
           dailyGoals: [
             "✅ Cài đặt và config lf",
             "✅ Master 15 phím tắt lf",
@@ -1394,6 +1439,7 @@ set icons true`
           day: "Thứ 5",
           title: "Practice Tổng Hợp - Browser & Files",
           totalHours: 4,
+          motivationalQuote: "🎁 Bạn đang tặng cho gia đình mình một món quà tuyệt vời - một phiên bản tốt hơn của chính bạn!",
           dailyGoals: [
             "✅ Combine Vimium + fzf + lf",
             "✅ Complete workflow không dùng chuột",
@@ -1481,6 +1527,7 @@ set icons true`
           day: "Thứ 6",
           title: "Advanced Practice - Browser & Files",
           totalHours: 4,
+          motivationalQuote: "🏆 Bạn không chỉ học cho mình, mà còn cho con bạn. Mỗi thành công của bạn là niềm tự hào của con!",
           dailyGoals: [
             "✅ Advanced Vimium features",
             "✅ Advanced fzf usage",
@@ -1679,6 +1726,24 @@ set icons true`
         shortcutsLearned: 100,
         comfortLevel: "8/10"
       },
+      finalProject: {
+        title: "Open Source Contribution Project",
+        description: "Contribute vào một open source project, sử dụng lazygit và VSCode Vim để code, commit, và manage branches hoàn toàn bằng keyboard",
+        requirements: [
+          "Fork và clone một open source project",
+          "Create feature branch với lazygit",
+          "Code feature với VSCode Vim",
+          "Commit và push với lazygit",
+          "Create pull request workflow"
+        ],
+        deliverables: [
+          "Working feature contribution",
+          "Git history với proper commits",
+          "Pull request documentation",
+          "Workflow documentation"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
@@ -1843,6 +1908,7 @@ lazygit
           day: "Thứ 3",
           title: "VSCode Vim - Deep Dive",
           totalHours: 4,
+          motivationalQuote: "🎪 Cuộc sống là một hành trình, và bạn đang đi đúng hướng. Tiếp tục bước đi!",
           dailyGoals: [
             "✅ Master 20+ Vim motions nâng cao",
             "✅ Text objects thành muscle memory",
@@ -2013,6 +2079,7 @@ lazygit
           day: "Thứ 4",
           title: "Practice Tổng Hợp - Git + Vim",
           totalHours: 4,
+          motivationalQuote: "💼 Kỹ năng bạn học hôm nay sẽ mở ra nhiều cơ hội mới. Đầu tư vào bản thân luôn là đầu tư tốt nhất!",
           dailyGoals: [
             "✅ Combine lazygit + VSCode Vim",
             "✅ Complete coding workflow",
@@ -2102,6 +2169,7 @@ lazygit
           day: "Thứ 5",
           title: "Advanced Practice - Git & Vim",
           totalHours: 4,
+          motivationalQuote: "🌟 Mỗi ngày là một cơ hội mới để trở nên tốt hơn. Hãy tận dụng cơ hội hôm nay!",
           dailyGoals: [
             "✅ Advanced lazygit features",
             "✅ Advanced Vim motions",
@@ -2299,11 +2367,30 @@ lazygit
         shortcutsLearned: 100,
         comfortLevel: "9/10"
       },
+      finalProject: {
+        title: "Moonlander Keyboard Mastery Project",
+        description: "Xây dựng một project hoàn chỉnh sử dụng Moonlander keyboard với custom layout, áp dụng tất cả skills đã học trong 4 tuần",
+        requirements: [
+          "Setup Moonlander với custom layout",
+          "Build complete project với Moonlander",
+          "Document Moonlander workflow",
+          "Create custom keybindings",
+          "Complete project không dùng chuột"
+        ],
+        deliverables: [
+          "Working project với Moonlander",
+          "Custom Moonlander layout file",
+          "Documentation về Moonlander setup",
+          "Workflow guide"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Moonlander Keyboard - Setup",
           totalHours: 4,
+          motivationalQuote: "🚀 Bạn đang trên con đường trở thành phiên bản tốt nhất của chính mình. Hãy tiếp tục!",
           dailyGoals: [
             "✅ Setup Moonlander keyboard với QMK/ZSA",
             "✅ Customize layout cho coding workflow",
@@ -2415,6 +2502,7 @@ lazygit
           day: "Thứ 3",
           title: "Moonlander Practice - Review All Skills",
           totalHours: 4,
+          motivationalQuote: "💪 Sức mạnh không đến từ việc không bao giờ ngã, mà từ việc luôn đứng dậy sau mỗi lần ngã!",
           dailyGoals: [
             "✅ Practice lại tất cả window management với Moonlander",
             "✅ Practice lại tất cả terminal/Zellij với Moonlander",
@@ -2481,6 +2569,7 @@ lazygit
           day: "Thứ 4",
           title: "Advanced Customization",
           totalHours: 4,
+          motivationalQuote: "🎯 Mỗi mục tiêu bạn đạt được hôm nay là một bước tiến gần hơn đến ước mơ của bạn!",
           dailyGoals: [
             "✅ Advanced skhd bindings",
             "✅ Custom Zellij layouts",
@@ -2545,6 +2634,7 @@ lazygit
           day: "Thứ 5",
           title: "Real World Practice",
           totalHours: 4,
+          motivationalQuote: "❤️ Gia đình bạn tin tưởng vào bạn. Hãy tin tưởng vào chính mình và tiếp tục cố gắng!",
           dailyGoals: [
             "✅ Code real features không dùng chuột",
             "✅ Track và optimize mouse usage",
@@ -2763,11 +2853,30 @@ lazygit
         shortcutsLearned: 120,
         comfortLevel: "9.5/10"
       },
+      finalProject: {
+        title: "Advanced Workflow Automation Project",
+        description: "Xây dựng một hệ thống automation hoàn chỉnh, tích hợp tất cả advanced features đã học, optimize workflow cho maximum efficiency",
+        requirements: [
+          "Create complex automation workflows",
+          "Integrate advanced Vim macros",
+          "Advanced git workflows",
+          "Optimize tất cả operations",
+          "Document automation system"
+        ],
+        deliverables: [
+          "Working automation system",
+          "Advanced Vim macros library",
+          "Git automation scripts",
+          "Complete documentation"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Speed Optimization",
           totalHours: 4,
+          motivationalQuote: "✨ Bạn đang tạo ra một tương lai tốt đẹp hơn cho chính mình và gia đình. Hãy tự hào về điều đó!",
           dailyGoals: [
             "✅ Optimize tất cả workflows",
             "✅ Reduce keystrokes",
@@ -2903,6 +3012,7 @@ lazygit
           day: "Thứ 3",
           title: "Advanced Vim Mastery",
           totalHours: 4,
+          motivationalQuote: "🔥 Đam mê và kiên trì sẽ đưa bạn đến nơi bạn muốn đến. Hãy giữ lửa!",
           dailyGoals: [
             "✅ Master advanced Vim motions",
             "✅ Complex refactoring",
@@ -2916,6 +3026,33 @@ lazygit
               "Complex text objects",
               "Advanced macros",
               "Vim plugins"
+            ],
+            detailedSetup: [
+              "Bước 1: Review VSCode Vim extension settings",
+              "Bước 2: Install Vim plugins nếu cần (surround, commentary, etc.)",
+              "Bước 3: Configure advanced Vim settings",
+              "Bước 4: Learn complex text objects (ci\", ci(, ci{, cit, etc.)",
+              "Bước 5: Master advanced motions (f/F, t/T, %, */#)",
+              "Bước 6: Learn macro recording và playback",
+              "Bước 7: Practice với complex refactoring scenarios",
+              "Bước 8: Integrate Vim plugins vào workflow"
+            ],
+            concepts: [
+              "Advanced text objects: ci\", ci(, ci{, cit - change inside quotes/parens/braces/tags",
+              "Advanced motions: f/F find character, t/T till character, % jump matching bracket",
+              "Macros: q{register} record, @{register} play, @@ repeat last macro",
+              "Visual mode: v (character), V (line), Ctrl+v (block)",
+              "Advanced operators: gU/gu (uppercase/lowercase), >/< (indent), = (auto-indent)",
+              "Registers: Named registers (\"a-\"z), numbered registers (\"0-\"9), special registers",
+              "Vim plugins: Extend Vim functionality với plugins",
+              "VSCode Vim integration: Combine Vim với VSCode features"
+            ],
+            troubleshooting: [
+              "Nếu macros không work: Check register names, ensure proper recording",
+              "Nếu text objects không select đúng: Check cursor position và syntax",
+              "Nếu plugins conflict: Disable conflicting plugins, check settings",
+              "Nếu motions chậm: Practice more để build muscle memory",
+              "Nếu VSCode features conflict: Configure vim.handleKeys properly"
             ]
           },
           afternoon: {
@@ -2925,6 +3062,56 @@ lazygit
               "Complex refactoring tasks",
               "Macro automation",
               "Plugin workflows"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Advanced Text Objects",
+                duration: "30 phút",
+                tasks: [
+                  "Practice ci\" - 100 lần với different string types",
+                  "Practice ci(, ci{, ci[ - 100 lần mỗi loại",
+                  "Practice cit (tags) - 80 lần",
+                  "Practice diw, daw, ciw - 120 lần",
+                  "Practice ya(, yi{, da\" - 80 lần",
+                  "Timed challenge: Change 30 strings < 1 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Advanced Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Practice f/F/t/T - 200 lần với different characters",
+                  "Practice ; repeat f/t - 150 lần",
+                  "Practice % jump brackets - 150 lần",
+                  "Practice */# search word - 120 lần",
+                  "Practice {/} paragraph jump - 100 lần",
+                  "Timed challenge: Navigate 500 lines < 2 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Macros Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Record macro format 100 lines - 5 different macros",
+                  "Record macro add semicolons - 3 macros",
+                  "Record macro wrap functions - 3 macros",
+                  "Practice @@ repeat macro - 50 lần",
+                  "Practice @{register} play specific macro - 30 lần",
+                  "Timed challenge: Format 200 lines với macros < 3 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Complex Refactoring",
+                duration: "30 phút",
+                tasks: [
+                  "Refactor file 500+ lines với advanced motions",
+                  "Đổi tên 50 variables bằng * + cw",
+                  "Extract 10 functions bằng visual mode",
+                  "Move 20 code blocks",
+                  "Format và indent 100 blocks",
+                  "Timed challenge: Complete refactoring < 20 phút"
+                ]
+              }
             ]
           },
           evening: {
@@ -2933,14 +3120,44 @@ lazygit
               "Review advanced features",
               "Document techniques",
               "Plan practice"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Test lại tất cả advanced motions - 100% accuracy",
+                  "Document favorite macros",
+                  "Create cheat sheet cho advanced features",
+                  "Plan practice cho tuần 6"
+                ]
+              }
             ]
           },
-          goals: ["Advanced Vim mastery achieved"]
+          goals: ["Advanced Vim mastery achieved"],
+          learningResources: [
+            { title: "Vim Advanced Motions", description: "Complete guide to advanced Vim motions" },
+            { title: "Vim Macros", description: "Master Vim macros for automation" },
+            { title: "VSCode Vim Advanced", description: "Advanced VSCode Vim features" }
+          ],
+          bestPractices: [
+            "Start với basic text objects trước khi học advanced",
+            "Practice macros trên real code, không chỉ practice files",
+            "Combine macros với motions để create powerful automation",
+            "Use registers để store và reuse macros",
+            "Document macros bạn use frequently"
+          ],
+          commonMistakes: [
+            "Cố gắng nhớ tất cả advanced features cùng lúc",
+            "Không practice macros đủ - macros rất powerful nhưng cần practice",
+            "Ignore text objects - miss out on efficient editing",
+            "Không combine features - advanced Vim là về combining features"
+          ]
         },
         {
           day: "Thứ 4",
           title: "Advanced Git Mastery",
           totalHours: 4,
+          motivationalQuote: "💎 Mỗi giờ bạn học là một viên ngọc quý trong hành trình phát triển của bạn!",
           dailyGoals: [
             "✅ Master advanced git operations",
             "✅ Complex branching strategies",
@@ -2954,6 +3171,33 @@ lazygit
               "Complex branching strategies",
               "Advanced rebase workflows",
               "Git hooks và automation"
+            ],
+            detailedSetup: [
+              "Bước 1: Review lazygit advanced features",
+              "Bước 2: Learn complex branching strategies (git-flow, GitHub flow)",
+              "Bước 3: Master interactive rebase trong lazygit",
+              "Bước 4: Learn git hooks (pre-commit, pre-push, etc.)",
+              "Bước 5: Setup git aliases cho common operations",
+              "Bước 6: Learn git worktree cho multiple working directories",
+              "Bước 7: Practice với complex merge scenarios",
+              "Bước 8: Create git automation scripts"
+            ],
+            concepts: [
+              "Branching strategies: git-flow, GitHub flow, GitLab flow",
+              "Interactive rebase: Edit, reword, squash, drop commits",
+              "Git hooks: Pre-commit, pre-push, post-commit hooks",
+              "Git worktree: Multiple working directories cho same repo",
+              "Cherry-picking: Apply specific commits từ other branches",
+              "Git bisect: Find commit that introduced bug",
+              "Git reflog: Recover lost commits",
+              "Git automation: Scripts và aliases cho repetitive tasks"
+            ],
+            troubleshooting: [
+              "Nếu rebase conflict: Resolve conflicts, continue rebase",
+              "Nếu branch strategy confusing: Start với simple strategy",
+              "Nếu hooks không run: Check permissions và hook locations",
+              "Nếu worktree issues: Check paths và branch names",
+              "Nếu lost commits: Use git reflog để recover"
             ]
           },
           afternoon: {
@@ -2963,6 +3207,56 @@ lazygit
               "Complex branching scenarios",
               "Advanced rebase operations",
               "Git automation scripts"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Complex Branching",
+                duration: "30 phút",
+                tasks: [
+                  "Create feature branch từ main",
+                  "Create hotfix branch từ main",
+                  "Merge feature branch vào develop",
+                  "Merge develop vào main",
+                  "Practice git-flow workflow - 5 complete cycles",
+                  "Timed challenge: Complete branching workflow < 5 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Interactive Rebase",
+                duration: "30 phút",
+                tasks: [
+                  "Interactive rebase - edit 10 commits",
+                  "Squash 5 commits thành 1 - 10 lần",
+                  "Reword commit messages - 20 lần",
+                  "Drop unwanted commits - 10 lần",
+                  "Reorder commits - 5 lần",
+                  "Timed challenge: Clean up 20 commits < 10 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Git Hooks & Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Create pre-commit hook - check linting",
+                  "Create pre-push hook - run tests",
+                  "Create 10 git aliases cho common operations",
+                  "Test hooks và aliases - 20 lần",
+                  "Create git automation script",
+                  "Timed challenge: Setup hooks và aliases < 15 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Advanced Operations",
+                duration: "30 phút",
+                tasks: [
+                  "Cherry-pick commits từ other branches - 10 lần",
+                  "Use git bisect để find bug - 3 scenarios",
+                  "Recover lost commits với git reflog - 5 lần",
+                  "Use git worktree - create 3 worktrees",
+                  "Practice complex merge scenarios - 10 merges",
+                  "Timed challenge: Complete advanced workflow < 15 phút"
+                ]
+              }
             ]
           },
           evening: {
@@ -2971,14 +3265,44 @@ lazygit
               "Review advanced git",
               "Document workflows",
               "Plan improvements"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Test lại tất cả advanced git operations",
+                  "Document branching strategy",
+                  "Document git hooks và aliases",
+                  "Plan improvements cho workflow"
+                ]
+              }
             ]
           },
-          goals: ["Advanced git mastery achieved"]
+          goals: ["Advanced git mastery achieved"],
+          learningResources: [
+            { title: "Git Branching Strategies", description: "Learn different branching strategies" },
+            { title: "Git Hooks", description: "Master git hooks for automation" },
+            { title: "Advanced Git", description: "Advanced git operations guide" }
+          ],
+          bestPractices: [
+            "Choose branching strategy phù hợp với team",
+            "Use interactive rebase để keep history clean",
+            "Setup git hooks để enforce code quality",
+            "Create aliases cho operations bạn do frequently",
+            "Document git workflow cho team"
+          ],
+          commonMistakes: [
+            "Rebase public branches - chỉ rebase local branches",
+            "Force push sau rebase - communicate với team",
+            "Ignore git hooks - hooks help maintain quality",
+            "Complex branching strategy khi không cần - keep it simple"
+          ]
         },
         {
           day: "Thứ 5",
           title: "Complete Workflow Mastery",
           totalHours: 4,
+          motivationalQuote: "🌱 Bạn đang phát triển không chỉ kỹ năng mà còn cả tính cách. Đây là điều tuyệt vời!",
           dailyGoals: [
             "✅ Master complete workflow",
             "✅ Zero mouse usage",
@@ -2992,6 +3316,30 @@ lazygit
               "Eliminate all mouse usage",
               "Optimize every step",
               "Build perfect muscle memory"
+            ],
+            detailedSetup: [
+              "Bước 1: Review complete workflow (Raycast → yabai → Zellij → VSCode Vim → lazygit)",
+              "Bước 2: Identify any remaining mouse usage",
+              "Bước 3: Create shortcuts cho any missing operations",
+              "Bước 4: Practice workflow từ đầu đến cuối - 20 lần",
+              "Bước 5: Time mỗi step để identify slow parts",
+              "Bước 6: Optimize slow parts",
+              "Bước 7: Practice optimized workflow - 30 lần",
+              "Bước 8: Build muscle memory cho complete workflow"
+            ],
+            concepts: [
+              "Complete workflow: Tất cả operations từ start đến finish",
+              "Workflow optimization: Eliminate inefficiencies trong workflow",
+              "Muscle memory: Automatic execution không cần suy nghĩ",
+              "Zero mouse challenge: Complete workflow không touch mouse",
+              "Speed optimization: Minimize time cho mỗi operation",
+              "Workflow consistency: Same workflow cho similar tasks"
+            ],
+            troubleshooting: [
+              "Nếu vẫn dùng mouse: Identify operations và create shortcuts",
+              "Nếu workflow chậm: Time mỗi step và optimize slowest parts",
+              "Nếu muscle memory chưa build: Practice more với consistent workflow",
+              "Nếu inconsistent: Document workflow và follow strictly"
             ]
           },
           afternoon: {
@@ -3001,6 +3349,57 @@ lazygit
               "Complete workflow execution",
               "Zero mouse challenge",
               "Speed optimization"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Complete Workflow Practice",
+                duration: "30 phút",
+                tasks: [
+                  "Practice complete workflow - 20 complete cycles",
+                  "Raycast mở project",
+                  "yabai setup workspace",
+                  "Zellij create layout",
+                  "VSCode Vim edit code",
+                  "lazygit commit changes",
+                  "Target: Complete cycle < 2 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Zero Mouse Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete coding task không touch mouse",
+                  "Track mouse usage (target: 0%)",
+                  "Identify any mouse usage và eliminate",
+                  "Create shortcuts cho any missing operations",
+                  "Repeat challenge - 10 lần",
+                  "Target: 100% keyboard-only"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Optimization",
+                duration: "30 phút",
+                tasks: [
+                  "Time baseline workflow",
+                  "Optimize slowest operations",
+                  "Practice optimized workflow - 30 lần",
+                  "Measure improvement",
+                  "Target: 30% faster than baseline",
+                  "Document optimized workflow"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real Project Work",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với complete workflow",
+                  "Code feature từ đầu đến cuối",
+                  "Use tất cả tools (yabai, Zellij, Vim, lazygit)",
+                  "Track time và mouse usage",
+                  "Complete feature không dùng mouse",
+                  "Target: Efficient và fast"
+                ]
+              }
             ]
           },
           evening: {
@@ -3009,9 +3408,37 @@ lazygit
               "Review mastery level",
               "Document achievements",
               "Plan maintenance"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review complete workflow mastery",
+                  "Document achievements và improvements",
+                  "Identify areas for further improvement",
+                  "Plan maintenance và continued practice"
+                ]
+              }
             ]
           },
-          goals: ["Complete workflow mastery achieved"]
+          goals: ["Complete workflow mastery achieved"],
+          learningResources: [
+            { title: "Workflow Optimization", description: "Best practices cho optimizing workflows" },
+            { title: "Keyboard-Only Workflow", description: "Complete keyboard-only workflow guide" }
+          ],
+          bestPractices: [
+            "Practice complete workflow consistently",
+            "Eliminate all mouse usage gradually",
+            "Optimize workflow based on real usage",
+            "Document workflow để maintain consistency",
+            "Continue practice để maintain muscle memory"
+          ],
+          commonMistakes: [
+            "Không practice complete workflow - chỉ practice individual tools",
+            "Allow mouse usage occasionally - breaks muscle memory",
+            "Không optimize workflow - miss efficiency gains",
+            "Không document workflow - forget optimized steps"
+          ]
         },
         createWeekendDay("Thứ 7", "Weekend Practice - Week 5", {
           dailyGoals: [
@@ -3020,9 +3447,74 @@ lazygit
             "✅ Zero mouse usage",
             "✅ Maximum speed"
           ],
-          morning: { title: "Sáng (4h)", content: ["Advanced practice session"] },
-          afternoon: { title: "Chiều (4h)", content: ["Real project work"] },
-          evening: { title: "Tối (4h)", content: ["Mastery refinement"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Advanced practice session với tất cả tools",
+              "Practice optimized workflows",
+              "Advanced Vim motions practice",
+              "Advanced git operations practice"
+            ],
+            exercises: [
+              {
+                title: "PRACTICE SESSION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice optimized workflows - 50 complete cycles",
+                  "Practice advanced Vim motions - 500+ repetitions",
+                  "Practice advanced git operations - 100 operations",
+                  "Practice macros - 50 macros",
+                  "Build muscle memory cho tất cả advanced features",
+                  "Track progress và improvements"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Real project work",
+              "Apply tất cả advanced features",
+              "Zero mouse challenge",
+              "Speed optimization"
+            ],
+            exercises: [
+              {
+                title: "REAL PROJECT WORK (4h)",
+                duration: "4h",
+                tasks: [
+                  "Work on real project với advanced features",
+                  "Use optimized workflows exclusively",
+                  "Apply advanced Vim motions",
+                  "Use advanced git operations",
+                  "Track mouse usage (target: 0%)",
+                  "Document workflow improvements"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Mastery refinement",
+              "Advanced customization",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "MASTERY REFINEMENT (4h)",
+                duration: "4h",
+                tasks: [
+                  "Refine advanced techniques",
+                  "Create custom solutions",
+                  "Document advanced workflows",
+                  "Reflect on progress",
+                  "Plan improvements cho tuần 6"
+                ]
+              }
+            ]
+          }
         }),
         createWeekendDay("Chủ nhật", "Weekend Challenge - Week 5", {
           dailyGoals: [
@@ -3031,9 +3523,70 @@ lazygit
             "✅ Maximum efficiency",
             "✅ Mastery demonstration"
           ],
-          morning: { title: "Sáng (4h)", content: ["Project planning"] },
-          afternoon: { title: "Chiều (4h)", content: ["Implementation"] },
-          evening: { title: "Tối (4h)", content: ["Completion & reflection"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Project planning",
+              "Research và setup",
+              "Initial implementation"
+            ],
+            exercises: [
+              {
+                title: "PROJECT SETUP & PLANNING (4h)",
+                duration: "4h",
+                tasks: [
+                  "Plan advanced project structure",
+                  "Research requirements và technologies",
+                  "Setup project với optimized workflow",
+                  "Initial implementation với advanced features",
+                  "Git workflow setup với advanced operations"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Implementation",
+              "Advanced features",
+              "Testing"
+            ],
+            exercises: [
+              {
+                title: "IMPLEMENTATION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Implement features với advanced Vim motions",
+                  "Use advanced git operations throughout",
+                  "Apply optimized workflows",
+                  "Test và debug",
+                  "Track mouse usage (target: 0%)",
+                  "Maintain code quality"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Completion",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "COMPLETION & REFLECTION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Complete project",
+                  "Write comprehensive documentation",
+                  "Reflect on advanced features used",
+                  "Document workflow improvements",
+                  "Prepare cho tuần 6"
+                ]
+              }
+            ]
+          }
         })
       ]
     },
@@ -3051,66 +3604,584 @@ lazygit
         shortcutsLearned: 150,
         comfortLevel: "10/10"
       },
+      finalProject: {
+        title: "Expert-Level Production Project",
+        description: "Xây dựng một production-ready project từ đầu đến cuối, áp dụng tất cả expert-level skills, maintain code quality và workflow perfection",
+        requirements: [
+          "Build production-ready application",
+          "Expert Vim motions throughout",
+          "Expert git workflow",
+          "Zero mouse usage",
+          "Production-quality code"
+        ],
+        deliverables: [
+          "Production-ready application",
+          "Complete git history",
+          "Code documentation",
+          "Deployment guide"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Expert Workflow",
           totalHours: 4,
+          motivationalQuote: "🎁 Bạn đang đầu tư vào tài sản quý giá nhất - chính bản thân bạn!",
           dailyGoals: [
             "✅ Expert level workflow",
             "✅ Zero mouse usage",
             "✅ Expert speed",
             "✅ Perfect muscle memory"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Expert practice"] },
-          afternoon: { title: "Chiều (2h)", content: ["Expert challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Expert level achieved"]
+          morning: {
+            title: "Sáng (1.5h): Expert Practice",
+            content: [
+              "Expert level workflow practice",
+              "Perfect execution",
+              "Zero mouse challenge",
+              "Expert speed training"
+            ],
+            detailedSetup: [
+              "Bước 1: Review expert-level workflow requirements",
+              "Bước 2: Practice complete workflow với expert speed",
+              "Bước 3: Eliminate any remaining inefficiencies",
+              "Bước 4: Perfect muscle memory cho tất cả operations",
+              "Bước 5: Time workflow để achieve expert speed",
+              "Bước 6: Practice consistency - same speed mỗi lần",
+              "Bước 7: Challenge yourself với complex scenarios",
+              "Bước 8: Document expert workflow"
+            ],
+            concepts: [
+              "Expert workflow: Perfect execution với maximum efficiency",
+              "Zero mouse usage: Complete workflow không touch mouse",
+              "Expert speed: Fast execution không sacrifice accuracy",
+              "Muscle memory: Automatic execution không cần suy nghĩ",
+              "Consistency: Same performance mỗi lần",
+              "Workflow perfection: Every step optimized và executed perfectly"
+            ],
+            troubleshooting: [
+              "Nếu vẫn có mouse usage: Identify và eliminate completely",
+              "Nếu speed chưa expert: Practice more và optimize further",
+              "Nếu inconsistent: Practice consistency và build muscle memory",
+              "Nếu errors increase: Balance speed với accuracy"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Expert Challenges",
+            content: [
+              "Expert level challenges",
+              "Complex scenarios",
+              "Speed challenges",
+              "Perfection practice"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Expert Workflow Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete workflow challenge - 30 lần",
+                  "Target: < 1.5 phút mỗi cycle",
+                  "Zero mouse usage - track và verify",
+                  "Perfect execution - no errors",
+                  "Consistent speed - same time mỗi lần",
+                  "Timed challenge: 10 cycles < 15 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Complex Scenarios",
+                duration: "30 phút",
+                tasks: [
+                  "Handle complex coding scenarios",
+                  "Multiple files, branches, và operations",
+                  "Maintain expert speed trong complexity",
+                  "Zero mouse usage trong complex scenarios",
+                  "Practice 10 complex scenarios",
+                  "Target: Handle complexity với expert speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Perfection",
+                duration: "30 phút",
+                tasks: [
+                  "Practice workflow với expert speed - 50 lần",
+                  "Measure và track speed consistency",
+                  "Identify và fix any speed variations",
+                  "Practice perfection - no errors",
+                  "Build perfect muscle memory",
+                  "Target: Consistent expert speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Expert",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với expert workflow",
+                  "Maintain expert speed throughout",
+                  "Zero mouse usage verified",
+                  "Handle real-world complexity",
+                  "Complete feature với expert efficiency",
+                  "Target: Expert performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review expert level",
+              "Document achievements",
+              "Plan mastery"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review expert workflow performance",
+                  "Document expert-level achievements",
+                  "Identify areas for mastery level",
+                  "Plan mastery practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Expert level achieved"],
+          learningResources: [
+            { title: "Expert Workflow", description: "Achieving expert-level workflow performance" }
+          ],
+          bestPractices: [
+            "Practice consistency để achieve expert speed",
+            "Eliminate all mouse usage completely",
+            "Perfect muscle memory cho tất cả operations",
+            "Maintain expert speed trong complexity",
+            "Document expert workflow để maintain level"
+          ],
+          commonMistakes: [
+            "Sacrifice accuracy cho speed - balance both",
+            "Allow occasional mouse usage - breaks expert level",
+            "Không practice consistency - speed varies",
+            "Ignore complexity - expert phải handle complexity"
+          ]
         },
         {
           day: "Thứ 3",
           title: "Expert Vim",
           totalHours: 4,
+          motivationalQuote: "⚡ Năng lượng tích cực bạn tạo ra hôm nay sẽ lan tỏa đến gia đình bạn!",
           dailyGoals: [
             "✅ Expert Vim mastery",
             "✅ Complex automation",
             "✅ Perfect efficiency",
             "✅ Zero errors"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Expert Vim"] },
-          afternoon: { title: "Chiều (2h)", content: ["Expert practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Expert Vim achieved"]
+          morning: {
+            title: "Sáng (1.5h): Expert Vim",
+            content: [
+              "Expert Vim motions mastery",
+              "Complex automation với macros",
+              "Perfect efficiency",
+              "Zero error execution"
+            ],
+            detailedSetup: [
+              "Bước 1: Master tất cả advanced Vim motions",
+              "Bước 2: Create complex macros cho automation",
+              "Bước 3: Perfect text object usage",
+              "Bước 4: Master visual mode operations",
+              "Bước 5: Perfect register usage",
+              "Bước 6: Integrate Vim plugins effectively",
+              "Bước 7: Practice complex refactoring",
+              "Bước 8: Achieve zero-error execution"
+            ],
+            concepts: [
+              "Expert Vim: Perfect execution của tất cả Vim features",
+              "Complex automation: Macros cho complex operations",
+              "Perfect efficiency: Maximum speed với zero errors",
+              "Text object mastery: Use text objects instinctively",
+              "Macro mastery: Create và use macros effectively",
+              "Visual mode expertise: Master all visual mode operations"
+            ],
+            troubleshooting: [
+              "Nếu errors occur: Slow down và focus on accuracy",
+              "Nếu macros fail: Check register names và recording",
+              "Nếu efficiency drops: Review và optimize motions",
+              "Nếu plugins conflict: Configure properly"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Expert Practice",
+            content: [
+              "Expert Vim practice",
+              "Complex automation",
+              "Perfect execution",
+              "Zero errors"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Expert Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Practice expert motions - 500+ repetitions",
+                  "Perfect text object usage - 200 lần",
+                  "Master f/F/t/T - 300 lần",
+                  "Perfect % jumps - 200 lần",
+                  "Zero errors - verify accuracy",
+                  "Target: 100% accuracy với expert speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Complex Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Create 10 complex macros",
+                  "Use macros cho automation - 50 operations",
+                  "Combine macros với motions",
+                  "Automate repetitive tasks",
+                  "Practice macro mastery - 100 repetitions",
+                  "Target: Automate 80% of repetitive work"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Perfect Efficiency",
+                duration: "30 phút",
+                tasks: [
+                  "Refactor 1000+ lines với expert efficiency",
+                  "Perfect execution - zero errors",
+                  "Expert speed - < 30 phút",
+                  "Use tất cả advanced features",
+                  "Maintain code quality",
+                  "Target: Expert efficiency với perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Error Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete coding task với zero errors",
+                  "Use expert Vim motions throughout",
+                  "Maintain expert speed",
+                  "Perfect accuracy - verify",
+                  "Handle complex scenarios",
+                  "Target: Zero errors với expert speed"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review expert Vim",
+              "Document mastery",
+              "Plan mastery level"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review expert Vim performance",
+                  "Document expert techniques",
+                  "Identify mastery areas",
+                  "Plan mastery practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Expert Vim achieved"],
+          learningResources: [
+            { title: "Expert Vim", description: "Achieving expert-level Vim mastery" }
+          ],
+          bestPractices: [
+            "Practice perfection - zero errors",
+            "Master complex automation",
+            "Perfect efficiency trong all operations",
+            "Build perfect muscle memory",
+            "Document expert techniques"
+          ],
+          commonMistakes: [
+            "Sacrifice accuracy cho speed",
+            "Không practice automation enough",
+            "Ignore error prevention",
+            "Không document expert techniques"
+          ]
         },
         {
           day: "Thứ 4",
           title: "Expert Git",
           totalHours: 4,
+          motivationalQuote: "🏆 Bạn là người hùng trong câu chuyện của chính mình. Hãy tiếp tục viết nên những trang đẹp!",
           dailyGoals: [
             "✅ Expert git mastery",
             "✅ Complex workflows",
             "✅ Perfect automation",
             "✅ Zero mistakes"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Expert git"] },
-          afternoon: { title: "Chiều (2h)", content: ["Expert practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Expert git achieved"]
+          morning: {
+            title: "Sáng (1.5h): Expert Git",
+            content: [
+              "Expert git operations",
+              "Complex workflow mastery",
+              "Perfect automation",
+              "Zero mistake execution"
+            ],
+            detailedSetup: [
+              "Bước 1: Master tất cả advanced git operations",
+              "Bước 2: Perfect complex branching strategies",
+              "Bước 3: Master interactive rebase",
+              "Bước 4: Perfect git hooks automation",
+              "Bước 5: Master git worktree",
+              "Bước 6: Perfect cherry-picking và bisect",
+              "Bước 7: Create perfect git automation",
+              "Bước 8: Achieve zero-mistake execution"
+            ],
+            concepts: [
+              "Expert git: Perfect execution của tất cả git operations",
+              "Complex workflows: Handle complex branching và merging",
+              "Perfect automation: Git hooks và scripts cho automation",
+              "Zero mistakes: Perfect execution không errors",
+              "Git mastery: Instinctive use của git features",
+              "Workflow perfection: Optimal git workflow cho all scenarios"
+            ],
+            troubleshooting: [
+              "Nếu mistakes occur: Review và learn from mistakes",
+              "Nếu workflow complex: Simplify và optimize",
+              "Nếu automation fails: Check hooks và scripts",
+              "Nếu conflicts: Master conflict resolution"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Expert Practice",
+            content: [
+              "Expert git practice",
+              "Complex workflows",
+              "Perfect automation",
+              "Zero mistakes"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Expert Operations",
+                duration: "30 phút",
+                tasks: [
+                  "Practice expert git operations - 200 operations",
+                  "Perfect branching strategies - 20 scenarios",
+                  "Master interactive rebase - 30 rebases",
+                  "Perfect automation - 50 automated operations",
+                  "Zero mistakes - verify accuracy",
+                  "Target: 100% accuracy với expert speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Complex Workflows",
+                duration: "30 phút",
+                tasks: [
+                  "Handle complex branching scenarios - 10 scenarios",
+                  "Complex merge strategies - 15 merges",
+                  "Handle conflicts expertly - 10 conflicts",
+                  "Perfect workflow execution",
+                  "Maintain git history quality",
+                  "Target: Handle complexity với perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Perfect Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Create perfect git hooks - 5 hooks",
+                  "Perfect git aliases - 20 aliases",
+                  "Automate repetitive operations",
+                  "Test automation - 100 operations",
+                  "Perfect automation execution",
+                  "Target: 90% automation coverage"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Mistake Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete git workflow với zero mistakes",
+                  "Handle complex scenarios perfectly",
+                  "Maintain perfect git history",
+                  "Use automation effectively",
+                  "Verify zero mistakes",
+                  "Target: Zero mistakes với expert efficiency"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review expert git",
+              "Document mastery",
+              "Plan mastery level"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review expert git performance",
+                  "Document expert workflows",
+                  "Identify mastery areas",
+                  "Plan mastery practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Expert git achieved"],
+          learningResources: [
+            { title: "Expert Git", description: "Achieving expert-level git mastery" }
+          ],
+          bestPractices: [
+            "Perfect execution - zero mistakes",
+            "Master complex workflows",
+            "Perfect automation",
+            "Maintain git history quality",
+            "Document expert workflows"
+          ],
+          commonMistakes: [
+            "Allow mistakes - expert means zero mistakes",
+            "Không automate enough",
+            "Ignore git history quality",
+            "Không document workflows"
+          ]
         },
         {
           day: "Thứ 5",
           title: "Expert Complete",
           totalHours: 4,
+          motivationalQuote: "🌈 Mỗi thử thách bạn vượt qua làm bạn mạnh mẽ hơn. Hãy tiếp tục chiến đấu!",
           dailyGoals: [
             "✅ Expert complete mastery",
             "✅ Zero mouse usage",
             "✅ Expert speed",
             "✅ Perfect workflow"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Expert complete"] },
-          afternoon: { title: "Chiều (2h)", content: ["Expert challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Expert complete mastery achieved"]
+          morning: {
+            title: "Sáng (1.5h): Expert Complete",
+            content: [
+              "Expert complete workflow",
+              "Perfect integration",
+              "Expert speed",
+              "Zero mouse usage"
+            ],
+            detailedSetup: [
+              "Bước 1: Integrate tất cả expert skills",
+              "Bước 2: Perfect complete workflow",
+              "Bước 3: Achieve expert speed trong complete workflow",
+              "Bước 4: Eliminate all mouse usage",
+              "Bước 5: Perfect muscle memory cho complete workflow",
+              "Bước 6: Practice consistency",
+              "Bước 7: Handle complexity với expert level",
+              "Bước 8: Document expert complete workflow"
+            ],
+            concepts: [
+              "Expert complete: Perfect integration của tất cả skills",
+              "Complete workflow: Tất cả tools work together perfectly",
+              "Expert speed: Fast execution trong complete workflow",
+              "Zero mouse: Complete workflow không touch mouse",
+              "Perfect integration: All tools complement each other",
+              "Workflow mastery: Perfect execution của complete workflow"
+            ],
+            troubleshooting: [
+              "Nếu integration issues: Review tool interactions",
+              "Nếu speed drops: Optimize complete workflow",
+              "Nếu mouse usage: Identify và eliminate",
+              "Nếu inconsistency: Practice consistency"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Expert Challenges",
+            content: [
+              "Expert level challenges",
+              "Complete workflow challenges",
+              "Complex scenarios",
+              "Perfection practice"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Expert Complete Workflow",
+                duration: "30 phút",
+                tasks: [
+                  "Practice expert complete workflow - 30 cycles",
+                  "Integrate tất cả expert skills",
+                  "Maintain expert speed",
+                  "Zero mouse usage verified",
+                  "Perfect execution",
+                  "Target: Expert performance trong complete workflow"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Complex Scenarios",
+                duration: "30 phút",
+                tasks: [
+                  "Handle complex scenarios với expert workflow",
+                  "Multiple projects, branches, files",
+                  "Maintain expert speed trong complexity",
+                  "Zero mouse usage trong complexity",
+                  "Perfect execution",
+                  "Target: Handle complexity với expert level"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Perfection",
+                duration: "30 phút",
+                tasks: [
+                  "Practice với expert speed - 50 cycles",
+                  "Perfect consistency",
+                  "Zero errors",
+                  "Maintain speed trong all scenarios",
+                  "Build perfect muscle memory",
+                  "Target: Consistent expert speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Expert",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với expert workflow",
+                  "Complete feature với expert efficiency",
+                  "Zero mouse usage",
+                  "Expert speed maintained",
+                  "Perfect execution",
+                  "Target: Expert performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review expert complete",
+              "Document mastery",
+              "Plan mastery level"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review expert complete mastery",
+                  "Document expert complete workflow",
+                  "Identify mastery level areas",
+                  "Plan mastery practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Expert complete mastery achieved"],
+          learningResources: [
+            { title: "Expert Complete Workflow", description: "Achieving expert-level complete workflow mastery" }
+          ],
+          bestPractices: [
+            "Integrate tất cả expert skills",
+            "Perfect complete workflow",
+            "Maintain expert speed",
+            "Zero mouse usage always",
+            "Document expert complete workflow"
+          ],
+          commonMistakes: [
+            "Không integrate skills properly",
+            "Allow mouse usage occasionally",
+            "Sacrifice speed cho accuracy",
+            "Không document expert workflow"
+          ]
         },
         createWeekendDay("Thứ 7", "Weekend Practice - Week 6", {
           dailyGoals: [
@@ -3119,9 +4190,74 @@ lazygit
             "✅ Zero mouse usage",
             "✅ Expert speed"
           ],
-          morning: { title: "Sáng (4h)", content: ["Expert practice"] },
-          afternoon: { title: "Chiều (4h)", content: ["Expert work"] },
-          evening: { title: "Tối (4h)", content: ["Expert refinement"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Expert practice session",
+              "Perfect all expert skills",
+              "Expert workflow practice",
+              "Expert Vim và Git practice"
+            ],
+            exercises: [
+              {
+                title: "EXPERT PRACTICE (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice expert workflow - 100 complete cycles",
+                  "Practice expert Vim motions - 1000+ repetitions",
+                  "Practice expert git operations - 200 operations",
+                  "Perfect all expert skills",
+                  "Build perfect muscle memory",
+                  "Track progress và perfection"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Expert work",
+              "Real project với expert level",
+              "Expert efficiency",
+              "Zero mouse usage"
+            ],
+            exercises: [
+              {
+                title: "EXPERT WORK (4h)",
+                duration: "4h",
+                tasks: [
+                  "Work on real project với expert level",
+                  "Maintain expert speed throughout",
+                  "Zero mouse usage verified",
+                  "Perfect execution",
+                  "Handle complexity với expert level",
+                  "Document expert performance"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Expert refinement",
+              "Mastery preparation",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "EXPERT REFINEMENT (4h)",
+                duration: "4h",
+                tasks: [
+                  "Refine expert techniques",
+                  "Prepare for mastery level",
+                  "Document expert workflows",
+                  "Reflect on expert achievements",
+                  "Plan mastery practice"
+                ]
+              }
+            ]
+          }
         }),
         createWeekendDay("Chủ nhật", "Weekend Challenge - Week 6", {
           dailyGoals: [
@@ -3130,9 +4266,70 @@ lazygit
             "✅ Expert efficiency",
             "✅ Perfect demonstration"
           ],
-          morning: { title: "Sáng (4h)", content: ["Expert planning"] },
-          afternoon: { title: "Chiều (4h)", content: ["Expert implementation"] },
-          evening: { title: "Tối (4h)", content: ["Expert completion"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Expert planning",
+              "Project setup",
+              "Initial implementation"
+            ],
+            exercises: [
+              {
+                title: "EXPERT PLANNING (4h)",
+                duration: "4h",
+                tasks: [
+                  "Plan expert-level project",
+                  "Research và setup với expert workflow",
+                  "Initial implementation với expert skills",
+                  "Git workflow với expert operations",
+                  "Setup complete expert environment"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Expert implementation",
+              "Expert features",
+              "Expert testing"
+            ],
+            exercises: [
+              {
+                title: "EXPERT IMPLEMENTATION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Implement với expert Vim motions",
+                  "Use expert git operations",
+                  "Apply expert workflow",
+                  "Maintain expert speed",
+                  "Zero mouse usage",
+                  "Perfect execution"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Expert completion",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "EXPERT COMPLETION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Complete expert project",
+                  "Write expert documentation",
+                  "Reflect on expert achievements",
+                  "Document expert workflow",
+                  "Prepare cho tuần 7"
+                ]
+              }
+            ]
+          }
         })
       ]
     },
@@ -3150,66 +4347,584 @@ lazygit
         shortcutsLearned: 180,
         comfortLevel: "10/10"
       },
+      finalProject: {
+        title: "Master-Level Complex System",
+        description: "Xây dựng một hệ thống phức tạp với multiple components, áp dụng master-level skills, perfect execution với zero mouse usage",
+        requirements: [
+          "Build complex multi-component system",
+          "Master Vim motions",
+          "Master git workflows",
+          "Perfect automation",
+          "Zero mouse usage guaranteed"
+        ],
+        deliverables: [
+          "Complex working system",
+          "Master-level code quality",
+          "Complete automation",
+          "Master workflow documentation"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Master Workflow",
           totalHours: 4,
+          motivationalQuote: "🎪 Cuộc sống là một buổi biểu diễn, và bạn đang tỏa sáng trên sân khấu của chính mình!",
           dailyGoals: [
             "✅ Master level workflow",
             "✅ Zero mouse usage",
             "✅ Master speed",
             "✅ Perfect execution"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Master practice"] },
-          afternoon: { title: "Chiều (2h)", content: ["Master challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Master level achieved"]
+          morning: {
+            title: "Sáng (1.5h): Master Practice",
+            content: [
+              "Master level workflow practice",
+              "Perfect execution mastery",
+              "Zero mouse guarantee",
+              "Master speed perfection"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve master-level workflow performance",
+              "Bước 2: Perfect execution của tất cả operations",
+              "Bước 3: Guarantee zero mouse usage - verified",
+              "Bước 4: Achieve master speed - fastest possible",
+              "Bước 5: Perfect muscle memory - automatic execution",
+              "Bước 6: Master consistency - perfect mỗi lần",
+              "Bước 7: Handle any complexity với master level",
+              "Bước 8: Document master workflow"
+            ],
+            concepts: [
+              "Master workflow: Perfect execution với maximum efficiency",
+              "Zero mouse guarantee: Verified zero mouse usage",
+              "Master speed: Fastest possible execution",
+              "Perfect execution: Zero errors với maximum speed",
+              "Muscle memory mastery: Automatic perfect execution",
+              "Workflow mastery: Perfect trong all scenarios"
+            ],
+            troubleshooting: [
+              "Nếu mouse usage detected: Immediate elimination và verification",
+              "Nếu speed not master: Further optimization và practice",
+              "Nếu execution not perfect: Focus on accuracy first",
+              "Nếu inconsistency: Practice consistency until perfect"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Master Challenges",
+            content: [
+              "Master level challenges",
+              "Perfect execution challenges",
+              "Master speed challenges",
+              "Complexity mastery"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Master Workflow Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete workflow challenge - 50 lần",
+                  "Target: < 1 phút mỗi cycle",
+                  "Zero mouse usage - verified và guaranteed",
+                  "Perfect execution - zero errors",
+                  "Master speed - fastest possible",
+                  "Timed challenge: 20 cycles < 20 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Perfect Execution",
+                duration: "30 phút",
+                tasks: [
+                  "Practice perfect execution - 100 operations",
+                  "Zero errors guaranteed",
+                  "Master speed maintained",
+                  "Perfect consistency",
+                  "Handle complexity perfectly",
+                  "Target: Perfect execution trong all scenarios"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Master Speed",
+                duration: "30 phút",
+                tasks: [
+                  "Practice với master speed - 100 cycles",
+                  "Fastest possible execution",
+                  "Perfect consistency",
+                  "Zero errors",
+                  "Maintain speed trong complexity",
+                  "Target: Master speed với perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Master",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với master workflow",
+                  "Complete feature với master efficiency",
+                  "Zero mouse usage guaranteed",
+                  "Master speed maintained",
+                  "Perfect execution",
+                  "Target: Master performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review master level",
+              "Document mastery",
+              "Plan grand master"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review master workflow performance",
+                  "Document master-level achievements",
+                  "Identify grand master areas",
+                  "Plan grand master practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Master level achieved"],
+          learningResources: [
+            { title: "Master Workflow", description: "Achieving master-level workflow mastery" }
+          ],
+          bestPractices: [
+            "Perfect execution always",
+            "Guarantee zero mouse usage",
+            "Achieve master speed",
+            "Maintain perfection trong all scenarios",
+            "Document master workflow"
+          ],
+          commonMistakes: [
+            "Allow any mouse usage - breaks master level",
+            "Sacrifice perfection cho speed",
+            "Không maintain consistency",
+            "Ignore complexity - master handles all"
+          ]
         },
         {
           day: "Thứ 3",
           title: "Master Vim",
           totalHours: 4,
+          motivationalQuote: "💼 Kỹ năng mới bạn học hôm nay sẽ là công cụ mạnh mẽ trong tương lai!",
           dailyGoals: [
             "✅ Master Vim mastery",
             "✅ Perfect automation",
             "✅ Master efficiency",
             "✅ Zero errors"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Master Vim"] },
-          afternoon: { title: "Chiều (2h)", content: ["Master practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Master Vim achieved"]
+          morning: {
+            title: "Sáng (1.5h): Master Vim",
+            content: [
+              "Master Vim motions mastery",
+              "Perfect automation mastery",
+              "Master efficiency perfection",
+              "Zero error guarantee"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve master Vim motions",
+              "Bước 2: Perfect automation với macros",
+              "Bước 3: Master efficiency - fastest possible",
+              "Bước 4: Guarantee zero errors",
+              "Bước 5: Perfect text object mastery",
+              "Bước 6: Master visual mode operations",
+              "Bước 7: Perfect macro mastery",
+              "Bước 8: Document master Vim techniques"
+            ],
+            concepts: [
+              "Master Vim: Perfect execution của tất cả Vim features",
+              "Perfect automation: Macros cho all repetitive tasks",
+              "Master efficiency: Fastest possible với zero errors",
+              "Zero error guarantee: Perfect execution always",
+              "Text object mastery: Instinctive perfect usage",
+              "Macro mastery: Perfect automation"
+            ],
+            troubleshooting: [
+              "Nếu errors occur: Immediate correction và prevention",
+              "Nếu automation fails: Review và perfect macros",
+              "Nếu efficiency drops: Optimize và practice",
+              "Nếu not perfect: Continue practice until perfect"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Master Practice",
+            content: [
+              "Master Vim practice",
+              "Perfect automation",
+              "Master efficiency",
+              "Zero errors"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Master Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Practice master motions - 1000+ repetitions",
+                  "Perfect text objects - 500 lần",
+                  "Master f/F/t/T - 500 lần",
+                  "Perfect % jumps - 300 lần",
+                  "Zero errors - verify perfection",
+                  "Target: Perfect execution với master speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Perfect Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Create perfect macros - 20 macros",
+                  "Automate all repetitive tasks",
+                  "Perfect macro execution - 200 operations",
+                  "Combine macros effectively",
+                  "Master automation",
+                  "Target: 90%+ automation coverage"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Master Efficiency",
+                duration: "30 phút",
+                tasks: [
+                  "Refactor 2000+ lines với master efficiency",
+                  "Perfect execution - zero errors",
+                  "Master speed - fastest possible",
+                  "Use tất cả master features",
+                  "Maintain code quality",
+                  "Target: Master efficiency với perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Error Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Complete coding task với zero errors",
+                  "Use master Vim motions throughout",
+                  "Maintain master speed",
+                  "Perfect accuracy - verify",
+                  "Handle complexity perfectly",
+                  "Target: Zero errors với master speed"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review master Vim",
+              "Document mastery",
+              "Plan grand master"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review master Vim performance",
+                  "Document master techniques",
+                  "Identify grand master areas",
+                  "Plan grand master practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Master Vim achieved"],
+          learningResources: [
+            { title: "Master Vim", description: "Achieving master-level Vim mastery" }
+          ],
+          bestPractices: [
+            "Perfect execution always",
+            "Perfect automation",
+            "Master efficiency",
+            "Zero errors guaranteed",
+            "Document master techniques"
+          ],
+          commonMistakes: [
+            "Allow any errors - master means zero errors",
+            "Không automate enough",
+            "Sacrifice perfection",
+            "Không document techniques"
+          ]
         },
         {
           day: "Thứ 4",
           title: "Master Git",
           totalHours: 4,
+          motivationalQuote: "🌟 Bạn đang tạo ra sự khác biệt. Hãy tự hào về điều đó!",
           dailyGoals: [
             "✅ Master git mastery",
             "✅ Perfect workflows",
             "✅ Master automation",
             "✅ Zero mistakes"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Master git"] },
-          afternoon: { title: "Chiều (2h)", content: ["Master practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Master git achieved"]
+          morning: {
+            title: "Sáng (1.5h): Master Git",
+            content: [
+              "Master git operations",
+              "Perfect workflow mastery",
+              "Master automation perfection",
+              "Zero mistake guarantee"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve master git operations",
+              "Bước 2: Perfect complex workflows",
+              "Bước 3: Master automation - perfect execution",
+              "Bước 4: Guarantee zero mistakes",
+              "Bước 5: Perfect branching strategies",
+              "Bước 6: Master interactive rebase",
+              "Bước 7: Perfect git hooks automation",
+              "Bước 8: Document master git workflows"
+            ],
+            concepts: [
+              "Master git: Perfect execution của tất cả git operations",
+              "Perfect workflows: Optimal workflows cho all scenarios",
+              "Master automation: Perfect git automation",
+              "Zero mistake guarantee: Perfect execution always",
+              "Workflow mastery: Perfect trong all scenarios",
+              "Git mastery: Instinctive perfect usage"
+            ],
+            troubleshooting: [
+              "Nếu mistakes occur: Immediate correction và prevention",
+              "Nếu workflow not perfect: Review và optimize",
+              "Nếu automation fails: Perfect hooks và scripts",
+              "Nếu not perfect: Continue practice until perfect"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Master Practice",
+            content: [
+              "Master git practice",
+              "Perfect workflows",
+              "Master automation",
+              "Zero mistakes"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Master Operations",
+                duration: "30 phút",
+                tasks: [
+                  "Practice master git operations - 300 operations",
+                  "Perfect branching strategies - 30 scenarios",
+                  "Master interactive rebase - 50 rebases",
+                  "Perfect automation - 100 automated operations",
+                  "Zero mistakes - verify perfection",
+                  "Target: Perfect execution với master speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Perfect Workflows",
+                duration: "30 phút",
+                tasks: [
+                  "Perfect complex workflows - 20 scenarios",
+                  "Handle all scenarios perfectly",
+                  "Maintain perfect git history",
+                  "Perfect workflow execution",
+                  "Master workflow consistency",
+                  "Target: Perfect workflows trong all scenarios"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Master Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Perfect git hooks - 10 hooks",
+                  "Perfect git aliases - 30 aliases",
+                  "Automate all repetitive operations",
+                  "Perfect automation execution - 200 operations",
+                  "Master automation",
+                  "Target: 95%+ automation coverage"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Mistake Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Complete git workflow với zero mistakes",
+                  "Handle complex scenarios perfectly",
+                  "Maintain perfect git history",
+                  "Use automation perfectly",
+                  "Verify zero mistakes",
+                  "Target: Zero mistakes với master efficiency"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review master git",
+              "Document mastery",
+              "Plan grand master"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review master git performance",
+                  "Document master workflows",
+                  "Identify grand master areas",
+                  "Plan grand master practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Master git achieved"],
+          learningResources: [
+            { title: "Master Git", description: "Achieving master-level git mastery" }
+          ],
+          bestPractices: [
+            "Perfect execution always",
+            "Perfect workflows",
+            "Master automation",
+            "Zero mistakes guaranteed",
+            "Document master workflows"
+          ],
+          commonMistakes: [
+            "Allow any mistakes - master means zero mistakes",
+            "Không automate enough",
+            "Ignore git history quality",
+            "Không document workflows"
+          ]
         },
         {
           day: "Thứ 5",
           title: "Master Complete",
           totalHours: 4,
+          motivationalQuote: "🚀 Mỗi ngày là một cơ hội để bay cao hơn. Hãy nắm lấy cơ hội hôm nay!",
           dailyGoals: [
             "✅ Master complete mastery",
             "✅ Zero mouse usage",
             "✅ Master speed",
             "✅ Perfect workflow"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Master complete"] },
-          afternoon: { title: "Chiều (2h)", content: ["Master challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Master complete mastery achieved"]
+          morning: {
+            title: "Sáng (1.5h): Master Complete",
+            content: [
+              "Master complete workflow",
+              "Perfect integration",
+              "Master speed",
+              "Zero mouse guarantee"
+            ],
+            detailedSetup: [
+              "Bước 1: Integrate tất cả master skills",
+              "Bước 2: Perfect complete workflow",
+              "Bước 3: Achieve master speed trong complete workflow",
+              "Bước 4: Guarantee zero mouse usage",
+              "Bước 5: Perfect muscle memory cho complete workflow",
+              "Bước 6: Perfect consistency",
+              "Bước 7: Handle any complexity với master level",
+              "Bước 8: Document master complete workflow"
+            ],
+            concepts: [
+              "Master complete: Perfect integration của tất cả master skills",
+              "Complete workflow: Tất cả tools work together perfectly",
+              "Master speed: Fastest possible trong complete workflow",
+              "Zero mouse: Complete workflow không touch mouse - guaranteed",
+              "Perfect integration: All tools complement perfectly",
+              "Workflow mastery: Perfect execution của complete workflow"
+            ],
+            troubleshooting: [
+              "Nếu integration issues: Perfect tool interactions",
+              "Nếu speed not master: Further optimization",
+              "Nếu mouse usage: Immediate elimination",
+              "Nếu not perfect: Continue practice until perfect"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Master Challenges",
+            content: [
+              "Master level challenges",
+              "Complete workflow challenges",
+              "Complex scenarios",
+              "Perfection practice"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Master Complete Workflow",
+                duration: "30 phút",
+                tasks: [
+                  "Practice master complete workflow - 50 cycles",
+                  "Integrate tất cả master skills",
+                  "Maintain master speed",
+                  "Zero mouse usage guaranteed",
+                  "Perfect execution",
+                  "Target: Master performance trong complete workflow"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Complex Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Handle complex scenarios với master workflow",
+                  "Any complexity, any scenario",
+                  "Maintain master speed trong complexity",
+                  "Zero mouse usage trong complexity",
+                  "Perfect execution",
+                  "Target: Handle any complexity với master level"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Practice với master speed - 100 cycles",
+                  "Perfect consistency",
+                  "Zero errors",
+                  "Maintain speed trong all scenarios",
+                  "Build perfect muscle memory",
+                  "Target: Consistent master speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Master",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với master workflow",
+                  "Complete feature với master efficiency",
+                  "Zero mouse usage guaranteed",
+                  "Master speed maintained",
+                  "Perfect execution",
+                  "Target: Master performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review master complete",
+              "Document mastery",
+              "Plan grand master"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review master complete mastery",
+                  "Document master complete workflow",
+                  "Identify grand master level areas",
+                  "Plan grand master practice"
+                ]
+              }
+            ]
+          },
+          goals: ["Master complete mastery achieved"],
+          learningResources: [
+            { title: "Master Complete Workflow", description: "Achieving master-level complete workflow mastery" }
+          ],
+          bestPractices: [
+            "Integrate tất cả master skills perfectly",
+            "Perfect complete workflow",
+            "Maintain master speed",
+            "Zero mouse usage always guaranteed",
+            "Document master complete workflow"
+          ],
+          commonMistakes: [
+            "Không integrate skills perfectly",
+            "Allow any mouse usage",
+            "Sacrifice perfection cho speed",
+            "Không document master workflow"
+          ]
         },
         createWeekendDay("Thứ 7", "Weekend Practice - Week 7", {
           dailyGoals: [
@@ -3218,9 +4933,74 @@ lazygit
             "✅ Zero mouse usage",
             "✅ Master speed"
           ],
-          morning: { title: "Sáng (4h)", content: ["Master practice"] },
-          afternoon: { title: "Chiều (4h)", content: ["Master work"] },
-          evening: { title: "Tối (4h)", content: ["Master refinement"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Master practice session",
+              "Perfect all master skills",
+              "Master workflow practice",
+              "Master Vim và Git practice"
+            ],
+            exercises: [
+              {
+                title: "MASTER PRACTICE (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice master workflow - 150 complete cycles",
+                  "Practice master Vim motions - 2000+ repetitions",
+                  "Practice master git operations - 300 operations",
+                  "Perfect all master skills",
+                  "Build perfect muscle memory",
+                  "Track perfection và mastery"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Master work",
+              "Real project với master level",
+              "Master efficiency",
+              "Zero mouse usage guaranteed"
+            ],
+            exercises: [
+              {
+                title: "MASTER WORK (4h)",
+                duration: "4h",
+                tasks: [
+                  "Work on real project với master level",
+                  "Maintain master speed throughout",
+                  "Zero mouse usage guaranteed và verified",
+                  "Perfect execution",
+                  "Handle any complexity với master level",
+                  "Document master performance"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Master refinement",
+              "Grand master preparation",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "MASTER REFINEMENT (4h)",
+                duration: "4h",
+                tasks: [
+                  "Refine master techniques",
+                  "Prepare for grand master level",
+                  "Document master workflows",
+                  "Reflect on master achievements",
+                  "Plan grand master practice"
+                ]
+              }
+            ]
+          }
         }),
         createWeekendDay("Chủ nhật", "Weekend Challenge - Week 7", {
           dailyGoals: [
@@ -3229,9 +5009,70 @@ lazygit
             "✅ Master efficiency",
             "✅ Perfect demonstration"
           ],
-          morning: { title: "Sáng (4h)", content: ["Master planning"] },
-          afternoon: { title: "Chiều (4h)", content: ["Master implementation"] },
-          evening: { title: "Tối (4h)", content: ["Master completion"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Master planning",
+              "Project setup",
+              "Initial implementation"
+            ],
+            exercises: [
+              {
+                title: "MASTER PLANNING (4h)",
+                duration: "4h",
+                tasks: [
+                  "Plan master-level project",
+                  "Research và setup với master workflow",
+                  "Initial implementation với master skills",
+                  "Git workflow với master operations",
+                  "Setup complete master environment"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Master implementation",
+              "Master features",
+              "Master testing"
+            ],
+            exercises: [
+              {
+                title: "MASTER IMPLEMENTATION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Implement với master Vim motions",
+                  "Use master git operations",
+                  "Apply master workflow",
+                  "Maintain master speed",
+                  "Zero mouse usage guaranteed",
+                  "Perfect execution"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Master completion",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "MASTER COMPLETION (4h)",
+                duration: "4h",
+                tasks: [
+                  "Complete master project",
+                  "Write master documentation",
+                  "Reflect on master achievements",
+                  "Document master workflow",
+                  "Prepare cho tuần 8"
+                ]
+              }
+            ]
+          }
         })
       ]
     },
@@ -3249,66 +5090,585 @@ lazygit
         shortcutsLearned: 200,
         comfortLevel: "10/10"
       },
+      finalProject: {
+        title: "Grand Master Final Challenge Project",
+        description: "Final project tổng hợp tất cả skills đã học trong 8 tuần, xây dựng một project hoàn chỉnh với grand master-level execution, perfect workflow, và zero mouse usage",
+        requirements: [
+          "Build complete production system",
+          "Grand Master Vim motions",
+          "Grand Master git workflows",
+          "Ultimate automation",
+          "Zero mouse usage absolute",
+          "Perfect code quality"
+        ],
+        deliverables: [
+          "Complete production system",
+          "Grand Master workflow documentation",
+          "Complete automation system",
+          "Final reflection và achievements"
+        ],
+        estimatedHours: 8
+      },
       days: [
         {
           day: "Thứ 2",
           title: "Grand Master Workflow",
           totalHours: 4,
+          motivationalQuote: "💪 Bạn mạnh mẽ hơn bạn nghĩ. Hãy tiếp tục chứng minh điều đó!",
           dailyGoals: [
             "✅ Grand Master level workflow",
             "✅ Zero mouse usage",
             "✅ Grand Master speed",
             "✅ Perfect execution"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Grand Master practice"] },
-          afternoon: { title: "Chiều (2h)", content: ["Grand Master challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Grand Master level achieved"]
+          morning: {
+            title: "Sáng (1.5h): Grand Master Practice",
+            content: [
+              "Grand Master level workflow practice",
+              "Ultimate perfection",
+              "Zero mouse guarantee",
+              "Grand Master speed"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve grand master-level workflow performance",
+              "Bước 2: Ultimate perfection của tất cả operations",
+              "Bước 3: Guarantee zero mouse usage - absolute",
+              "Bước 4: Achieve grand master speed - ultimate",
+              "Bước 5: Perfect muscle memory - automatic perfection",
+              "Bước 6: Grand master consistency - perfect always",
+              "Bước 7: Handle any complexity với grand master level",
+              "Bước 8: Document grand master workflow"
+            ],
+            concepts: [
+              "Grand Master workflow: Ultimate perfection với maximum efficiency",
+              "Zero mouse absolute: Guaranteed zero mouse usage always",
+              "Grand Master speed: Ultimate fastest execution",
+              "Perfect execution: Zero errors với ultimate speed",
+              "Muscle memory grand master: Automatic perfect execution always",
+              "Workflow grand mastery: Perfect trong all scenarios always"
+            ],
+            troubleshooting: [
+              "Nếu mouse usage detected: Immediate absolute elimination",
+              "Nếu speed not grand master: Ultimate optimization",
+              "Nếu execution not perfect: Focus on ultimate perfection",
+              "Nếu inconsistency: Practice until grand master consistency"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Grand Master Challenges",
+            content: [
+              "Grand Master level challenges",
+              "Ultimate perfection challenges",
+              "Grand Master speed challenges",
+              "Ultimate complexity mastery"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Grand Master Workflow Challenge",
+                duration: "30 phút",
+                tasks: [
+                  "Complete workflow challenge - 100 lần",
+                  "Target: < 45s mỗi cycle",
+                  "Zero mouse usage - absolute guarantee",
+                  "Perfect execution - zero errors always",
+                  "Grand Master speed - ultimate fastest",
+                  "Timed challenge: 30 cycles < 25 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Ultimate Perfection",
+                duration: "30 phút",
+                tasks: [
+                  "Practice ultimate perfection - 200 operations",
+                  "Zero errors absolute guarantee",
+                  "Grand Master speed maintained",
+                  "Perfect consistency always",
+                  "Handle ultimate complexity perfectly",
+                  "Target: Ultimate perfection trong all scenarios"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Grand Master Speed",
+                duration: "30 phút",
+                tasks: [
+                  "Practice với grand master speed - 200 cycles",
+                  "Ultimate fastest execution",
+                  "Perfect consistency always",
+                  "Zero errors always",
+                  "Maintain speed trong ultimate complexity",
+                  "Target: Grand Master speed với ultimate perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Grand Master",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với grand master workflow",
+                  "Complete feature với grand master efficiency",
+                  "Zero mouse usage absolute guarantee",
+                  "Grand Master speed maintained",
+                  "Perfect execution always",
+                  "Target: Grand Master performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review grand master level",
+              "Document grand mastery",
+              "Plan final challenge"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review grand master workflow performance",
+                  "Document grand master-level achievements",
+                  "Identify final challenge preparation",
+                  "Plan final 8h challenge"
+                ]
+              }
+            ]
+          },
+          goals: ["Grand Master level achieved"],
+          learningResources: [
+            { title: "Grand Master Workflow", description: "Achieving grand master-level workflow mastery" }
+          ],
+          bestPractices: [
+            "Ultimate perfection always",
+            "Absolute zero mouse usage",
+            "Grand Master speed",
+            "Perfect trong all scenarios always",
+            "Document grand master workflow"
+          ],
+          commonMistakes: [
+            "Allow any mouse usage - grand master means absolute zero",
+            "Sacrifice perfection cho speed",
+            "Không maintain grand master consistency",
+            "Ignore ultimate complexity - grand master handles all"
+          ]
         },
         {
           day: "Thứ 3",
           title: "Grand Master Vim",
           totalHours: 4,
+          motivationalQuote: "✨ Tuần cuối cùng! Bạn đã đi được một chặng đường dài. Hãy hoàn thành thật xuất sắc!",
           dailyGoals: [
             "✅ Grand Master Vim mastery",
             "✅ Perfect automation",
             "✅ Grand Master efficiency",
             "✅ Zero errors"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Grand Master Vim"] },
-          afternoon: { title: "Chiều (2h)", content: ["Grand Master practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Grand Master Vim achieved"]
+          morning: {
+            title: "Sáng (1.5h): Grand Master Vim",
+            content: [
+              "Grand Master Vim motions mastery",
+              "Ultimate automation perfection",
+              "Grand Master efficiency ultimate",
+              "Zero error absolute guarantee"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve grand master Vim motions",
+              "Bước 2: Ultimate automation với macros",
+              "Bước 3: Grand Master efficiency - ultimate fastest",
+              "Bước 4: Absolute zero error guarantee",
+              "Bước 5: Ultimate text object mastery",
+              "Bước 6: Grand Master visual mode operations",
+              "Bước 7: Ultimate macro mastery",
+              "Bước 8: Document grand master Vim techniques"
+            ],
+            concepts: [
+              "Grand Master Vim: Ultimate perfection của tất cả Vim features",
+              "Ultimate automation: Macros cho all tasks perfectly",
+              "Grand Master efficiency: Ultimate fastest với zero errors",
+              "Zero error absolute: Perfect execution always guaranteed",
+              "Text object grand mastery: Instinctive perfect usage always",
+              "Macro grand mastery: Ultimate perfect automation"
+            ],
+            troubleshooting: [
+              "Nếu errors occur: Immediate absolute correction",
+              "Nếu automation fails: Ultimate macro perfection",
+              "Nếu efficiency drops: Ultimate optimization",
+              "Nếu not perfect: Continue until grand master perfection"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Grand Master Practice",
+            content: [
+              "Grand Master Vim practice",
+              "Ultimate automation",
+              "Grand Master efficiency",
+              "Zero errors absolute"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Grand Master Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Practice grand master motions - 2000+ repetitions",
+                  "Ultimate text objects - 1000 lần",
+                  "Grand Master f/F/t/T - 1000 lần",
+                  "Ultimate % jumps - 500 lần",
+                  "Zero errors absolute - verify perfection",
+                  "Target: Ultimate perfection với grand master speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Ultimate Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Create ultimate macros - 30 macros",
+                  "Automate all tasks perfectly",
+                  "Ultimate macro execution - 500 operations",
+                  "Combine macros perfectly",
+                  "Grand Master automation",
+                  "Target: 100% automation coverage"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Grand Master Efficiency",
+                duration: "30 phút",
+                tasks: [
+                  "Refactor 3000+ lines với grand master efficiency",
+                  "Perfect execution - zero errors absolute",
+                  "Grand Master speed - ultimate fastest",
+                  "Use tất cả grand master features",
+                  "Maintain code quality",
+                  "Target: Grand Master efficiency với ultimate perfection"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Error Grand Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Complete coding task với zero errors absolute",
+                  "Use grand master Vim motions throughout",
+                  "Maintain grand master speed",
+                  "Perfect accuracy absolute - verify",
+                  "Handle ultimate complexity perfectly",
+                  "Target: Zero errors absolute với grand master speed"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review grand master Vim",
+              "Document grand mastery",
+              "Plan final challenge"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review grand master Vim performance",
+                  "Document grand master techniques",
+                  "Identify final challenge preparation",
+                  "Plan final 8h challenge"
+                ]
+              }
+            ]
+          },
+          goals: ["Grand Master Vim achieved"],
+          learningResources: [
+            { title: "Grand Master Vim", description: "Achieving grand master-level Vim mastery" }
+          ],
+          bestPractices: [
+            "Ultimate perfection always",
+            "Ultimate automation",
+            "Grand Master efficiency",
+            "Zero errors absolute guaranteed",
+            "Document grand master techniques"
+          ],
+          commonMistakes: [
+            "Allow any errors - grand master means absolute zero",
+            "Không automate enough - automate everything",
+            "Sacrifice perfection",
+            "Không document grand master techniques"
+          ]
         },
         {
           day: "Thứ 4",
           title: "Grand Master Git",
           totalHours: 4,
+          motivationalQuote: "🎯 Bạn sắp hoàn thành 8 tuần học tập. Gia đình bạn sẽ tự hào về bạn!",
           dailyGoals: [
             "✅ Grand Master git mastery",
             "✅ Perfect workflows",
             "✅ Grand Master automation",
             "✅ Zero mistakes"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Grand Master git"] },
-          afternoon: { title: "Chiều (2h)", content: ["Grand Master practice"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Grand Master git achieved"]
+          morning: {
+            title: "Sáng (1.5h): Grand Master Git",
+            content: [
+              "Grand Master git operations",
+              "Ultimate workflow perfection",
+              "Grand Master automation ultimate",
+              "Zero mistake absolute guarantee"
+            ],
+            detailedSetup: [
+              "Bước 1: Achieve grand master git operations",
+              "Bước 2: Ultimate perfect workflows",
+              "Bước 3: Grand Master automation - ultimate perfection",
+              "Bước 4: Absolute zero mistake guarantee",
+              "Bước 5: Ultimate branching strategies",
+              "Bước 6: Grand Master interactive rebase",
+              "Bước 7: Ultimate git hooks automation",
+              "Bước 8: Document grand master git workflows"
+            ],
+            concepts: [
+              "Grand Master git: Ultimate perfection của tất cả git operations",
+              "Ultimate workflows: Perfect workflows cho all scenarios always",
+              "Grand Master automation: Ultimate perfect git automation",
+              "Zero mistake absolute: Perfect execution always guaranteed",
+              "Workflow grand mastery: Perfect trong all scenarios always",
+              "Git grand mastery: Instinctive perfect usage always"
+            ],
+            troubleshooting: [
+              "Nếu mistakes occur: Immediate absolute correction",
+              "Nếu workflow not perfect: Ultimate optimization",
+              "Nếu automation fails: Ultimate hooks và scripts perfection",
+              "Nếu not perfect: Continue until grand master perfection"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Grand Master Practice",
+            content: [
+              "Grand Master git practice",
+              "Ultimate workflows",
+              "Grand Master automation",
+              "Zero mistakes absolute"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Grand Master Operations",
+                duration: "30 phút",
+                tasks: [
+                  "Practice grand master git operations - 500 operations",
+                  "Ultimate branching strategies - 50 scenarios",
+                  "Grand Master interactive rebase - 100 rebases",
+                  "Ultimate automation - 200 automated operations",
+                  "Zero mistakes absolute - verify perfection",
+                  "Target: Ultimate perfection với grand master speed"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Ultimate Workflows",
+                duration: "30 phút",
+                tasks: [
+                  "Perfect ultimate workflows - 30 scenarios",
+                  "Handle all scenarios perfectly always",
+                  "Maintain perfect git history always",
+                  "Ultimate workflow execution",
+                  "Grand Master workflow consistency",
+                  "Target: Ultimate workflows trong all scenarios"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Grand Master Automation",
+                duration: "30 phút",
+                tasks: [
+                  "Ultimate git hooks - 15 hooks",
+                  "Ultimate git aliases - 50 aliases",
+                  "Automate all operations perfectly",
+                  "Ultimate automation execution - 500 operations",
+                  "Grand Master automation",
+                  "Target: 100% automation coverage"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Zero Mistake Grand Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Complete git workflow với zero mistakes absolute",
+                  "Handle ultimate scenarios perfectly",
+                  "Maintain perfect git history always",
+                  "Use automation perfectly",
+                  "Verify zero mistakes absolute",
+                  "Target: Zero mistakes absolute với grand master efficiency"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review grand master git",
+              "Document grand mastery",
+              "Plan final challenge"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review grand master git performance",
+                  "Document grand master workflows",
+                  "Identify final challenge preparation",
+                  "Plan final 8h challenge"
+                ]
+              }
+            ]
+          },
+          goals: ["Grand Master git achieved"],
+          learningResources: [
+            { title: "Grand Master Git", description: "Achieving grand master-level git mastery" }
+          ],
+          bestPractices: [
+            "Ultimate perfection always",
+            "Ultimate workflows",
+            "Grand Master automation",
+            "Zero mistakes absolute guaranteed",
+            "Document grand master workflows"
+          ],
+          commonMistakes: [
+            "Allow any mistakes - grand master means absolute zero",
+            "Không automate enough - automate everything",
+            "Ignore git history quality",
+            "Không document grand master workflows"
+          ]
         },
         {
           day: "Thứ 5",
           title: "Grand Master Complete",
           totalHours: 4,
+          motivationalQuote: "🏆 Bạn đã gần đến đích! Hãy tiếp tục và hoàn thành thật xuất sắc!",
           dailyGoals: [
             "✅ Grand Master complete mastery",
             "✅ Zero mouse usage",
             "✅ Grand Master speed",
             "✅ Perfect workflow"
           ],
-          morning: { title: "Sáng (1.5h)", content: ["Grand Master complete"] },
-          afternoon: { title: "Chiều (2h)", content: ["Grand Master challenges"] },
-          evening: { title: "Tối (30 phút)", content: ["Review"] },
-          goals: ["Grand Master complete mastery achieved"]
+          morning: {
+            title: "Sáng (1.5h): Grand Master Complete",
+            content: [
+              "Grand Master complete workflow",
+              "Ultimate integration",
+              "Grand Master speed",
+              "Zero mouse absolute"
+            ],
+            detailedSetup: [
+              "Bước 1: Integrate tất cả grand master skills",
+              "Bước 2: Ultimate perfect complete workflow",
+              "Bước 3: Achieve grand master speed trong complete workflow",
+              "Bước 4: Absolute zero mouse usage guarantee",
+              "Bước 5: Ultimate muscle memory cho complete workflow",
+              "Bước 6: Grand master consistency always",
+              "Bước 7: Handle ultimate complexity với grand master level",
+              "Bước 8: Document grand master complete workflow"
+            ],
+            concepts: [
+              "Grand Master complete: Ultimate perfect integration của tất cả skills",
+              "Complete workflow: Tất cả tools work together perfectly always",
+              "Grand Master speed: Ultimate fastest trong complete workflow",
+              "Zero mouse absolute: Complete workflow không touch mouse - absolute",
+              "Ultimate integration: All tools complement perfectly always",
+              "Workflow grand mastery: Perfect execution của complete workflow always"
+            ],
+            troubleshooting: [
+              "Nếu integration issues: Ultimate perfect tool interactions",
+              "Nếu speed not grand master: Ultimate optimization",
+              "Nếu mouse usage: Immediate absolute elimination",
+              "Nếu not perfect: Continue until grand master perfection"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Grand Master Challenges",
+            content: [
+              "Grand Master level challenges",
+              "Complete workflow challenges",
+              "Ultimate scenarios",
+              "Perfection practice"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Grand Master Complete Workflow",
+                duration: "30 phút",
+                tasks: [
+                  "Practice grand master complete workflow - 100 cycles",
+                  "Integrate tất cả grand master skills",
+                  "Maintain grand master speed",
+                  "Zero mouse usage absolute guarantee",
+                  "Perfect execution always",
+                  "Target: Grand Master performance trong complete workflow"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Ultimate Scenarios",
+                duration: "30 phút",
+                tasks: [
+                  "Handle ultimate scenarios với grand master workflow",
+                  "Any complexity, any scenario, any challenge",
+                  "Maintain grand master speed trong ultimate complexity",
+                  "Zero mouse usage trong ultimate scenarios",
+                  "Perfect execution always",
+                  "Target: Handle ultimate scenarios với grand master level"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Speed Grand Mastery",
+                duration: "30 phút",
+                tasks: [
+                  "Practice với grand master speed - 200 cycles",
+                  "Ultimate consistency always",
+                  "Zero errors always",
+                  "Maintain speed trong ultimate scenarios",
+                  "Build ultimate muscle memory",
+                  "Target: Consistent grand master speed always"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Real World Grand Master",
+                duration: "30 phút",
+                tasks: [
+                  "Work on real project với grand master workflow",
+                  "Complete feature với grand master efficiency",
+                  "Zero mouse usage absolute guarantee",
+                  "Grand Master speed maintained",
+                  "Perfect execution always",
+                  "Target: Grand Master performance trong real work"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review",
+            content: [
+              "Review grand master complete",
+              "Document grand mastery",
+              "Plan final challenge"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Review grand master complete mastery",
+                  "Document grand master complete workflow",
+                  "Final challenge preparation",
+                  "Plan final 8h coding marathon"
+                ]
+              }
+            ]
+          },
+          goals: ["Grand Master complete mastery achieved"],
+          learningResources: [
+            { title: "Grand Master Complete Workflow", description: "Achieving grand master-level complete workflow mastery" }
+          ],
+          bestPractices: [
+            "Integrate tất cả grand master skills perfectly always",
+            "Ultimate perfect complete workflow",
+            "Maintain grand master speed",
+            "Zero mouse usage absolute always guaranteed",
+            "Document grand master complete workflow"
+          ],
+          commonMistakes: [
+            "Không integrate skills perfectly",
+            "Allow any mouse usage",
+            "Sacrifice perfection cho speed",
+            "Không document grand master workflow"
+          ]
         },
         createWeekendDay("Thứ 7", "Weekend Practice - Week 8", {
           dailyGoals: [
@@ -3317,9 +5677,74 @@ lazygit
             "✅ Zero mouse usage",
             "✅ Grand Master speed"
           ],
-          morning: { title: "Sáng (4h)", content: ["Grand Master practice"] },
-          afternoon: { title: "Chiều (4h)", content: ["Grand Master work"] },
-          evening: { title: "Tối (4h)", content: ["Grand Master refinement"] }
+          morning: {
+            title: "Sáng (4h)",
+            content: [
+              "Grand Master practice session",
+              "Perfect all grand master skills",
+              "Grand Master workflow practice",
+              "Grand Master Vim và Git practice"
+            ],
+            exercises: [
+              {
+                title: "GRAND MASTER PRACTICE (4h)",
+                duration: "4h",
+                tasks: [
+                  "Practice grand master workflow - 200 complete cycles",
+                  "Practice grand master Vim motions - 3000+ repetitions",
+                  "Practice grand master git operations - 400 operations",
+                  "Perfect all grand master skills",
+                  "Build ultimate muscle memory",
+                  "Track perfection và grand mastery"
+                ]
+              }
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h)",
+            content: [
+              "Grand Master work",
+              "Real project với grand master level",
+              "Grand Master efficiency",
+              "Zero mouse usage absolute"
+            ],
+            exercises: [
+              {
+                title: "GRAND MASTER WORK (4h)",
+                duration: "4h",
+                tasks: [
+                  "Work on real project với grand master level",
+                  "Maintain grand master speed throughout",
+                  "Zero mouse usage absolute guarantee và verified",
+                  "Perfect execution always",
+                  "Handle ultimate complexity với grand master level",
+                  "Document grand master performance"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (4h)",
+            content: [
+              "Grand Master refinement",
+              "Final challenge preparation",
+              "Documentation",
+              "Reflection"
+            ],
+            exercises: [
+              {
+                title: "GRAND MASTER REFINEMENT (4h)",
+                duration: "4h",
+                tasks: [
+                  "Refine grand master techniques",
+                  "Prepare for final 8h challenge",
+                  "Document grand master workflows",
+                  "Reflect on grand master achievements",
+                  "Plan final challenge strategy"
+                ]
+              }
+            ]
+          }
         }),
         createWeekendDay("Chủ nhật", "FINAL CHALLENGE - 8h Coding Marathon", {
           dailyGoals: [

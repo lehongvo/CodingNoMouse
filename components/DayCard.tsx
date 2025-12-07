@@ -1,7 +1,7 @@
 'use client';
 
-import { DayContent } from '@/types/curriculum';
 import { useProgress } from '@/hooks/useProgress';
+import { DayContent } from '@/types/curriculum';
 import ShortcutDisplay from './ShortcutDisplay';
 
 interface DayCardProps {
@@ -46,6 +46,15 @@ export default function DayCard({ day, week }: DayCardProps) {
           </span>
         )}
       </div>
+
+      {/* Motivational Quote */}
+      {day.motivationalQuote && (
+        <div className="mb-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg p-4">
+          <p className="text-gray-200 text-sm leading-relaxed italic">
+            {day.motivationalQuote}
+          </p>
+        </div>
+      )}
 
       {/* Daily Goals */}
       {day.dailyGoals && day.dailyGoals.length > 0 && (

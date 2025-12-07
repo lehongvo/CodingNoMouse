@@ -27,7 +27,7 @@ export default function Dashboard({ weeks }: DashboardProps) {
             🎯 Coding Không Chuột
           </h1>
           <p className="text-gray-400 text-lg">
-            Lộ trình học coding hoàn toàn bằng bàn phím trong 4 tuần
+            Lộ trình học coding hoàn toàn bằng bàn phím trong 8 tuần
           </p>
         </div>
 
