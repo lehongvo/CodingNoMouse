@@ -82,3 +82,4 @@ UPSTASH_REDIS_REST_TOKEN=your_token
 - Dễ migrate từ Vercel KV
 - Có nhiều features hơn (queues, vector, search)
 
+
