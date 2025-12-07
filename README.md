@@ -15,6 +15,10 @@ Trang web học tập theo lộ trình **Coding Không Chuột** - Master keyboa
 # Cài đặt dependencies
 yarn install
 
+# Tạo file .env.local với credentials
+cp .env.example .env.local
+# Chỉnh sửa .env.local và set USER_NAME và USER_PASSWORD
+
 # Chạy development server
 yarn dev
 
@@ -24,6 +28,20 @@ yarn build
 # Start production server
 yarn start
 ```
+
+## 🔐 Authentication
+
+Ứng dụng chỉ có **1 user admin**. Bạn cần set environment variables:
+
+```env
+USER_NAME=admin
+USER_PASSWORD=your-secure-password-here
+```
+
+- Tạo file `.env.local` trong root directory
+- Set `USER_NAME` và `USER_PASSWORD` cho admin login
+- App sẽ redirect đến `/login` nếu chưa authenticated
+- Redis sync chỉ hoạt động sau khi login thành công
 
 ## 🎨 Features
 

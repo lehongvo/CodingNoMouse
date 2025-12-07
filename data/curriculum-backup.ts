@@ -1,28 +1,5 @@
 import { Curriculum } from '@/types/curriculum';
 
-// Helper function để tạo weekend day (12h)
-function createWeekendDay(day: string, title: string, content: any) {
-  return {
-    day,
-    title,
-    totalHours: 12,
-    dailyGoals: content.dailyGoals || [],
-    morning: {
-      title: "Sáng (4h)",
-      ...content.morning
-    },
-    afternoon: {
-      title: "Chiều (4h)",
-      ...content.afternoon
-    },
-    evening: {
-      title: "Tối (4h)",
-      ...content.evening
-    },
-    ...content
-  };
-}
-
 export const curriculum: Curriculum = {
   weeks: [
     {
@@ -41,7 +18,7 @@ export const curriculum: Curriculum = {
       },
       days: [
         {
-          day: "Thứ 2",
+          day: "1-2",
           title: "Setup + yabai + skhd",
           totalHours: 4,
           dailyGoals: [
@@ -224,7 +201,7 @@ skhd --stop-service`
                   "Test lại 10 phím tắt - target: 100% accuracy",
                   "Ghi lại 3 phím tắt cần practice thêm",
                   "Đọc thêm về yabai advanced features",
-                  "Chuẩn bị cho ngày mai: Zellij"
+                  "Chuẩn bị cho ngày 3-4: Zellij"
                 ]
               }
             ]
@@ -258,7 +235,7 @@ skhd --stop-service`
           ]
         },
         {
-          day: "Thứ 3",
+          day: "3-4",
           title: "Zellij - Terminal Multiplexer",
           totalHours: 4,
           dailyGoals: [
@@ -464,8 +441,8 @@ zellij kill-session <session-name>`
           ]
         },
         {
-          day: "Thứ 4",
-          title: "Raycast - App Launcher & Productivity",
+          day: "5-7",
+          title: "Raycast + Practice tổng hợp",
           totalHours: 4,
           dailyGoals: [
             "✅ Setup Raycast hoàn chỉnh",
@@ -525,11 +502,11 @@ zellij kill-session <session-name>`
             ]
           },
           evening: {
-            title: "Tối (30 phút): Integration & Review",
+            title: "Tối (30 phút): Integration & CHALLENGE TUẦN 1",
             content: [
               "Review tất cả Raycast features",
               "Integrate với yabai + Zellij workflow",
-              "Plan cho ngày mai"
+              "CHALLENGE: Làm project nhỏ hoàn toàn không chuột"
             ],
             exercises: [
               {
@@ -537,8 +514,16 @@ zellij kill-session <session-name>`
                 tasks: [
                   "Test lại 10 commands - 100% accuracy",
                   "Setup complete workflow: Raycast → yabai → Zellij",
-                  "Timed challenge: Complete setup < 1 phút",
-                  "Chuẩn bị cho ngày mai"
+                  "Timed challenge: Complete setup < 1 phút"
+                ]
+              },
+              {
+                title: "CHALLENGE TUẦN 1: Project Nhỏ Hoàn Toàn Không Chuột",
+                tasks: [
+                  "Setup (15 phút): Raycast mở VSCode, yabai tạo layout (VSCode 70% trái, Terminal 30% phải), Zellij split terminal (top: git, bottom: server)",
+                  "Coding workflow (2h): fzf tìm files (Ctrl+T), Vim motions edit code, Alt+l focus terminal, Git commands, Alt+h focus VSCode, Raycast search docs, Copy/paste bằng clipboard history",
+                  "Target: Hoàn thành project nhỏ không dùng chuột",
+                  "Timed challenge: Complete project setup và coding < 2.5 giờ"
                 ]
               }
             ]
@@ -555,348 +540,7 @@ zellij kill-session <session-name>`
             { key: "snip", description: "Snippets" },
             { key: "ext", description: "Browse extensions" }
           ]
-        },
-        {
-          day: "Thứ 5",
-          title: "Practice Tổng Hợp - yabai + Zellij + Raycast",
-          totalHours: 4,
-          dailyGoals: [
-            "✅ Combine tất cả tools đã học",
-            "✅ Complete workflow không dùng chuột",
-            "✅ Speed training",
-            "✅ Muscle memory cho tất cả shortcuts"
-          ],
-          morning: {
-            title: "Sáng (1.5h): Integration Practice",
-            content: [
-              "Practice combine yabai + Zellij + Raycast",
-              "Setup complete workspace",
-              "Speed training"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP: Complete Workflow",
-                tasks: [
-                  "Raycast mở VSCode",
-                  "yabai tạo layout: VSCode 70% trái, Terminal 30% phải",
-                  "Zellij split terminal: top (git), bottom (server)",
-                  "Practice workflow này 20 lần",
-                  "Target: Setup workspace < 30s"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (2h): Real Coding Practice",
-            content: [
-              "Code với complete workflow",
-              "Practice tất cả shortcuts",
-              "Timed challenges"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP 1 (1h): Coding Workflow",
-                duration: "1h",
-                tasks: [
-                  "fzf tìm files (Ctrl+T)",
-                  "Vim motions edit code",
-                  "Alt+l focus terminal",
-                  "Git commands trong terminal",
-                  "Alt+h focus VSCode",
-                  "Raycast search docs",
-                  "Copy/paste bằng clipboard history",
-                  "Repeat workflow 10 lần"
-                ]
-              },
-              {
-                title: "BÀI TẬP 2 (1h): Speed Training",
-                duration: "1h",
-                tasks: [
-                  "Timed challenge: Setup workspace < 15s",
-                  "Timed challenge: Switch giữa apps 10 lần < 30s",
-                  "Timed challenge: Complete coding task < 5 phút",
-                  "Track mouse usage - target: < 10 lần"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (30 phút): Review",
-            content: [
-              "Review tất cả skills tuần 1",
-              "Identify improvements",
-              "Plan cho tuần 2"
-            ],
-            exercises: [
-              {
-                title: "REVIEW",
-                tasks: [
-                  "Test lại tất cả shortcuts - 100% accuracy",
-                  "Ghi lại bottlenecks",
-                  "Plan optimizations",
-                  "Chuẩn bị cho tuần 2"
-                ]
-              }
-            ]
-          },
-          goals: [
-            "Complete workflow thành thạo",
-            "Mouse usage < 10%",
-            "Speed: Setup workspace < 30s"
-          ]
-        },
-        {
-          day: "Thứ 6",
-          title: "Advanced yabai & Zellij",
-          totalHours: 4,
-          dailyGoals: [
-            "✅ Advanced yabai features",
-            "✅ Advanced Zellij layouts",
-            "✅ Custom configurations",
-            "✅ Optimize workflow"
-          ],
-          morning: {
-            title: "Sáng (1.5h): Advanced Config",
-            content: [
-              "Advanced yabai rules",
-              "Custom Zellij layouts",
-              "Optimize configurations"
-            ]
-          },
-          afternoon: {
-            title: "Chiều (2h): Practice Advanced",
-            content: [
-              "Practice advanced features",
-              "Create custom setups",
-              "Optimize workflow"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP: Advanced Practice",
-                tasks: [
-                  "Setup complex yabai layouts",
-                  "Create custom Zellij layouts",
-                  "Practice advanced shortcuts",
-                  "Optimize cho daily use"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (30 phút): Review",
-            content: [
-              "Review advanced features",
-              "Document customizations",
-              "Prepare for weekend"
-            ]
-          },
-          goals: [
-            "Advanced features mastered",
-            "Custom setup optimized"
-          ]
-        },
-        createWeekendDay("Thứ 7", "INTENSIVE PRACTICE - Tuần 1", {
-          dailyGoals: [
-            "✅ Practice tất cả skills tuần 1",
-            "✅ Complete projects không dùng chuột",
-            "✅ Speed training intensive",
-            "✅ Build muscle memory"
-          ],
-          morning: {
-            title: "Sáng (4h): Intensive Practice",
-            content: [
-              "Practice yabai - 2h intensive",
-              "Practice Zellij - 1h intensive",
-              "Practice Raycast - 1h intensive"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP 1 (2h): yabai Intensive",
-                duration: "2h",
-                tasks: [
-                  "Window management - 200 operations",
-                  "Space switching - 100 lần",
-                  "Layout creation - 50 lần",
-                  "Timed challenges - 20 lần",
-                  "Target: 100% accuracy, < 1s mỗi operation"
-                ]
-              },
-              {
-                title: "BÀI TẬP 2 (1h): Zellij Intensive",
-                duration: "1h",
-                tasks: [
-                  "Pane management - 150 operations",
-                  "Tab switching - 100 lần",
-                  "Session management - 30 lần",
-                  "Layout creation - 20 lần",
-                  "Target: Setup layout < 20s"
-                ]
-              },
-              {
-                title: "BÀI TẬP 3 (1h): Raycast Intensive",
-                duration: "1h",
-                tasks: [
-                  "App launching - 100 lần",
-                  "File search - 80 lần",
-                  "Clipboard history - 60 lần",
-                  "Snippets - 40 lần",
-                  "Target: Mở app < 1.5s"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (4h): Complete Projects",
-            content: [
-              "Build projects hoàn toàn không chuột",
-              "Practice complete workflow",
-              "Real coding scenarios"
-            ],
-            exercises: [
-              {
-                title: "PROJECT 1 (2h): Setup & Code",
-                duration: "2h",
-                tasks: [
-                  "Setup project structure với lf",
-                  "Create files với terminal",
-                  "Code feature với VSCode",
-                  "Git workflow với terminal",
-                  "Target: Complete project không dùng chuột"
-                ]
-              },
-              {
-                title: "PROJECT 2 (2h): Advanced Workflow",
-                duration: "2h",
-                tasks: [
-                  "Multi-window workflow",
-                  "Multi-tab terminal workflow",
-                  "Complete coding cycle",
-                  "Timed challenge: Full cycle < 10 phút"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (4h): Review & Optimization",
-            content: [
-              "Review toàn bộ tuần 1",
-              "Identify improvements",
-              "Optimize workflow",
-              "Plan tuần 2"
-            ],
-            exercises: [
-              {
-                title: "REVIEW & OPTIMIZATION",
-                tasks: [
-                  "Test lại tất cả skills - 100% accuracy",
-                  "Measure mouse usage - target: < 5%",
-                  "Identify bottlenecks",
-                  "Optimize configurations",
-                  "Document improvements",
-                  "Plan tuần 2 chi tiết"
-                ]
-              }
-            ]
-          },
-          goals: [
-            "Master tất cả skills tuần 1",
-            "Mouse usage < 5%",
-            "Complete workflow < 30s",
-            "Ready for tuần 2"
-          ]
-        }),
-        createWeekendDay("Chủ nhật", "REVIEW & CHALLENGE - Tuần 1", {
-          dailyGoals: [
-            "✅ Review toàn bộ tuần 1",
-            "✅ Complete challenge project",
-            "✅ Measure progress",
-            "✅ Prepare tuần 2"
-          ],
-          morning: {
-            title: "Sáng (4h): Review & Assessment",
-            content: [
-              "Review tất cả concepts",
-              "Test tất cả shortcuts",
-              "Measure progress",
-              "Identify weak points"
-            ],
-            exercises: [
-              {
-                title: "ASSESSMENT (2h)",
-                duration: "2h",
-                tasks: [
-                  "Test yabai - 100 operations, measure time",
-                  "Test Zellij - 100 operations, measure time",
-                  "Test Raycast - 100 operations, measure time",
-                  "Track mouse usage - count clicks",
-                  "Measure typing speed",
-                  "Document metrics"
-                ]
-              },
-              {
-                title: "REVIEW (2h)",
-                duration: "2h",
-                tasks: [
-                  "Review tất cả configs",
-                  "Review tất cả shortcuts",
-                  "Review concepts",
-                  "Create cheat sheet",
-                  "Document workflow"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (4h): CHALLENGE PROJECT",
-            content: [
-              "Build complete project không dùng chuột",
-              "Apply tất cả skills đã học",
-              "Timed challenge"
-            ],
-            exercises: [
-              {
-                title: "CHALLENGE: Complete Project (4h)",
-                duration: "4h",
-                tasks: [
-                  "Setup project: Raycast → yabai → Zellij",
-                  "Create project structure",
-                  "Code complete feature",
-                  "Git workflow",
-                  "Testing và debugging",
-                  "Documentation",
-                  "Target: Hoàn thành project < 4h, mouse usage < 5%"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (4h): Reflection & Planning",
-            content: [
-              "Reflect on progress",
-              "Plan tuần 2",
-              "Optimize workflow",
-              "Prepare materials"
-            ],
-            exercises: [
-              {
-                title: "REFLECTION & PLANNING",
-                tasks: [
-                  "Write reflection về tuần 1",
-                  "Document achievements",
-                  "Identify areas for improvement",
-                  "Plan tuần 2 chi tiết",
-                  "Prepare learning materials",
-                  "Set goals cho tuần 2"
-                ]
-              }
-            ]
-          },
-          goals: [
-            "Complete challenge project",
-            "Mouse usage < 5%",
-            "Ready for tuần 2"
-          ]
-        })
+        }
       ]
     },
     {
@@ -915,7 +559,7 @@ zellij kill-session <session-name>`
       },
       days: [
         {
-          day: "Thứ 2",
+          day: "8-9",
           title: "Vimium - Browser Navigation",
           totalHours: 4,
           dailyGoals: [
@@ -933,49 +577,6 @@ zellij kill-session <session-name>`
               "Test tất cả phím tắt cơ bản",
               "Config Vimium settings",
               "Practice với sample pages"
-            ],
-            detailedSetup: [
-              "Bước 1: Mở Chrome/Edge Extensions (chrome://extensions hoặc edge://extensions)",
-              "Bước 2: Search 'Vimium' và install extension",
-              "Bước 3: Safari: Install Vimari từ App Store hoặc Safari Extensions",
-              "Bước 4: Grant permissions cho extension",
-              "Bước 5: Test basic shortcuts (f, j/k, gg/G)",
-              "Bước 6: Configure Vimium settings (Options page)",
-              "Bước 7: Disable conflicting shortcuts nếu cần",
-              "Bước 8: Practice với sample websites"
-            ],
-            concepts: [
-              "Vimium: Browser extension để navigate web bằng keyboard",
-              "Link hints: Letters/numbers hiện trên links để click nhanh",
-              "Tab management: Switch, close, restore tabs bằng keyboard",
-              "Page navigation: Scroll, jump, search trong page",
-              "URL navigation: Open URLs, bookmarks, history",
-              "Search: Search trong page và navigate results"
-            ],
-            troubleshooting: [
-              "Nếu hints không hiện: Check extension enabled, refresh page",
-              "Nếu shortcuts conflict: Disable other extensions hoặc remap keys",
-              "Nếu không work trên một số sites: Check site-specific settings",
-              "Nếu hints quá nhỏ: Adjust hint size trong settings",
-              "Nếu tab switching chậm: Check browser performance"
-            ],
-            learningResources: [
-              { title: "Vimium GitHub", url: "https://github.com/philc/vimium", description: "Official Vimium repository" },
-              { title: "Vimium Documentation", url: "https://github.com/philc/vimium#readme", description: "Complete documentation" },
-              { title: "Vimium Shortcuts", description: "Cheat sheet cho tất cả shortcuts" }
-            ],
-            bestPractices: [
-              "Start với basic shortcuts (f, j/k, gg/G) trước",
-              "Practice trên websites quen thuộc trước",
-              "Use hints để click links thay vì reach cho mouse",
-              "Combine shortcuts để tạo workflow",
-              "Customize settings cho phù hợp với bạn"
-            ],
-            commonMistakes: [
-              "Cố gắng nhớ tất cả shortcuts cùng lúc",
-              "Không practice đủ - muscle memory cần thời gian",
-              "Ignore hints - miss out on fast navigation",
-              "Không customize settings - default có thể không optimal"
             ]
           },
           afternoon: {
@@ -1073,7 +674,7 @@ zellij kill-session <session-name>`
           goals: ["Browse web 90% không chuột."]
         },
         {
-          day: "Thứ 3",
+          day: "10-11",
           title: "fzf - Fuzzy Finder",
           totalHours: 4,
           dailyGoals: [
@@ -1090,34 +691,6 @@ zellij kill-session <session-name>`
               "Test keybindings",
               "Config fzf options",
               "Practice basic usage"
-            ],
-            detailedSetup: [
-              "Bước 1: Install fzf via Homebrew: brew install fzf",
-              "Bước 2: Run install script: $(brew --prefix)/opt/fzf/install",
-              "Bước 3: Add to shell config (.zshrc hoặc .bashrc)",
-              "Bước 4: Test keybindings: Ctrl+T, Ctrl+R, Alt+C",
-              "Bước 5: Configure fzf options (colors, layout, etc.)",
-              "Bước 6: Test với sample files và commands",
-              "Bước 7: Create custom fzf aliases nếu cần"
-            ],
-            concepts: [
-              "fzf: Fuzzy finder - tìm files, commands, history bằng fuzzy matching",
-              "Fuzzy matching: Tìm kết quả không cần exact match",
-              "Keybindings: Ctrl+T (files), Ctrl+R (history), Alt+C (directories)",
-              "Integration: fzf có thể integrate với nhiều tools (vim, git, etc.)",
-              "Performance: fzf rất nhanh với large datasets"
-            ],
-            configFiles: [
-              {
-                name: "~/.zshrc hoặc ~/.bashrc",
-                description: "fzf keybindings configuration",
-                content: `# fzf keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Custom fzf aliases
-alias fzf-files='fzf --preview "bat --color=always {}"'
-alias fzf-dirs='find . -type d | fzf'`
-              }
             ],
             codeBlocks: [
               `# Cài đặt
@@ -1212,7 +785,7 @@ $(brew --prefix)/opt/fzf/install  # Setup keybindings
           ]
         },
         {
-          day: "Thứ 4",
+          day: "12-14",
           title: "lf - File Manager",
           totalHours: 4,
           dailyGoals: [
@@ -1229,36 +802,6 @@ $(brew --prefix)/opt/fzf/install  # Setup keybindings
               "Đọc lf documentation",
               "Test các phím tắt cơ bản",
               "Setup preview và icons"
-            ],
-            detailedSetup: [
-              "Bước 1: Install lf: brew install lf",
-              "Bước 2: Tạo config directory: mkdir -p ~/.config/lf",
-              "Bước 3: Tạo config file: touch ~/.config/lf/lfrc",
-              "Bước 4: Add basic config (preview, hidden, icons)",
-              "Bước 5: Test basic navigation (j/k/h/l)",
-              "Bước 6: Test file operations (copy, move, delete)",
-              "Bước 7: Setup preview cho different file types",
-              "Bước 8: Practice với sample directories"
-            ],
-            concepts: [
-              "lf: Terminal file manager - thay thế Finder",
-              "Vim-like navigation: j/k/h/l để navigate",
-              "File operations: Copy, move, delete, rename bằng keyboard",
-              "Preview: Preview files trong lf",
-              "Bulk operations: Select multiple files và operate cùng lúc"
-            ],
-            configFiles: [
-              {
-                name: "~/.config/lf/lfrc",
-                description: "lf configuration file",
-                content: `# lf Configuration
-set preview true
-set hidden true
-set drawbox true
-set icons true
-set shellopts '-eu'
-set ifs '\n'`
-              }
             ],
             codeBlocks: [
               `# Cài đặt
@@ -1389,285 +932,12 @@ set icons true`
             { key: "?", description: "Show help" }
           ],
           goals: ["File management 90% không chuột."]
-        },
-        {
-          day: "Thứ 5",
-          title: "Practice Tổng Hợp - Browser & Files",
-          totalHours: 4,
-          dailyGoals: [
-            "✅ Combine Vimium + fzf + lf",
-            "✅ Complete workflow không dùng chuột",
-            "✅ Speed training",
-            "✅ Muscle memory cho tất cả shortcuts"
-          ],
-          morning: {
-            title: "Sáng (1.5h): Integration Practice",
-            content: [
-              "Practice combine Vimium + fzf + lf",
-              "Setup complete workflow",
-              "Speed training"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP: Complete Workflow",
-                tasks: [
-                  "Raycast mở browser",
-                  "Vimium navigate web",
-                  "fzf tìm files",
-                  "lf manage files",
-                  "Practice workflow này 20 lần",
-                  "Target: Complete workflow < 30s"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (2h): Real World Practice",
-            content: [
-              "Practice với real projects",
-              "Combine tất cả tools",
-              "Timed challenges"
-            ],
-            exercises: [
-              {
-                title: "BÀI TẬP 1 (1h): Real Project Work",
-                duration: "1h",
-                tasks: [
-                  "Research trên web (Vimium)",
-                  "Find files (fzf)",
-                  "Manage files (lf)",
-                  "Complete task không dùng chuột",
-                  "Track mouse usage (target: < 10%)"
-                ]
-              },
-              {
-                title: "BÀI TẬP 2 (1h): Speed Training",
-                duration: "1h",
-                tasks: [
-                  "Timed challenges cho mỗi tool",
-                  "Combine tools trong workflow",
-                  "Optimize shortcuts",
-                  "Build muscle memory"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (30 phút): Review & Prepare",
-            content: [
-              "Review progress",
-              "Identify improvements",
-              "Prepare cho tuần 3"
-            ],
-            exercises: [
-              {
-                title: "REVIEW",
-                tasks: [
-                  "Test tất cả shortcuts - 100% accuracy",
-                  "Document improvements",
-                  "Plan tuần 3",
-                  "Set goals cho tuần 3"
-                ]
-              }
-            ]
-          },
-          goals: [
-            "Master Vimium, fzf, lf",
-            "Complete workflow không dùng chuột",
-            "Ready for tuần 3"
-          ]
-        },
-        {
-          day: "Thứ 6",
-          title: "Advanced Practice - Browser & Files",
-          totalHours: 4,
-          dailyGoals: [
-            "✅ Advanced Vimium features",
-            "✅ Advanced fzf usage",
-            "✅ Advanced lf commands",
-            "✅ Custom scripts và aliases"
-          ],
-          morning: {
-            title: "Sáng (1.5h): Advanced Features",
-            content: [
-              "Learn advanced Vimium features",
-              "Learn advanced fzf usage",
-              "Learn advanced lf commands",
-              "Create custom scripts"
-            ]
-          },
-          afternoon: {
-            title: "Chiều (2h): Practice Advanced",
-            content: [
-              "Practice advanced features",
-              "Create và test custom scripts",
-              "Optimize workflow"
-            ]
-          },
-          evening: {
-            title: "Tối (30 phút): Review",
-            content: [
-              "Review advanced features",
-              "Document custom scripts",
-              "Prepare cho weekend"
-            ]
-          },
-          goals: [
-            "Advanced features mastered",
-            "Custom scripts created",
-            "Workflow optimized"
-          ]
-        },
-        createWeekendDay("Thứ 7", "Weekend Practice - Browser & Files", {
-          dailyGoals: [
-            "✅ 12h practice với Vimium, fzf, lf",
-            "✅ Complete real projects",
-            "✅ Build muscle memory",
-            "✅ Optimize workflow"
-          ],
-          morning: {
-            title: "Sáng (4h)",
-            content: [
-              "Deep practice với Vimium",
-              "Deep practice với fzf",
-              "Deep practice với lf",
-              "Combine trong real projects"
-            ],
-            exercises: [
-              {
-                title: "PRACTICE SESSION (4h)",
-                duration: "4h",
-                tasks: [
-                  "Practice tất cả shortcuts - 500+ repetitions",
-                  "Complete real browsing tasks",
-                  "Complete real file management tasks",
-                  "Build muscle memory",
-                  "Track progress và improvements"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (4h)",
-            content: [
-              "Real project work",
-              "Combine tất cả tools",
-              "Optimize workflow",
-              "Create custom solutions"
-            ],
-            exercises: [
-              {
-                title: "REAL PROJECT WORK (4h)",
-                duration: "4h",
-                tasks: [
-                  "Work on real project",
-                  "Use Vimium, fzf, lf exclusively",
-                  "Track mouse usage (target: < 5%)",
-                  "Document workflow improvements",
-                  "Create custom scripts nếu cần"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (4h)",
-            content: [
-              "Advanced practice",
-              "Customization",
-              "Documentation",
-              "Reflection"
-            ],
-            exercises: [
-              {
-                title: "ADVANCED & REFLECTION (4h)",
-                duration: "4h",
-                tasks: [
-                  "Practice advanced features",
-                  "Create custom scripts và aliases",
-                  "Document workflow",
-                  "Reflect on progress",
-                  "Plan improvements"
-                ]
-              }
-            ]
-          }
-        }),
-        createWeekendDay("Chủ nhật", "Weekend Challenge - Complete Project", {
-          dailyGoals: [
-            "✅ Complete project từ đầu đến cuối",
-            "✅ Use Vimium, fzf, lf exclusively",
-            "✅ Mouse usage < 5%",
-            "✅ Document complete workflow"
-          ],
-          morning: {
-            title: "Sáng (4h)",
-            content: [
-              "Project planning",
-              "Research và setup",
-              "Initial implementation"
-            ],
-            exercises: [
-              {
-                title: "PROJECT SETUP & PLANNING (4h)",
-                duration: "4h",
-                tasks: [
-                  "Plan project structure",
-                  "Research requirements (Vimium)",
-                  "Setup project (lf, fzf)",
-                  "Initial implementation",
-                  "Git workflow setup"
-                ]
-              }
-            ]
-          },
-          afternoon: {
-            title: "Chiều (4h)",
-            content: [
-              "Implementation",
-              "Testing",
-              "Debugging"
-            ],
-            exercises: [
-              {
-                title: "IMPLEMENTATION (4h)",
-                duration: "4h",
-                tasks: [
-                  "Implement features",
-                  "Use Vimium, fzf, lf throughout",
-                  "Test và debug",
-                  "Git workflow",
-                  "Track mouse usage"
-                ]
-              }
-            ]
-          },
-          evening: {
-            title: "Tối (4h)",
-            content: [
-              "Completion",
-              "Documentation",
-              "Reflection"
-            ],
-            exercises: [
-              {
-                title: "COMPLETION & REFLECTION (4h)",
-                duration: "4h",
-                tasks: [
-                  "Complete project",
-                  "Write documentation",
-                  "Reflect on workflow",
-                  "Document improvements",
-                  "Prepare cho tuần 3"
-                ]
-              }
-            ]
-          }
-        })
+        }
       ]
     },
     {
       week: 3,
-      title: "ADVANCED - Git & Vim",
+      title: "ADVANCED - Git & Optimization",
       goals: [
         "90-95% không dùng chuột",
         "Git workflow hoàn toàn keyboard",
@@ -1681,7 +951,7 @@ set icons true`
       },
       days: [
         {
-          day: "Thứ 2",
+          day: "15-17",
           title: "lazygit - Git TUI",
           totalHours: 4,
           dailyGoals: [
@@ -1699,41 +969,16 @@ set icons true`
               "Test các panels và navigation",
               "Practice basic commands"
             ],
-            detailedSetup: [
-              "Bước 1: Install lazygit: brew install lazygit",
-              "Bước 2: Run lazygit để test: lazygit",
-              "Bước 3: Navigate các panels (1-5 keys)",
-              "Bước 4: Test basic operations (space, c, P)",
-              "Bước 5: Configure lazygit settings nếu cần",
-              "Bước 6: Practice với test repository",
-              "Bước 7: Learn panel navigation",
-              "Bước 8: Master basic git workflow"
-            ],
-            concepts: [
-              "lazygit: Terminal UI cho Git operations",
-              "Panels: Status, Files, Branches, Commits, Stash",
-              "Navigation: Switch panels với 1-5 keys",
-              "Staging: Space để stage/unstage files",
-              "Commits: c để commit, P để push",
-              "Branches: n để new branch, space để checkout",
-              "Interactive rebase: e để edit commits"
-            ],
             codeBlocks: [
               `# Cài đặt
 brew install lazygit
 
-# Chạy lazygit
-lazygit
+# Config (optional)
+mkdir -p ~/Library/Application\\ Support/lazygit
+touch ~/Library/Application\\ Support/lazygit/config.yml
 
-# Basic commands:
-# 1 - Status panel
-# 2 - Files panel
-# 3 - Branches panel
-# 4 - Commits panel
-# 5 - Stash panel
-# space - Stage/unstage
-# c - Commit
-# P - Push`
+# Chạy lazygit
+lazygit`
             ]
           },
           afternoon: {
@@ -1819,8 +1064,8 @@ lazygit
             ]
           },
           shortcuts: [
-            { key: "1", description: "Status panel" },
-            { key: "2", description: "Files panel" },
+            { key: "1", description: "Status" },
+            { key: "2", description: "Files" },
             { key: "3", description: "Local branches" },
             { key: "4", description: "Commits" },
             { key: "5", description: "Stash" },
@@ -1833,6 +1078,7 @@ lazygit
             { key: "s", description: "Squash" },
             { key: "r", description: "Reword" },
             { key: "e", description: "Edit (rebase)" },
+            { key: "d", description: "Drop commit" },
             { key: "A", description: "Amend" },
             { key: "n", description: "New branch" },
             { key: "M", description: "Merge" }
@@ -1840,7 +1086,7 @@ lazygit
           goals: ["Git operations 100% không cần GUI/chuột."]
         },
         {
-          day: "Thứ 3",
+          day: "18-19",
           title: "VSCode Vim - Deep Dive",
           totalHours: 4,
           dailyGoals: [
@@ -1879,22 +1125,107 @@ lazygit
               "Macros: Record và replay sequences of commands",
               "VSCode integration: Vim commands work với VSCode features (IntelliSense, multi-cursor, etc.)"
             ],
+            troubleshooting: [
+              "Nếu Vim mode không activate: Check extension installed và enabled",
+              "Nếu shortcuts conflict: Disable VSCode shortcuts trong keybindings.json",
+              "Nếu motions không work: Check vim.useSystemClipboard và vim.useCtrlKeys",
+              "Nếu Insert mode stuck: Press Esc nhiều lần hoặc restart VSCode",
+              "Nếu extension lag: Disable unnecessary features trong settings",
+              "Nếu multi-cursor conflict: Configure vim.handleKeys để allow VSCode shortcuts"
+            ],
             configFiles: [
               {
                 name: ".vscode/settings.json",
                 description: "VSCode settings với Vim configuration",
                 content: `{
+  // Vim Extension Settings
   "vim.enabled": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 200,
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false
-  }
+    "<C-f>": false,
+    "<C-h>": false,
+    "<C-n>": false,
+    "<C-p>": false,
+    "<C-t>": false
+  },
+  
+  // Disable conflicting VSCode shortcuts
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  
+  // Vim normal mode keybindings
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    }
+  ],
+  
+  // Visual mode
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    }
+  ]
 }`
+              },
+              {
+                name: ".vimrc (optional)",
+                description: "Vim configuration file cho custom settings",
+                content: `" VSCode Vim Configuration
+" This file is read by VSCode Vim extension
+
+" Basic settings
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Key mappings
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>e :e<CR>
+
+" Disable arrow keys (force hjkl)
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>`
               }
+            ],
+            codeBlocks: [
+              `# Install VSCode Vim Extension
+# Method 1: Through VSCode UI
+# 1. Open Extensions (Cmd+Shift+X)
+# 2. Search "Vim"
+# 3. Install "Vim" by vscodevim
+
+# Method 2: Through command line
+code --install-extension vscodevim.vim
+
+# Verify installation
+# Check status bar for "-- NORMAL --" when in Vim mode
+
+# Test basic commands
+# Press 'i' to enter Insert mode
+# Press 'Esc' to return to Normal mode
+# Use h/j/k/l to navigate`
             ]
           },
           afternoon: {
@@ -1985,7 +1316,7 @@ lazygit
                   "Test lại 20+ motions - 100% accuracy",
                   "Code một feature hoàn chỉnh chỉ dùng Vim motions",
                   "Track số lần dùng chuột (target: 0)",
-                  "Chuẩn bị cho tuần 4"
+                  "Chuẩn bị cho optimization"
                 ]
               }
             ]
@@ -2007,282 +1338,1082 @@ lazygit
             { key: "q{register}", description: "Record macro" },
             { key: "@{register}", description: "Play macro" }
           ],
-          goals: ["Vim motions thành bản năng."]
-        },
+          goals: ["Vim motions thành bản năng."],
+          learningResources: [
+            { title: "VSCode Vim Extension", url: "https://marketplace.visualstudio.com/items?itemName=vscodevim.vim", description: "Official VSCode Vim extension page" },
+            { title: "VSCode Vim GitHub", url: "https://github.com/VSCodeVim/Vim", description: "Source code và documentation" },
+            { title: "Vim Adventures", url: "https://vim-adventures.com/", description: "Game để học Vim motions" },
+            { title: "Vim Cheat Sheet", description: "Quick reference cho Vim commands" },
+            { title: "Practical Vim", description: "Book về Vim best practices" }
+          ],
+          bestPractices: [
+            "Bắt đầu với basic motions (h/j/k/l, w/e/b) trước khi học advanced",
+            "Disable arrow keys để force dùng hjkl - tạo muscle memory",
+            "Sử dụng relative line numbers (set relativenumber) để navigate dễ hơn",
+            "Practice trong real code, không chỉ practice files",
+            "Combine Vim motions với VSCode features (IntelliSense, multi-cursor)",
+            "Customize keybindings cho phù hợp với workflow",
+            "Sử dụng leader key (<space>) cho custom commands",
+            "Learn text objects (ci\", ci(, ci{) - rất powerful"
+          ],
+          commonMistakes: [
+            "Cố gắng nhớ tất cả commands cùng lúc - nên học từng nhóm",
+            "Không disable conflicting VSCode shortcuts - gây confusion",
+            "Quên Esc để exit Insert mode - stuck trong Insert mode",
+            "Không practice đủ - muscle memory cần thời gian",
+            "Ignore text objects - miss out on powerful editing",
+            "Không customize settings - default settings có thể không optimal",
+            "Chỉ dùng motions, không combine với operators (d, c, y)",
+            "Không practice macros - miss powerful automation tool"
+          ]
+        }
+      ]
+    },
+    {
+      week: 4,
+      title: "MASTERY & CUSTOMIZATION",
+      goals: [
+        "Mouse usage: < 5%",
+        "Phím tắt mastered: 100+",
+        "Comfort level: 9/10",
+        "Speed: Same or better than before"
+      ],
+      metrics: {
+        mouseUsage: "< 5%",
+        shortcutsLearned: 100,
+        comfortLevel: "9/10"
+      },
+      days: [
         {
-          day: "Thứ 4",
-          title: "Practice Tổng Hợp - Git + Vim",
+          day: "20-21",
+          title: "Moonlander Keyboard - Master Layout",
           totalHours: 4,
           dailyGoals: [
-            "✅ Combine lazygit + VSCode Vim",
-            "✅ Complete coding workflow",
-            "✅ Speed training",
-            "✅ Muscle memory cho tất cả shortcuts"
+            "✅ Setup Moonlander keyboard với QMK/ZSA",
+            "✅ Customize layout cho coding workflow",
+            "✅ Master thumb clusters và layers",
+            "✅ Practice lại tất cả skills với Moonlander"
           ],
           morning: {
-            title: "Sáng (1.5h): Integration Practice",
+            title: "Sáng (1.5h): Setup Moonlander",
             content: [
-              "Practice combine lazygit + VSCode Vim",
-              "Setup complete workflow",
-              "Speed training"
+              "Unbox và connect Moonlander",
+              "Cài đặt ZSA Configurator hoặc QMK",
+              "Hiểu về Moonlander layout và thumb clusters",
+              "Setup basic layout cho coding",
+              "Test và calibrate keys"
             ],
-            exercises: [
+            detailedSetup: [
+              "Bước 1: Unbox Moonlander và connect via USB-C",
+              "Bước 2: Download ZSA Configurator từ zsa.io hoặc setup QMK",
+              "Bước 3: Flash default firmware lên keyboard",
+              "Bước 4: Test tất cả keys và thumb clusters",
+              "Bước 5: Calibrate thumb clusters cho comfortable position",
+              "Bước 6: Tạo custom layout trong Configurator",
+              "Bước 7: Map keys cho coding workflow (hjkl, modifiers, etc.)",
+              "Bước 8: Setup layers (Base, Navigation, Numbers, Symbols)",
+              "Bước 9: Test layout với typing test",
+              "Bước 10: Fine-tune key positions"
+            ],
+            concepts: [
+              "Moonlander layout: Split keyboard với thumb clusters - ergonomic hơn",
+              "Thumb clusters: 4 keys mỗi side - dùng cho modifiers và layer switching",
+              "Layers: Different keymaps trên cùng physical keys (như Shift nhưng cho toàn bộ keyboard)",
+              "QMK firmware: Open-source firmware cho custom keyboards - fully programmable",
+              "ZSA Configurator: Web-based tool để configure Moonlander không cần code",
+              "Columnar stagger: Keys arranged theo finger columns - natural hơn row stagger",
+              "Tenting: Adjustable angle của keyboard halves - reduce wrist strain",
+              "Home row: ASDF JKL; - fingers rest position, Moonlander optimize cho home row"
+            ],
+            troubleshooting: [
+              "Nếu keyboard không connect: Check USB-C cable, try different port",
+              "Nếu keys không register: Re-flash firmware, check keymap",
+              "Nếu thumb clusters uncomfortable: Adjust tenting angle và key positions",
+              "Nếu layout không save: Check ZSA account sync, export backup",
+              "Nếu typing speed giảm: Normal khi switch keyboard, practice 1-2 tuần",
+              "Nếu layers không switch: Check layer keys mapping, test với Configurator"
+            ],
+            configFiles: [
               {
-                title: "BÀI TẬP: Complete Workflow",
-                tasks: [
-                  "VSCode Vim edit code",
-                  "lazygit stage changes",
-                  "lazygit commit",
-                  "lazygit push",
-                  "Practice workflow này 20 lần",
-                  "Target: Complete workflow < 2 phút"
-                ]
+                name: "Moonlander Layout (ZSA Configurator)",
+                description: "Custom layout cho coding workflow",
+                content: `// Moonlander Layout Configuration
+// Base Layer (Layer 0)
+// Left Hand: QWERTY layout với thumb clusters
+// Right Hand: QWERTY layout với thumb clusters
+
+// Thumb Clusters Mapping:
+// Left Thumb: 
+//   - Bottom Left: Space
+//   - Bottom Right: Enter
+//   - Top Left: Layer 1 (Navigation)
+//   - Top Right: Layer 2 (Numbers/Symbols)
+
+// Right Thumb:
+//   - Bottom Left: Backspace
+//   - Bottom Right: Delete
+//   - Top Left: Layer 3 (Function Keys)
+//   - Top Right: Layer 1 (Navigation)
+
+// Layer 1 (Navigation):
+//   - hjkl → Arrow keys
+//   - u/i/o/p → Home/PageUp/PageDown/End
+//   - w/e/r → Word navigation
+//   - Thumb clusters → Modifiers (Ctrl, Alt, Cmd)
+
+// Layer 2 (Numbers/Symbols):
+//   - Top row → Numbers 1-0
+//   - Middle row → Symbols (!@#$%^&*())
+//   - Bottom row → More symbols
+
+// Layer 3 (Function Keys):
+//   - Top row → F1-F12
+//   - Custom shortcuts cho coding tools`
+              },
+              {
+                name: "QMK Keymap (keymap.c)",
+                description: "QMK keymap file cho advanced customization",
+                content: `#include QMK_KEYBOARD_H
+
+// Layer definitions
+enum layers {
+    _BASE,
+    _NAV,
+    _NUM,
+    _FN
+};
+
+// Keymap
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // Base layer
+    [_BASE] = LAYOUT_moonlander(
+        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
+        KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
+        KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
+        KC_LCTL, KC_LGUI, KC_LALT, KC_LSFT, MO(_NAV), KC_SPC,  KC_ENT,  MO(_NAV), KC_RSFT, KC_RALT, KC_RGUI, KC_RCTL
+    ),
+    
+    // Navigation layer
+    [_NAV] = LAYOUT_moonlander(
+        _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGUP, KC_PGDN, KC_END,
+        _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    )
+};`
               }
+            ],
+            codeBlocks: [
+              `# Setup Moonlander với ZSA Configurator
+
+# 1. Download ZSA Configurator
+# Visit: https://config.zsa.io
+
+# 2. Connect Moonlander và flash firmware
+# - Click "Detect Keyboard"
+# - Select Moonlander
+# - Flash default layout
+
+# 3. Customize layout
+# - Click keys để remap
+# - Setup layers
+# - Configure thumb clusters
+
+# 4. Test layout
+# - Use typing test
+# - Practice basic movements
+
+# Setup với QMK (Advanced)
+git clone https://github.com/qmk/qmk_firmware
+cd qmk_firmware
+qmk setup
+qmk compile -kb moonlander -km default
+qmk flash -kb moonlander -km default`
             ]
           },
           afternoon: {
-            title: "Chiều (2h): Real Coding Practice",
+            title: "Chiều (2h): Practice với Moonlander",
             content: [
-              "Code với complete workflow",
-              "Practice tất cả shortcuts",
-              "Timed challenges"
+              "Practice typing với Moonlander layout",
+              "Luyện lại tất cả skills đã học",
+              "Adapt workflow cho Moonlander"
             ],
             exercises: [
               {
-                title: "BÀI TẬP 1 (1h): Coding Workflow",
-                duration: "1h",
+                title: "BÀI TẬP 1 (30 phút): Moonlander Basics",
+                duration: "30 phút",
                 tasks: [
-                  "Code feature với VSCode Vim",
-                  "lazygit stage selective changes",
-                  "lazygit commit với message",
-                  "lazygit push",
-                  "Repeat workflow 10 lần",
-                  "Target: Mouse usage < 5%"
+                  "Typing test với Moonlander - target: 40+ WPM",
+                  "Practice home row position - 10 phút",
+                  "Practice thumb clusters - 50 lần mỗi thumb",
+                  "Switch giữa layers - 100 lần",
+                  "Timed challenge: Type 100 words < 3 phút"
                 ]
               },
               {
-                title: "BÀI TẬP 2 (1h): Advanced Git + Vim",
-                duration: "1h",
+                title: "BÀI TẬP 2 (30 phút): Window Management với Moonlander",
+                duration: "30 phút",
                 tasks: [
-                  "Refactor code với Vim motions",
-                  "lazygit interactive rebase",
-                  "lazygit squash commits",
-                  "Complete advanced workflow",
-                  "Timed challenge: Full cycle < 5 phút"
+                  "Setup yabai shortcuts trên Moonlander layers",
+                  "Practice window focus (alt+h/j/k/l) - 80 lần",
+                  "Practice window move (shift+alt+h/j/k/l) - 60 lần",
+                  "Switch spaces với thumb clusters - 50 lần",
+                  "Timed challenge: Setup workspace < 10s"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Terminal & Zellij với Moonlander",
+                duration: "30 phút",
+                tasks: [
+                  "Practice Zellij shortcuts với Moonlander layout",
+                  "Ctrl+p, n (new pane) - 50 lần",
+                  "Ctrl+p, h/j/k/l (navigate) - 100 lần",
+                  "Ctrl+t, h/l (switch tabs) - 80 lần",
+                  "Detach/attach sessions - 20 lần",
+                  "Timed challenge: Setup Zellij layout < 30s"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Vim Motions với Moonlander",
+                duration: "30 phút",
+                tasks: [
+                  "Practice hjkl navigation - 150 lần",
+                  "Practice text objects (ci\", ci(, ci{) - 100 lần",
+                  "Practice f/F/t/T - 120 lần",
+                  "Practice macros với Moonlander - 30 lần",
+                  "Code refactoring với Moonlander - real file",
+                  "Timed challenge: Navigate 200 lines < 1 phút"
                 ]
               }
             ]
           },
           evening: {
-            title: "Tối (30 phút): Review & Prepare",
+            title: "Tối (30 phút): Complete Workflow với Moonlander",
             content: [
-              "Review progress",
-              "Identify improvements",
-              "Prepare cho tuần 4"
+              "Practice complete coding workflow",
+              "Combine tất cả tools với Moonlander",
+              "Optimize layout cho workflow"
+            ],
+            exercises: [
+              {
+                title: "REVIEW & INTEGRATION",
+                tasks: [
+                  "Complete workflow: Raycast → yabai → Zellij → Vim → lazygit",
+                  "Practice với Moonlander - tất cả shortcuts",
+                  "Timed challenge: Full coding cycle < 5 phút",
+                  "Fine-tune Moonlander layout cho comfort",
+                  "Document custom keybindings"
+                ]
+              }
+            ]
+          },
+          shortcuts: [
+            { key: "Thumb clusters", description: "Layer switching và modifiers" },
+            { key: "Layer 1 + hjkl", description: "Arrow keys (thay vì reach cho arrow keys)" },
+            { key: "Layer 2 + top row", description: "Numbers 1-0" },
+            { key: "Layer 3 + top row", description: "Function keys F1-F12" },
+            { key: "Thumb + hjkl", description: "Navigation với thumb modifiers" }
+          ],
+          goals: [
+            "Master Moonlander layout và thumb clusters",
+            "Adapt tất cả skills cho Moonlander",
+            "Typing speed: 40+ WPM với Moonlander",
+            "Complete workflow không cần reach cho arrow keys/numbers"
+          ],
+          learningResources: [
+            { title: "ZSA Moonlander", url: "https://www.zsa.io/moonlander/", description: "Official Moonlander page" },
+            { title: "ZSA Configurator", url: "https://config.zsa.io/", description: "Web-based configurator" },
+            { title: "QMK Documentation", url: "https://docs.qmk.fm/", description: "QMK firmware documentation" },
+            { title: "Moonlander Layouts", url: "https://github.com/qmk/qmk_firmware/tree/master/keyboards/zsa/moonlander/keymaps", description: "Community layouts" },
+            { title: "Ergonomic Typing", description: "Best practices cho split keyboards" }
+          ],
+          bestPractices: [
+            "Start với default layout, customize dần dần",
+            "Setup layers cho different contexts (coding, navigation, numbers)",
+            "Use thumb clusters cho frequently used keys (Space, Enter, Backspace)",
+            "Map hjkl trên navigation layer - không cần reach cho arrow keys",
+            "Practice typing test mỗi ngày - muscle memory cần thời gian",
+            "Adjust tenting angle cho comfortable - reduce wrist strain",
+            "Use columnar stagger advantage - fingers move naturally",
+            "Customize cho YOUR hands - không copy layout của người khác"
+          ],
+          commonMistakes: [
+            "Cố gắng customize quá nhiều ngay từ đầu - nên học default trước",
+            "Không practice typing test - typing speed sẽ giảm",
+            "Ignore thumb clusters - miss out on ergonomic advantage",
+            "Không setup layers - phải reach cho numbers/symbols",
+            "Không adjust tenting - có thể gây wrist pain",
+            "Copy layout của người khác mà không test - mỗi người khác nhau",
+            "Không practice đủ - Moonlander cần 1-2 tuần để adapt",
+            "Quên backup layout - mất customizations"
+          ]
+        },
+        {
+          day: "21",
+          title: "Moonlander Practice - Review All Skills",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Practice lại tất cả window management với Moonlander",
+            "✅ Practice lại tất cả terminal/Zellij với Moonlander",
+            "✅ Practice lại tất cả Vim motions với Moonlander",
+            "✅ Complete coding workflow với Moonlander"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Review Week 1-2 Skills",
+            content: [
+              "Practice window management (yabai) với Moonlander",
+              "Practice terminal multiplexer (Zellij) với Moonlander",
+              "Practice browser navigation (Vimium) với Moonlander",
+              "Practice file management (fzf, lf) với Moonlander",
+              "Focus: Adapt tất cả shortcuts cho Moonlander layout"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Review All Skills với Moonlander",
+            content: [
+              "Practice Git workflow (lazygit) với Moonlander",
+              "Practice Vim motions (VSCode Vim) với Moonlander",
+              "Combine tất cả tools trong real workflow"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (30 phút): Review Week 1-2",
+                duration: "30 phút",
+                tasks: [
+                  "Window management: Setup workspace với yabai - 20 lần",
+                  "Focus windows (alt+h/j/k/l) - 100 lần với Moonlander",
+                  "Zellij: Create layout - 15 lần, Navigate panes - 120 lần",
+                  "Vimium: Navigation (f, j/k, J/K) - 100 lần",
+                  "fzf/lf: File operations - 80 operations",
+                  "Timed challenge: Complete Week 1-2 workflow < 3 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (30 phút): Review Git Workflow",
+                duration: "30 phút",
+                tasks: [
+                  "Stage files (space) - 60 lần",
+                  "Commit (c) - 30 lần",
+                  "Switch branches (space) - 50 lần",
+                  "Interactive rebase - 10 lần",
+                  "Stash workflow - 20 lần",
+                  "Timed challenge: Complete git cycle < 3 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (30 phút): Review Vim Motions",
+                duration: "30 phút",
+                tasks: [
+                  "Text objects (ci\", ci(, ci{) - 120 lần",
+                  "Navigation (f/F, */#, %) - 150 lần",
+                  "Editing (d, c, y) - 100 lần",
+                  "Macros - 20 lần",
+                  "Refactor real file (200+ lines)",
+                  "Timed challenge: Refactor file < 15 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 4 (30 phút): Complete Workflow",
+                duration: "30 phút",
+                tasks: [
+                  "Raycast mở project",
+                  "yabai setup workspace",
+                  "Zellij create layout",
+                  "VSCode Vim edit code",
+                  "lazygit commit changes",
+                  "Timed challenge: Full coding cycle < 5 phút",
+                  "Repeat 5 lần để build muscle memory"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Moonlander Optimization",
+            content: [
+              "Fine-tune Moonlander layout",
+              "Document workflow",
+              "Plan advanced customization"
+            ],
+            exercises: [
+              {
+                title: "OPTIMIZATION",
+                tasks: [
+                  "Identify keys còn uncomfortable",
+                  "Adjust thumb cluster positions",
+                  "Optimize layer switching",
+                  "Test typing speed - target: 50+ WPM",
+                  "Document final layout"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Master tất cả skills với Moonlander",
+            "Typing speed: 50+ WPM",
+            "Complete workflow không cần reach cho keys",
+            "Moonlander layout optimized cho coding"
+          ]
+        },
+        {
+          day: "22",
+          title: "skhd Advanced",
+          totalHours: 4,
+          dailyGoals: [
+            "✅ Tạo complex skhd bindings",
+            "✅ Setup app-specific shortcuts",
+            "✅ Window size presets và multi-monitor",
+            "✅ Create custom scripts"
+          ],
+          morning: {
+            title: "Sáng (1.5h): Advanced skhd",
+            content: [
+              "Tạo complex bindings cho skhd",
+              "App-specific bindings (VSCode, Terminal, Browser)",
+              "Window size presets và quick layouts",
+              "Multi-monitor support"
+            ],
+            detailedSetup: [
+              "Bước 1: Review current skhd config",
+              "Bước 2: Add app-specific bindings cho VSCode",
+              "Bước 3: Add app-specific bindings cho Terminal",
+              "Bước 4: Create window size presets (half, third, two-thirds)",
+              "Bước 5: Setup multi-monitor shortcuts",
+              "Bước 6: Create quick layout scripts",
+              "Bước 7: Test tất cả bindings",
+              "Bước 8: Document custom shortcuts"
+            ],
+            concepts: [
+              "App-specific bindings: Different shortcuts cho different apps",
+              "Window presets: Quick resize to common sizes",
+              "Multi-monitor: Move windows giữa monitors",
+              "Shell scripts: Automate complex workflows",
+              "Quick layouts: One-command setup cho common scenarios"
+            ],
+            configFiles: [
+              {
+                name: "~/.config/skhd/skhdrc (Advanced)",
+                description: "Advanced skhd configuration với app-specific bindings",
+                content: `# Advanced skhd Configuration
+
+# App-specific bindings
+# VSCode
+app : code {
+    alt - h : yabai -m window --focus west
+    alt - j : yabai -m window --focus south
+    alt - k : yabai -m window --focus north
+    alt - l : yabai -m window --focus east
+}
+
+# Terminal
+app : iTerm2 {
+    alt - h : yabai -m window --focus west
+    alt - j : yabai -m window --focus south
+    alt - k : yabai -m window --focus north
+    alt - l : yabai -m window --focus east
+}
+
+# Window size presets
+alt - 1 : yabai -m window --ratio abs:0.5    # Half
+alt - 2 : yabai -m window --ratio abs:0.33   # Third
+alt - 3 : yabai -m window --ratio abs:0.67   # Two-thirds
+
+# Multi-monitor
+ctrl + alt - 1 : yabai -m window --display 1
+ctrl + alt - 2 : yabai -m window --display 2
+
+# Quick layouts
+alt + shift - 1 : ~/scripts/layout-coding.sh
+alt + shift - 2 : ~/scripts/layout-meeting.sh`
+              }
+            ],
+            codeBlocks: [
+              `# Create custom layout scripts
+# ~/scripts/layout-coding.sh
+#!/bin/bash
+yabai -m space --layout bsp
+yabai -m window --grid 1:2:0:0:1:1
+yabai -m window --grid 2:2:1:0:1:1`
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice & Create Scripts",
+            content: [
+              "Practice advanced bindings",
+              "Create custom scripts",
+              "Test và optimize"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (40 phút): Advanced Bindings",
+                duration: "40 phút",
+                tasks: [
+                  "Test app-specific bindings - 50 lần mỗi app",
+                  "Practice window presets - 30 lần",
+                  "Multi-monitor navigation - 20 lần",
+                  "Quick layouts - 15 lần",
+                  "Timed challenge: Setup complex workspace < 15s"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (40 phút): Custom Scripts",
+                duration: "40 phút",
+                tasks: [
+                  "Tạo script layout-coding.sh",
+                  "Tạo script layout-meeting.sh",
+                  "Tạo script setup-project.sh",
+                  "Tạo script cleanup-workspace.sh",
+                  "Tạo script quick-switch.sh",
+                  "Test tất cả scripts - 10 lần mỗi script"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (40 phút): Integration",
+                duration: "40 phút",
+                tasks: [
+                  "Combine scripts với Raycast",
+                  "Create aliases cho common tasks",
+                  "Setup keyboard shortcuts cho scripts",
+                  "Document workflow",
+                  "Timed challenge: Complete setup < 1 phút"
+                ]
+              }
+            ]
+          },
+          evening: {
+            title: "Tối (30 phút): Review & Optimize",
+            content: [
+              "Review tất cả customizations",
+              "Optimize workflow",
+              "Document setup"
             ],
             exercises: [
               {
                 title: "REVIEW",
                 tasks: [
-                  "Test tất cả shortcuts - 100% accuracy",
-                  "Document improvements",
-                  "Plan tuần 4",
-                  "Set goals cho tuần 4"
+                  "Test tất cả custom bindings",
+                  "Review scripts và optimize",
+                  "Document final setup",
+                  "Chuẩn bị cho real world practice"
                 ]
               }
             ]
           },
           goals: [
-            "Master lazygit và VSCode Vim",
-            "Complete workflow không dùng chuột",
-            "Ready for tuần 4"
+            "Advanced skhd bindings hoàn chỉnh",
+            "Custom scripts cho daily workflow",
+            "Optimized setup cho coding"
           ]
         },
         {
-          day: "Thứ 5",
-          title: "Advanced Practice - Git & Vim",
+          day: "23",
+          title: "Zellij Layouts",
           totalHours: 4,
           dailyGoals: [
-            "✅ Advanced lazygit features",
-            "✅ Advanced Vim motions",
-            "✅ Custom workflows",
-            "✅ Optimization"
+            "✅ Tạo project-specific Zellij layouts",
+            "✅ Layouts cho Frontend, Backend, Full-stack",
+            "✅ Save và load layouts nhanh chóng",
+            "✅ Integrate layouts vào workflow"
           ],
           morning: {
-            title: "Sáng (1.5h): Advanced Features",
+            title: "Sáng (1.5h): Create Zellij Layouts",
             content: [
-              "Learn advanced lazygit features",
-              "Learn advanced Vim motions",
-              "Create custom workflows",
-              "Optimize shortcuts"
+              "Hiểu về Zellij layout system",
+              "Tạo layout files (.kdl format)",
+              "Setup layouts cho different project types",
+              "Test và optimize layouts"
+            ],
+            concepts: [
+              "Zellij layouts: Predefined pane arrangements",
+              "KDL format: Key-value language cho Zellij configs",
+              "Layout inheritance: Base layouts và variations",
+              "Command integration: Auto-run commands trong panes"
+            ],
+            configFiles: [
+              {
+                name: "~/.config/zellij/layouts/frontend.kdl",
+                description: "Frontend development layout",
+                content: `// Frontend Development Layout
+layout {
+    pane split_direction="vertical" {
+        pane size="70%" {
+            pane // VSCode/Editor
+        }
+        pane split_direction="horizontal" size="30%" {
+            pane {
+                command "npm"
+                args "run" "dev"
+            }
+            pane // git/lazygit
+        }
+    }
+}`
+              },
+              {
+                name: "~/.config/zellij/layouts/backend.kdl",
+                description: "Backend development layout",
+                content: `// Backend Development Layout
+layout {
+    pane split_direction="vertical" {
+        pane size="60%" {
+            pane // VSCode/Editor
+        }
+        pane split_direction="horizontal" size="40%" {
+            pane {
+                command "npm"
+                args "run" "dev"
+            }
+            pane {
+                command "npm"
+                args "run" "test"
+            }
+            pane // git/lazygit
+        }
+    }
+}`
+              },
+              {
+                name: "~/.config/zellij/layouts/fullstack.kdl",
+                description: "Full-stack development layout",
+                content: `// Full-stack Development Layout
+layout {
+    pane split_direction="vertical" {
+        pane size="50%" {
+            pane split_direction="horizontal" {
+                pane size="50%" {
+                    pane // Frontend code
+                }
+                pane size="50%" {
+                    pane // Backend code
+                }
+            }
+        }
+        pane split_direction="horizontal" size="50%" {
+            pane {
+                command "npm"
+                args "run" "dev"
+            }
+            pane // git/lazygit
+        }
+    }
+}`
+              }
+            ],
+            codeBlocks: [
+              `# Load layout trong Zellij
+zellij --layout frontend
+
+# Hoặc trong Zellij session
+:load-layout frontend
+
+# List available layouts
+ls ~/.config/zellij/layouts/`
             ]
           },
           afternoon: {
-            title: "Chiều (2h): Practice Advanced",
+            title: "Chiều (2h): Practice Layouts",
             content: [
-              "Practice advanced features",
-              "Create và test custom workflows",
-              "Optimize performance"
+              "Create và test layouts",
+              "Practice switching giữa layouts",
+              "Optimize layouts cho workflow"
+            ],
+            exercises: [
+              {
+                title: "BÀI TẬP 1 (40 phút): Create Layouts",
+                duration: "40 phút",
+                tasks: [
+                  "Tạo layout cho Frontend dev",
+                  "Tạo layout cho Backend dev",
+                  "Tạo layout cho Full-stack dev",
+                  "Tạo layout cho DevOps tasks",
+                  "Tạo layout cho Code review",
+                  "Test mỗi layout - 5 lần"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (40 phút): Practice Switching",
+                duration: "40 phút",
+                tasks: [
+                  "Switch giữa layouts - 30 lần",
+                  "Load layout từ command line - 20 lần",
+                  "Modify layout realtime - 10 lần",
+                  "Save custom layout - 5 lần",
+                  "Timed challenge: Switch layout < 5s"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (40 phút): Integration",
+                duration: "40 phút",
+                tasks: [
+                  "Combine với yabai window management",
+                  "Create aliases cho common layouts",
+                  "Setup Raycast shortcuts cho layouts",
+                  "Document workflow",
+                  "Timed challenge: Complete setup < 1 phút"
+                ]
+              }
             ]
           },
           evening: {
             title: "Tối (30 phút): Review",
             content: [
-              "Review advanced features",
-              "Document custom workflows",
-              "Prepare cho weekend"
+              "Review tất cả layouts",
+              "Optimize cho daily use",
+              "Document best practices"
+            ],
+            exercises: [
+              {
+                title: "REVIEW",
+                tasks: [
+                  "Test tất cả layouts",
+                  "Identify improvements",
+                  "Document final layouts",
+                  "Chuẩn bị cho lf Advanced"
+                ]
+              }
             ]
           },
           goals: [
-            "Advanced features mastered",
-            "Custom workflows created",
-            "Performance optimized"
+            "Zellij layouts cho tất cả project types",
+            "Quick layout switching",
+            "Optimized workflow"
           ]
         },
-        createWeekendDay("Thứ 6", "Weekend Practice - Git & Vim", {
+        {
+          day: "24",
+          title: "lf Advanced Commands",
+          totalHours: 4,
           dailyGoals: [
-            "✅ 12h practice với lazygit và VSCode Vim",
-            "✅ Complete real projects",
-            "✅ Build muscle memory",
-            "✅ Optimize workflow"
+            "✅ Tạo custom lf commands",
+            "✅ Git integration trong lf",
+            "✅ fzf integration",
+            "✅ 10+ custom commands cho workflow"
           ],
           morning: {
-            title: "Sáng (4h)",
+            title: "Sáng (1.5h): Create Custom Commands",
             content: [
-              "Deep practice với lazygit",
-              "Deep practice với VSCode Vim",
-              "Combine trong real projects"
+              "Hiểu về lf command system",
+              "Tạo custom commands",
+              "Git integration",
+              "fzf integration"
+            ],
+            concepts: [
+              "lf commands: Custom shell commands trong lf",
+              "Command mapping: Map keys to commands",
+              "Remote commands: Control lf từ external scripts",
+              "Git integration: Git operations trong lf"
+            ],
+            configFiles: [
+              {
+                name: "~/.config/lf/lfrc (Advanced)",
+                description: "Advanced lf configuration với custom commands - Note: Trong file thực tế, dùng ${...} thay vì ${{...}}",
+                content: `# Advanced lf Configuration
+# Note: Trong file thực tế, dùng cú pháp dollar-brace cho shell commands
+
+# Git operations
+cmd git_add %{{
+    git add "$f"
+    lf -remote "send $id reload"
+}}
+
+cmd git_status \${{
+    clear
+    git status
+    read -p "Press enter to continue"
+}}
+
+cmd git_commit \${{
+    printf "Commit message: "
+    read ans
+    git commit -m "$ans"
+    lf -remote "send $id reload"
+}}
+
+# Bulk rename
+cmd bulkrename \${{
+    vidir
+}}
+
+# FZF integration  
+cmd fzf_jump \${{
+    res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+    if [ -n "$res" ]; then
+        lf -remote "send $id cd "$res""
+    fi
+}}
+
+# Quick edit
+cmd edit_config \${{
+    $EDITOR ~/.config/lf/lfrc
+    lf -remote "send $id source ~/.config/lf/lfrc"
+}}
+
+# Open with default app
+cmd open_default \${{
+    open "$f"
+}}
+
+# Copy path
+cmd copy_path \${{
+    echo -n "$f" | pbcopy
+    echo "Path copied to clipboard"
+}}
+
+# Map keys
+map ga :git_add
+map gs :git_status
+map gc :git_commit
+map br :bulkrename
+map <c-f> :fzf_jump
+map <c-e> :edit_config
+map o :open_default
+map yp :copy_path`
+              }
+            ],
+            codeBlocks: [
+              `# Test custom commands trong lf
+# Press : để vào command mode
+# Type command name (e.g., :git_add)
+
+# Reload config
+:source ~/.config/lf/lfrc`
+            ]
+          },
+          afternoon: {
+            title: "Chiều (2h): Practice Custom Commands",
+            content: [
+              "Practice tất cả custom commands",
+              "Integrate vào workflow",
+              "Create thêm commands nếu cần"
             ],
             exercises: [
               {
-                title: "PRACTICE SESSION (4h)",
-                duration: "4h",
+                title: "BÀI TẬP 1 (40 phút): Git Commands",
+                duration: "40 phút",
                 tasks: [
-                  "Practice tất cả shortcuts - 500+ repetitions",
-                  "Complete real git workflows",
-                  "Complete real coding tasks",
-                  "Build muscle memory",
-                  "Track progress và improvements"
+                  "Practice git_add (ga) - 30 lần",
+                  "Practice git_status (gs) - 20 lần",
+                  "Practice git_commit (gc) - 15 lần",
+                  "Complete git workflow trong lf - 10 lần",
+                  "Timed challenge: Git workflow < 1 phút"
+                ]
+              },
+              {
+                title: "BÀI TẬP 2 (40 phút): Advanced Commands",
+                duration: "40 phút",
+                tasks: [
+                  "Practice fzf_jump (Ctrl+f) - 30 lần",
+                  "Practice bulkrename (br) - 10 lần",
+                  "Practice copy_path (yp) - 25 lần",
+                  "Create 5 custom commands cho workflow của bạn",
+                  "Test tất cả commands - 20 lần"
+                ]
+              },
+              {
+                title: "BÀI TẬP 3 (40 phút): Integration",
+                duration: "40 phút",
+                tasks: [
+                  "Combine lf commands với git workflow",
+                  "Use lf thay Finder hoàn toàn",
+                  "Create aliases cho common tasks",
+                  "Document custom commands",
+                  "Timed challenge: Complete file task < 30s"
                 ]
               }
             ]
           },
-          afternoon: {
-            title: "Chiều (4h)",
+          evening: {
+            title: "Tối (30 phút): Review",
             content: [
-              "Real project work",
-              "Combine tất cả tools",
+              "Review tất cả custom commands",
               "Optimize workflow",
-              "Create custom solutions"
+              "Document best practices"
             ],
             exercises: [
               {
-                title: "REAL PROJECT WORK (4h)",
-                duration: "4h",
+                title: "REVIEW",
                 tasks: [
-                  "Work on real project",
-                  "Use lazygit và VSCode Vim exclusively",
-                  "Track mouse usage (target: < 5%)",
-                  "Document workflow improvements",
-                  "Create custom scripts nếu cần"
+                  "Test tất cả 10+ custom commands",
+                  "Identify improvements",
+                  "Document final setup",
+                  "Chuẩn bị cho Real World Practice"
                 ]
               }
             ]
           },
-          evening: {
-            title: "Tối (4h)",
-            content: [
-              "Advanced practice",
-              "Customization",
-              "Documentation",
-              "Reflection"
-            ],
-            exercises: [
-              {
-                title: "ADVANCED & REFLECTION (4h)",
-                duration: "4h",
-                tasks: [
-                  "Practice advanced features",
-                  "Create custom workflows",
-                  "Document best practices",
-                  "Reflect on progress",
-                  "Plan improvements"
-                ]
-              }
-            ]
-          }
-        }),
-        createWeekendDay("Chủ nhật", "Weekend Challenge - Complete Project", {
+          goals: [
+            "10+ custom lf commands",
+            "Git integration hoàn chỉnh",
+            "Workflow optimized"
+          ]
+        },
+        {
+          day: "25-28",
+          title: "REAL WORLD PRACTICE",
+          totalHours: 4,
           dailyGoals: [
-            "✅ Complete project từ đầu đến cuối",
-            "✅ Use lazygit và VSCode Vim exclusively",
-            "✅ Mouse usage < 5%",
-            "✅ Document complete workflow"
+            "✅ Code real features không dùng chuột",
+            "✅ Track và optimize mouse usage",
+            "✅ Complete 8h coding marathon",
+            "✅ Master keyboard-only workflow"
           ],
           morning: {
-            title: "Sáng (4h)",
+            title: "Sáng (1.5h): Real Projects Practice",
             content: [
-              "Project planning",
-              "Research và setup",
-              "Initial implementation"
+              "Code real features cho work/personal projects",
+              "Track mouse usage (target: < 5%)",
+              "Time các tasks",
+              "So sánh với previous workflow",
+              "Identify và fix bottlenecks",
+              "Daily log tracking"
             ],
-            exercises: [
+            detailedSetup: [
+              "Bước 1: Choose real project để work on",
+              "Bước 2: Setup tracking cho mouse usage",
+              "Bước 3: Time baseline cho common tasks",
+              "Bước 4: Code features với keyboard-only",
+              "Bước 5: Track metrics (time, mouse clicks, errors)",
+              "Bước 6: Identify bottlenecks",
+              "Bước 7: Optimize workflow",
+              "Bước 8: Compare với previous workflow",
+              "Bước 9: Daily log format tracking"
+            ],
+            configFiles: [
               {
-                title: "PROJECT SETUP & PLANNING (4h)",
-                duration: "4h",
-                tasks: [
-                  "Plan project structure",
-                  "Research requirements",
-                  "Setup project",
-                  "Initial implementation",
-                  "Git workflow setup"
-                ]
+                name: "Daily Log Format",
+                description: "Template để track daily progress",
+                content: `Date: XX/XX
+Project: XXX
+Hours coded: X
+Mouse clicks: XX (%)
+Bottlenecks: 
+- XXX
+- XXX
+Improvements made:
+- XXX
+- XXX
+Next steps:
+- XXX`
               }
+            ],
+            concepts: [
+              "Real world practice: Apply skills trong actual work",
+              "Metrics tracking: Measure progress và identify issues",
+              "Bottleneck identification: Find slow parts của workflow",
+              "Workflow optimization: Improve efficiency",
+              "Muscle memory: Practice makes perfect"
             ]
           },
           afternoon: {
-            title: "Chiều (4h)",
+            title: "Chiều (2h): Daily Practice",
             content: [
-              "Implementation",
-              "Testing",
-              "Debugging"
+              "Continue working on real projects",
+              "Practice tất cả skills",
+              "Optimize workflow realtime"
             ],
             exercises: [
               {
-                title: "IMPLEMENTATION (4h)",
-                duration: "4h",
+                title: "BÀI TẬP: Real Project Work",
                 tasks: [
-                  "Implement features",
-                  "Use lazygit và VSCode Vim throughout",
-                  "Test và debug",
-                  "Git workflow",
-                  "Track mouse usage"
+                  "Code feature hoàn chỉnh - track time và mouse usage",
+                  "Practice git workflow với lazygit - 10 commits",
+                  "Refactor code với Vim motions - 200+ lines",
+                  "Browse docs với Vimium - 20 pages",
+                  "File management với lf - 50 operations",
+                  "Target: Mouse usage < 5%, Speed same or better"
                 ]
               }
             ]
           },
           evening: {
-            title: "Tối (4h)",
+            title: "Tối (30 phút): Review & Prepare Final Challenge",
             content: [
-              "Completion",
-              "Documentation",
-              "Reflection"
+              "Review daily progress",
+              "Identify improvements",
+              "Prepare cho Final Challenge"
             ],
             exercises: [
               {
-                title: "COMPLETION & REFLECTION (4h)",
-                duration: "4h",
+                title: "DAILY REVIEW",
                 tasks: [
-                  "Complete project",
-                  "Write documentation",
-                  "Reflect on workflow",
-                  "Document improvements",
-                  "Prepare cho tuần 4"
+                  "Log metrics: Time, mouse usage, bottlenecks",
+                  "Note improvements made",
+                  "Plan optimizations cho ngày mai",
+                  "Prepare cho Final Challenge"
                 ]
               }
             ]
-          }
-        })
+          },
+          goals: [
+            "Real world mastery",
+            "Mouse usage < 5%",
+            "Workflow optimized",
+            "Ready for Final Challenge"
+          ]
+        },
+        {
+          day: "28",
+          title: "FINAL CHALLENGE - 8h Coding Marathon",
+          totalHours: 8,
+          dailyGoals: [
+            "✅ Complete 8h coding marathon",
+            "✅ Mouse usage < 5%",
+            "✅ Build complete feature từ đầu",
+            "✅ Maintain flow state"
+          ],
+          morning: {
+            title: "Sáng (4h): Planning & Implementation",
+            content: [
+              "Planning & research (browser) - dùng Vimium",
+              "Setup project structure (lf, terminal)",
+              "Implement feature (VSCode + Vim)",
+              "Git workflow (lazygit)",
+              "Phase 1 (1h): Research requirements, plan architecture, setup project",
+              "Phase 2 (3h): Code feature với VSCode Vim, use tất cả Vim motions, git workflow"
+            ]
+          },
+          afternoon: {
+            title: "Chiều (4h): Completion & Documentation",
+            content: [
+              "Complete implementation",
+              "Testing & debugging",
+              "Code review prep",
+              "Documentation"
+            ],
+            exercises: [
+              {
+                title: "PHASE 3: Completion (2h)",
+                tasks: [
+                  "Finish implementation",
+                  "Testing comprehensive",
+                  "Debug issues",
+                  "Optimize code"
+                ]
+              },
+              {
+                title: "PHASE 4: Polish (2h)",
+                tasks: [
+                  "Code review preparation",
+                  "Write documentation",
+                  "Final git workflow",
+                  "Reflection và notes"
+                ]
+              }
+            ]
+          },
+          goals: [
+            "Complete feature từ đầu đến cuối",
+            "Mouse usage < 5%",
+            "Flow state maintained",
+            "Fast như hoặc nhanh hơn previous workflow"
+          ],
+          bestPractices: [
+            "Take breaks mỗi 1-2 giờ",
+            "Track mouse usage realtime",
+            "Note bottlenecks để optimize sau",
+            "Maintain flow state - không rush",
+            "Celebrate small wins"
+          ]
+        }
       ]
     }
   ],
