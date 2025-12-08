@@ -1,0 +1,122 @@
+# 🚀 Hướng dẫn Deploy lên Vercel
+
+## 📋 Bước 1: Chuẩn bị
+
+1. **Đảm bảo code đã commit và push lên GitHub/GitLab/Bitbucket**
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+## 🔧 Bước 2: Setup Project trên Vercel
+
+1. Vào [Vercel Dashboard](https://vercel.com/dashboard)
+2. Click **"Add New Project"**
+3. Import repository từ GitHub/GitLab/Bitbucket
+4. Vercel sẽ tự động detect Next.js framework
+
+## ⚙️ Bước 3: Cấu hình Environment Variables
+
+**QUAN TRỌNG**: Phải set các environment variables sau trong Vercel Dashboard:
+
+### Trong Vercel Dashboard:
+1. Vào **Settings** → **Environment Variables**
+2. Thêm các biến sau:
+
+#### Required Variables:
+```env
+USER_NAME=admin
+USER_PASSWORD=your-secure-password-here
+```
+
+#### Optional (nếu dùng Redis):
+```env
+REDIS_URL=your-redis-connection-string
+```
+
+**Lưu ý**: 
+- Set cho cả **Production**, **Preview**, và **Development**
+- `USER_PASSWORD` nên là password mạnh
+- Nếu không có Redis, app vẫn chạy được (dùng localStorage fallback)
+
+## 🏗️ Bước 4: Deploy
+
+1. Vercel sẽ tự động build và deploy
+2. Kiểm tra **Build Logs** nếu có lỗi
+3. Sau khi deploy thành công, bạn sẽ có URL: `your-project.vercel.app`
+
+## 🔍 Bước 5: Kiểm tra Deployment
+
+### Kiểm tra Build Logs:
+- Vào **Deployments** → Click vào deployment mới nhất
+- Xem **Build Logs** để đảm bảo không có lỗi
+
+### Kiểm tra Runtime Logs:
+- Vào **Deployments** → Click vào deployment
+- Xem **Runtime Logs** để debug nếu có lỗi runtime
+
+## 🐛 Troubleshooting
+
+### Lỗi 404: NOT_FOUND
+- **Nguyên nhân**: Có thể do routing hoặc build failed
+- **Giải pháp**: 
+  - Kiểm tra Build Logs
+  - Đảm bảo `next.config.mjs` đúng
+  - Kiểm tra environment variables đã set chưa
+
+### Lỗi Authentication
+- **Nguyên nhân**: `USER_NAME` hoặc `USER_PASSWORD` chưa set
+- **Giải pháp**: Set environment variables trong Vercel Dashboard
+
+### Lỗi Redis Connection
+- **Nguyên nhân**: `REDIS_URL` không đúng hoặc chưa set
+- **Giải pháp**: 
+  - App sẽ tự động fallback về localStorage
+  - Nếu muốn dùng Redis, set `REDIS_URL` đúng format
+
+### Build Failed
+- **Nguyên nhân**: Có thể do dependencies hoặc TypeScript errors
+- **Giải pháp**:
+  ```bash
+  # Test build local trước
+  yarn build
+  ```
+  - Fix các lỗi TypeScript
+  - Đảm bảo tất cả dependencies đã install
+
+## 📝 Checklist trước khi Deploy
+
+- [ ] Code đã push lên Git
+- [ ] `package.json` có đầy đủ dependencies
+- [ ] `next.config.mjs` đúng cấu hình
+- [ ] Environment variables đã set trong Vercel
+- [ ] Test build local thành công: `yarn build`
+- [ ] Test run local thành công: `yarn start`
+
+## 🔄 Auto Deploy
+
+Vercel sẽ tự động deploy khi:
+- Push code lên branch `main` → Deploy Production
+- Push code lên branch khác → Deploy Preview
+- Tạo Pull Request → Deploy Preview
+
+## 🌐 Custom Domain (Optional)
+
+1. Vào **Settings** → **Domains**
+2. Add custom domain
+3. Follow instructions để setup DNS
+
+## 📊 Monitoring
+
+- **Analytics**: Xem traffic và performance
+- **Logs**: Debug runtime errors
+- **Speed Insights**: Monitor page speed
+
+## 🆘 Support
+
+Nếu gặp vấn đề:
+1. Kiểm tra [Vercel Documentation](https://vercel.com/docs)
+2. Xem Build Logs và Runtime Logs
+3. Test build local: `yarn build && yarn start`
+
