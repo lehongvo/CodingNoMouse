@@ -6,7 +6,7 @@ import 'server-only';
 // Create Redis client from REDIS_URL
 let redis: Redis | null = null;
 
-function getRedisClient(): Redis | null {
+export function getRedisClient(): Redis | null {
   // Only create client in server environment
   if (typeof window !== 'undefined') {
     return null;

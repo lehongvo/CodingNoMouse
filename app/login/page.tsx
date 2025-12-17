@@ -27,7 +27,7 @@ export default function LoginPage() {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        router.push('/');
+        router.push('/select');
         router.refresh();
       } else {
         setError(data.error || 'Invalid credentials');

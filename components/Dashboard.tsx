@@ -1,8 +1,7 @@
 'use client';
 
-import { curriculum } from '@/data/curriculum';
 import { useProgress } from '@/hooks/useProgress';
-import { Week } from '@/types/curriculum';
+import { Curriculum, Week } from '@/types/curriculum';
 import { useState } from 'react';
 import Checklist from './Checklist';
 import DayCard from './DayCard';
@@ -12,9 +11,17 @@ import WeekCard from './WeekCard';
 
 interface DashboardProps {
   weeks: Week[];
+  curriculum?: Curriculum; // Optional curriculum để lấy finalChecklist và proTips
+  title?: string; // Custom title
+  description?: string; // Custom description
 }
 
-export default function Dashboard({ weeks }: DashboardProps) {
+export default function Dashboard({ 
+  weeks, 
+  curriculum,
+  title = "🎯 Coding Không Chuột",
+  description = "Lộ trình học coding hoàn toàn bằng bàn phím trong 8 tuần"
+}: DashboardProps) {
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const { getWeekProgress } = useProgress();
 
@@ -24,15 +31,15 @@ export default function Dashboard({ weeks }: DashboardProps) {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            🎯 Coding Không Chuột
+            {title}
           </h1>
           <p className="text-gray-400 text-lg">
-            Lộ trình học coding hoàn toàn bằng bàn phím trong 8 tuần
+            {description}
           </p>
         </div>
 
         {/* Progress Overview */}
-        <ProgressTracker weeks={weeks} />
+        <ProgressTracker weeks={weeks} curriculumType={curriculum ? 'tester' : 'coding'} />
 
         {/* Weeks Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -54,14 +61,18 @@ export default function Dashboard({ weeks }: DashboardProps) {
         )}
 
         {/* Final Checklist */}
-        <div className="mt-8">
-          <Checklist items={curriculum.finalChecklist} title="🎯 Final Checklist" />
-        </div>
+        {curriculum?.finalChecklist && (
+          <div className="mt-8">
+            <Checklist items={curriculum.finalChecklist} title="🎯 Final Checklist" />
+          </div>
+        )}
 
         {/* Pro Tips */}
-        <div className="mt-8">
-          <ProTips />
-        </div>
+        {curriculum?.proTips && (
+          <div className="mt-8">
+            <ProTips proTips={curriculum.proTips} />
+          </div>
+        )}
       </div>
     </div>
   );

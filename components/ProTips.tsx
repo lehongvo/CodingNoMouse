@@ -1,8 +1,14 @@
 'use client';
 
-import { curriculum } from '@/data/curriculum';
+interface ProTipsProps {
+  proTips: {
+    ifStuck: string[];
+    ifTooHard: string[];
+    ifTooEasy: string[];
+  };
+}
 
-export default function ProTips() {
+export default function ProTips({ proTips }: ProTipsProps) {
   return (
     <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
       <h2 className="text-2xl font-bold mb-6 text-white">💡 Pro Tips</h2>
@@ -12,7 +18,7 @@ export default function ProTips() {
         <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-xl p-5 border border-yellow-500/30">
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Nếu stuck:</h3>
           <ul className="space-y-2">
-            {curriculum.proTips.ifStuck.map((tip, idx) => (
+            {proTips.ifStuck.map((tip, idx) => (
               <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
                 <span className="text-yellow-400 mt-1">•</span>
                 <span>{tip}</span>
@@ -25,7 +31,7 @@ export default function ProTips() {
         <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 rounded-xl p-5 border border-red-500/30">
           <h3 className="text-lg font-semibold text-red-400 mb-3">Nếu quá khó:</h3>
           <ul className="space-y-2">
-            {curriculum.proTips.ifTooHard.map((tip, idx) => (
+            {proTips.ifTooHard.map((tip, idx) => (
               <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
                 <span className="text-red-400 mt-1">•</span>
                 <span>{tip}</span>
@@ -38,7 +44,7 @@ export default function ProTips() {
         <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl p-5 border border-green-500/30">
           <h3 className="text-lg font-semibold text-green-400 mb-3">Nếu quá dễ:</h3>
           <ul className="space-y-2">
-            {curriculum.proTips.ifTooEasy.map((tip, idx) => (
+            {proTips.ifTooEasy.map((tip, idx) => (
               <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
                 <span className="text-green-400 mt-1">•</span>
                 <span>{tip}</span>
