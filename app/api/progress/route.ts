@@ -1,9 +1,15 @@
 import { verifyAuth } from '@/lib/auth';
 import { deleteProgress, getProgress, saveAllProgress, saveProgress } from '@/lib/redis';
+import { rateLimitMiddleware } from '@/lib/rateLimit';
 import { NextRequest, NextResponse } from 'next/server';
 
 // GET /api/progress - Get user progress
 export async function GET(request: NextRequest) {
+  // Rate limit: max 15 requests / phút theo IP + User-Agent
+  const rateLimitResponse = await rateLimitMiddleware(request);
+  if (rateLimitResponse) {
+    return rateLimitResponse;
+  }
   // Check authentication
   const isAuthenticated = await verifyAuth();
   if (!isAuthenticated) {
@@ -27,6 +33,11 @@ export async function GET(request: NextRequest) {
 
 // POST /api/progress - Save day progress
 export async function POST(request: NextRequest) {
+  // Rate limit: max 15 requests / phút theo IP + User-Agent
+  const rateLimitResponse = await rateLimitMiddleware(request);
+  if (rateLimitResponse) {
+    return rateLimitResponse;
+  }
   // Check authentication
   const isAuthenticated = await verifyAuth();
   if (!isAuthenticated) {
@@ -69,6 +80,11 @@ export async function POST(request: NextRequest) {
 
 // PUT /api/progress - Save all progress at once
 export async function PUT(request: NextRequest) {
+  // Rate limit: max 15 requests / phút theo IP + User-Agent
+  const rateLimitResponse = await rateLimitMiddleware(request);
+  if (rateLimitResponse) {
+    return rateLimitResponse;
+  }
   // Check authentication
   const isAuthenticated = await verifyAuth();
   if (!isAuthenticated) {
@@ -111,6 +127,11 @@ export async function PUT(request: NextRequest) {
 
 // DELETE /api/progress - Delete user progress
 export async function DELETE(request: NextRequest) {
+  // Rate limit: max 15 requests / phút theo IP + User-Agent
+  const rateLimitResponse = await rateLimitMiddleware(request);
+  if (rateLimitResponse) {
+    return rateLimitResponse;
+  }
   // Check authentication
   const isAuthenticated = await verifyAuth();
   if (!isAuthenticated) {

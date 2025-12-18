@@ -1,8 +1,15 @@
 import { login } from '@/lib/auth';
+import { rateLimitMiddleware } from '@/lib/rateLimit';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit: max 15 requests / phút theo IP + User-Agent
+    const rateLimitResponse = await rateLimitMiddleware(request);
+    if (rateLimitResponse) {
+      return rateLimitResponse;
+    }
+
     const { username, password } = await request.json();
 
     if (!username || !password) {
