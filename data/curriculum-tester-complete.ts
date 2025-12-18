@@ -1,5 +1,54 @@
 import { Curriculum } from '@/types/curriculum';
 
+// Dimotivational quotes for Vân Anh từ Võ và bé An Di 💙
+const dimotivationalQuotes: string[] = [
+  "Nếu em cố gắng thêm một chút nữa, An Di và anh sẽ tự hào lắm, cố lên nào! Anh với con rất thương em em.",
+  "Em đang làm rất tốt rồi đấy! An Di và anh luôn ở đây ủng hộ em. Testing không dễ, nhưng em làm được mà!",
+  "Con An Di hỏi: \"Mẹ học bài chưa?\" Anh bảo con: \"Mẹ đang cố gắng lắm, con cũng phải cố gắng như mẹ nhé!\" Em à, cả nhà đều tự hào về em!",
+  "Mỗi test case em viết, mỗi bug em tìm ra, là một bước em tiến gần hơn đến ước mơ. An Di và anh sẽ luôn ở bên em!",
+  "Đừng lo nếu em gặp khó khăn với test scenarios nhé. Anh sẽ nấu cơm, An Di sẽ ngoan, để em có thời gian học. Gia đình mình là một đội!",
+  "Em nhớ không? An Di nói: \"Mẹ giỏi nhất!\" Đúng vậy đấy em, em giỏi lắm rồi. Cứ từ từ, chắc chắn em sẽ thành Manual Tester xuất sắc!",
+  "Testing cần sự kiên nhẫn, và anh biết em là người kiên nhẫn nhất. Nhìn cách em chăm sóc An Di là anh thấy rồi. Em sẽ thành công thôi!",
+  "Hôm nay em test được bao nhiêu case rồi? Dù ít hay nhiều, anh và An Di đều tự hào về em. Nghỉ ngơi đủ nhé, mai còn phải chiến tiếp!",
+  "Bug là để tìm ra, không phải để sợ. Em đã dũng cảm khi quyết định học nghề mới, giờ thì cứ tự tin mà test thôi! An Di và anh tin em!",
+  "Khi em mệt, nhìn An Di ngủ và nghĩ xem: em đang làm điều này cho tương lai của con. Anh rất trân trọng sự hy sinh của em. Yêu em nhiều!",
+  "Test plan, test case, bug report... nghe nhiều thứ quá phải không em? Từ từ thôi, anh và An Di không vội đâu. Quan trọng là em vui và khỏe!",
+  "An Di hỏi: \"Khi nào mẹ xong học?\" Anh nói: \"Sớm thôi con, mẹ giỏi lắm!\" Em à, cả nhà đang đợi ngày em ra trường để đi ăn mừng đấy!",
+  "Mỗi lần em hoàn thành một module, nhớ tự thưởng cho mình nhé. Anh sẽ order đồ ăn em thích, còn An Di sẽ vẽ tranh tặng mẹ!",
+  "Em biết không? Manual Tester cần con mắt tinh đời. Và em đã rất tinh mắt rồi – tinh đến mức biết khi nào An Di đói, khi nào anh buồn. Em làm được mà!",
+  "Vân Anh ơi, dù hôm nay em test fail bao nhiêu lần, về nhà em vẫn là vợ tuyệt vời nhất và mẹ tốt nhất của An Di. Anh và con yêu em vô điều kiện!",
+  "Có những ngày requirement rối tung lên, em cứ bình tĩnh từng bước một nhé. Requirement có thể mơ hồ, nhưng tình yêu của anh và An Di dành cho em thì rõ ràng lắm.",
+  "Nếu em thấy mệt vì phải đọc quá nhiều tài liệu, nghỉ một chút, ôm An Di một cái rồi quay lại. Tài liệu có thể khó, nhưng em thông minh hơn em nghĩ nhiều.",
+  "Mỗi lần em hiểu thêm một khái niệm mới, là tương lai của cả nhà mình sáng thêm một chút. Anh biết em đang cố gắng rất nhiều, và anh biết ơn điều đó.",
+  "Ngày nào em cũng vừa làm vợ, vừa làm mẹ, vừa làm học viên. Thế mà em vẫn đi tiếp được tới đây. Anh thật lòng rất nể và tự hào về em.",
+  "Có bug nào khó quá thì để anh 'debug' cảm xúc cho em. Em chỉ cần tập trung test, còn việc cổ vũ, động viên, để anh và An Di lo.",
+  "Khi em thấy mình chậm hơn người khác, nhớ rằng em đang vừa học vừa chăm con, vừa lo cho gia đình. So sánh với ai làm gì – em của hôm qua thua xa em của hôm nay rồi.",
+  "Mỗi lần em muốn bỏ cuộc, hãy nghĩ tới ngày em nhận offer đầu tiên. Hôm đó chắc chắn anh sẽ khoe với cả thế giới rằng: 'Vợ tao – Manual Tester xịn nhất!'",
+  "Nếu hôm nay em chỉ học được một chút thôi, cũng được. Một chút mỗi ngày, 32 tuần sẽ là một chặng đường rất dài. Anh đi cùng em, không vội.",
+  "Khi em viết test case, đừng quên em cũng đang 'viết' tương lai cho An Di nữa. Mỗi bước nhỏ hôm nay là một phần tuổi thơ đủ đầy hơn cho con.",
+  "Có hôm em buồn vì không hiểu bài, cứ nói với anh. Anh không hiểu testing nhưng anh hiểu em mệt, và anh sẽ tìm cách để em đỡ mệt hơn.",
+  "Anh biết nhiều đêm em vừa buồn ngủ vừa cố học nốt video. Nếu mệt quá thì ngủ sớm một hôm cũng được, anh và An Di vẫn chờ em ở vạch đích.",
+  "Nếu lỡ làm sai một bài tập, cứ coi như tìm ra thêm một 'bug' trong hành trình học. Tester giỏi là người không ngại thấy bug – kể cả bug của chính mình.",
+  "Có thể em chưa quen với từ vựng chuyên ngành, nhưng anh đã thấy em từng bước ghi chép, tra cứu, luyện lại. Đó là cách mà người kiên trì chiến thắng.",
+  "Khi em cảm thấy mình 'không giỏi bằng ai', hãy nhớ: không ai trên đời này làm vợ của Võ và mẹ của An Di tốt như em cả.",
+  "Dù hôm nay em chỉ tick được một task nhỏ trong to-do list, anh vẫn muốn nói: 'Good job, em!' Tiến bộ không cần ồn ào, chỉ cần đều đặn.",
+  "Mỗi buổi em ngồi học, An Di nhìn thấy hết. Sau này con sẽ kể lại rằng: 'Mẹ mình đã rất cố gắng để thay đổi cuộc đời.' Đó là món quà lớn nhất em tặng con.",
+  "Khi em bối rối giữa hàng đống khái niệm: test plan, test case, test suite..., thì cứ dừng lại hít một hơi thật sâu. Không hiểu hôm nay thì mai hiểu, không sao cả.",
+  "Thỉnh thoảng hãy tưởng tượng cảnh em đi làm về, kể cho anh nghe chuyện 'bug khó' trong ngày và hai vợ chồng vừa ăn tối vừa cười. Chặng đường đó đang đến gần rồi.",
+  "Nếu bài học hôm nay khô khan quá, cứ coi nó như một 'ticket' hơi khó của cuộc đời. Em đã xử lý được bao nhiêu 'ticket' gia đình rồi – thêm vài cái này không làm khó được em đâu.",
+  "Anh không cần em phải hoàn hảo, anh chỉ cần em tiếp tục đi từng bước nhỏ. Manual Tester giỏi không phải người biết hết, mà là người không ngừng học.",
+  "Có những ngày em thấy mình chẳng làm được gì ra hồn, nhưng tin anh đi: chỉ cần em còn mở máy lên, còn đọc được vài dòng, là em đã thắng chính mình rồi.",
+  "Dù đường học có dài, em không đi một mình. Phía sau em là Võ, là An Di, là cả một gia đình tin rằng: 'Vân Anh làm được.'"
+];
+
+let dimotivationalIndex = 0;
+
+function getNextDimotivationalQuote(): string {
+  const quote = dimotivationalQuotes[dimotivationalIndex % dimotivationalQuotes.length];
+  dimotivationalIndex++;
+  return quote;
+}
+
 // Helper functions
 function createWeekendDay(day: string, title: string, content: any) {
   return {
@@ -15,7 +64,7 @@ function createWeekendDay(day: string, title: string, content: any) {
 function createDay(day: string, title: string, hours: number, content: any) {
   return {
     day, title, totalHours: hours,
-    motivationalQuote: content.motivationalQuote || "",
+    motivationalQuote: getNextDimotivationalQuote(),
     dailyGoals: content.dailyGoals || [],
     morning: content.morning || {},
     afternoon: content.afternoon || {},
@@ -65,7 +114,7 @@ export const curriculumTesterComplete: Curriculum = {
       },
       days: [
         createDay("Thứ 2", "Software Testing Fundamentals", 4, {
-          motivationalQuote: "🎯 Mỗi bug được tìm thấy là một bước tiến đến chất lượng tốt hơn!",
+          motivationalQuote: "Nếu em cố gắng thêm một chút nữa, An Di và anh sẽ tự hào lắm, cố lên nào! Anh với con rất thương em em.",
           dailyGoals: ["✅ Hiểu Testing là gì", "✅ Nắm khái niệm Bug, Defect", "✅ Hiểu vai trò Tester"],
           morning: {
             title: "Sáng (1.5h): Lý thuyết",
@@ -1137,20 +1186,46 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Hiểu Test Coverage", "✅ Calculate metrics", "✅ Analyze coverage"],
           morning: {
             title: "Sáng (1.5h): Coverage Concepts",
-            content: ["Test Coverage", "Requirements Coverage", "Code Coverage", "Metrics"],
-            concepts: ["Coverage: % requirements được test", "Metrics: Pass rate, Defect density"]
+            content: [
+              "Test Coverage: Là mức độ mà testing đã cover các phần của hệ thống (requirements, test conditions, code, UI, flows...). Coverage cao giúp giảm rủi ro bỏ sót bugs, nhưng 100% coverage không đồng nghĩa với 'không còn bug'.",
+              "Requirements Coverage: Đo bằng RTM – mỗi requirement có ít nhất một (thường là nhiều) test case. Requirements Coverage% = (Số requirements có test / Tổng requirements) × 100%. Đây là coverage mà Manual Tester cần quan tâm nhiều nhất.",
+              "Test Case Coverage / Scenario Coverage: Đánh giá mức độ mà các luồng nghiệp vụ (scenarios) đã được test. Ví dụ: Checkout flow có bao nhiêu nhánh (COD, Online payment, Voucher, Guest vs Logged-in) và bao nhiêu nhánh đã có test case. Thường được thể hiện bằng mapping flow → test cases.",
+              "Code Coverage (ở mức awareness): Là % dòng code / branches / paths được thực thi bởi tests (thường liên quan đến Unit/Automation). Manual Tester không đo trực tiếp nhưng nên hiểu concept để giao tiếp với Dev/Automation. Metrics: Line coverage, Branch coverage, Function coverage, Statement coverage.",
+              "Metrics cơ bản liên quan Coverage: Pass Rate, Requirements Coverage, Defect Density (số bugs trên số requirements/test cases/module), Defect Distribution (bugs theo module/area)."
+            ],
+            concepts: [
+              "Coverage = mức độ mà testing đã 'chạm tới' các phần của hệ thống (requirements, code, flows...).",
+              "Requirements Coverage dùng RTM để kiểm tra: requirement nào đã có test, requirement nào chưa.",
+              "Không thể và không cần 100% coverage ở mọi thứ – quan trọng là coverage tốt cho phần critical, high risk.",
+              "Metrics (Pass rate, Defect density, ...) giúp đo lường, nhưng phải hiểu context, không nhìn số khô.",
+              "Coverage thấp + ít bugs không có nghĩa là sản phẩm tốt – có thể do chưa test đủ."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Practice Coverage",
             exercises: [{
               title: "BÀI TẬP: Calculate Coverage",
               duration: "2h",
-              tasks: ["Calculate requirements coverage", "Calculate test coverage", "Analyze gaps"]
+              tasks: [
+                "Requirements Coverage từ RTM: Sử dụng RTM đã tạo ở ngày Thứ 2, (1) Đếm tổng số requirements, (2) Đếm số requirements có ít nhất 1 test case, (3) Tính Requirements Coverage% = (Covered / Total) × 100%, (4) Đánh dấu (highlight) các requirements chưa được cover và ghi chú loại risk nếu bỏ sót.",
+                "Test Case/Scenario Coverage cho 1 flow: Chọn 1 flow (ví dụ: Login hoặc Checkout) và vẽ sơ bộ các nhánh chính (happy path, negative paths quan trọng). Map mỗi nhánh với các test case tương ứng. Đánh dấu nhánh chưa có test case (coverage gap).",
+                "Defect Distribution & Defect Density (giả lập): Dùng dữ liệu bugs từ các bài trước (hoặc tự giả lập): (1) Nhóm bugs theo module/requirement, (2) Tính Defect Density = Số bugs / Số requirements hoặc / Số test cases cho module đó, (3) Xác định module/requirement có Defect Density cao → risk cao.",
+                "Phân tích gaps: Dựa trên Coverage% và Defect Density, (1) Liệt kê 3 khu vực có coverage thấp hoặc defect density cao, (2) Đề xuất thêm test cases hoặc ưu tiên test lại cho các khu vực này, (3) Ghi lại 5–7 dòng kết luận: 'Phần nào đang được test tốt, phần nào còn lỗ hổng lớn'.",
+                "Chuẩn bị bảng Coverage Summary: Tạo một bảng nhỏ gồm: Requirement ID, #TestCases, Covered? (Y/N), #Defects found, Notes. Bảng này sẽ hữu ích khi viết Test Summary Report sau này."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review coverage"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "Tóm tắt lại: Test Coverage là gì, Requirements Coverage là gì, tại sao không nên hiểu lầm '100% coverage = không còn bug'. Viết ngắn gọn 7–10 dòng bằng lời của bạn.",
+                "Xem lại Coverage Summary/RTM: Ghi lại 2–3 requirements hoặc module có coverage thấp và đề xuất cụ thể để cải thiện (thêm test cases, thay đổi priority, v.v.).",
+                "Tự đánh giá: Bạn thấy mình hiểu về coverage & metrics đến mức nào (tự chấm 1–10)? Bạn muốn đào sâu metric nào hơn (Pass rate, Defect density, Requirements coverage,...)? Ghi 2–3 ý."
+              ]
+            }]
           }
         }),
         createDay("Thứ 5", "Test Summary Report", 4, {
@@ -1158,20 +1233,45 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Tạo Test Summary Report", "✅ Include metrics", "✅ Write recommendations"],
           morning: {
             title: "Sáng (1.5h): Report Structure",
-            content: ["Test Summary Report structure", "Metrics", "Charts", "Recommendations"],
-            concepts: ["Test Report: Summary, Results, Metrics, Recommendations"]
+            content: [
+              "Nhắc lại cấu trúc Test Summary Report: (1) Executive Summary, (2) Test Scope, (3) Test Environment, (4) Test Execution Summary, (5) Defect Summary, (6) Test Metrics, (7) Risks & Issues, (8) Recommendations, (9) Appendix.",
+              "Executive Summary & Audience: Viết cho PM/PO/Stakeholders bận rộn – ngắn gọn, tập trung vào: status release (ổn/không), mức độ chất lượng, các risk lớn, gợi ý decision (release/hoãn). Không nên nhồi quá nhiều chi tiết kỹ thuật.",
+              "Kết hợp Metrics & Narrative: Metrics (Pass rate, Coverage, #Defects, Defect Density,...) cần được giải thích bằng lời: ví dụ 'Pass rate 75% vì module X còn nhiều bug High, chúng tôi recommend không release'. Không đưa số liệu mà không có bối cảnh.",
+              "Recommendations rõ ràng: Không nói chung chung 'cần test thêm', mà nên: 'Fix X bugs High ở module Checkout, viết thêm Y test cases cho scenario A/B, chạy lại regression pack Z trước khi release'."
+            ],
+            concepts: [
+              "Test Summary Report là output chính của QA trước khi release – giúp team quyết định có đủ tự tin để release hay không.",
+              "Executive Summary phải đọc trong 1–2 phút là nắm được tình hình.",
+              "Metrics phải đi với phân tích, không nên chỉ có bảng số.",
+              "Report nên trung thực, rõ ràng, không giấu bug nhưng cũng không 'hù dọa' quá mức – tập trung vào risk và action.",
+              "Phong cách viết report: ngắn gọn, dùng bullet points, có tiêu đề rõ, tránh câu dài khó hiểu."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Create Report",
             exercises: [{
               title: "BÀI TẬP: Test Summary Report",
               duration: "2h",
-              tasks: ["Create report template", "Fill data", "Calculate metrics", "Create charts"]
+              tasks: [
+                "Sử dụng RTM + Coverage + Execution data đã làm tuần này: (1) Chọn 1 feature (Login hoặc Registration), (2) Lấy số liệu: #Requirements, Requirements Coverage%, #TestCases, #Executed, Pass Rate, #Defects (theo Severity).",
+                "Viết bản nháp Executive Summary (~2 đoạn): Ví dụ: 'Trong sprint này, chúng tôi đã test feature Login với 10 requirements, 95% đã có test coverage. 20 test cases được chạy, 16 Pass, 4 Fail (Pass Rate 80%). 4 bugs được tìm thấy (2 High, 2 Medium). Module Login tạm ổn cho UAT nhưng chưa đủ 안정 để release production do còn 2 bug High chưa fix.'",
+                "Điền phần Test Scope, Environment, Execution Summary, Defect Summary: (1) Test Scope – rõ ràng cái gì được test, cái gì chưa, (2) Environment – OS, Browser, Version, (3) Execution Summary – bảng tổng hợp Test Cases, (4) Defect Summary – bảng tổng hợp bugs theo Severity/Status.",
+                "Thêm Test Metrics & Charts đơn giản: (1) Tính lại Pass Rate, Requirements Coverage, Defect Density, (2) Tạo 1–2 biểu đồ (pie/bar) bằng Excel/Sheets/Notion,... cho Test Results và Defects theo Severity. Chèn/đính kèm vào report.",
+                "Viết phần Risks & Recommendations: (1) Liệt kê 3–5 risk lớn (ví dụ: thiếu test cho một số negative flows, thời gian test ngắn, dependency chưa ổn định), (2) Với mỗi risk, gắn recommendation cụ thể: what/why/how/when. Kết luận report bằng 2–3 dòng: 'We recommend...' rõ ràng."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review report"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "Đọc lại Test Summary Report như một PM/PO: liệu bạn có hiểu được: (1) Đã test những gì, (2) Chất lượng đang ở mức nào, (3) Risk chính là gì, (4) Nên làm gì tiếp theo? Nếu thiếu, bổ sung.",
+                "Kiểm tra lại phần Executive Summary: có quá dài/dòng không? Có thể rút gọn thành 4–6 câu rõ ràng không? Thử chỉnh sửa cho cô đọng hơn.",
+                "Tự đánh giá: Bạn cảm thấy viết report như thế nào (tự chấm 1–10)? Bạn muốn cải thiện điều gì (cách dùng số liệu, cách viết recommendation, trình bày biểu đồ)? Ghi lại 2–3 ý."
+              ]
+            }]
           }
         }),
         createWeekendDay("Thứ 6", "Weekend Project - Complete Test Documentation", {
@@ -1225,20 +1325,45 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Hiểu Use Case Testing", "✅ Test theo use cases", "✅ Document scenarios"],
           morning: {
             title: "Sáng (1.5h): Use Case Concepts",
-            content: ["Use Case là gì", "Use Case Testing", "User scenarios", "Examples"],
-            concepts: ["Use Case: Mô tả cách user tương tác", "Use Case Testing: Test theo flow"]
+            content: [
+              "Use Case là gì: Use Case mô tả cách một loại user cụ thể (Actor) tương tác với hệ thống để đạt một mục tiêu business (Goal). Một Use Case thường có: Tên, Actor, Mục tiêu, Preconditions, Main success scenario (happy path), Extensions/Alternate flows (các nhánh khác như lỗi, ngoại lệ), Postconditions.",
+              "Use Case vs User Story: User Story (trong Agile) thường ở dạng 'As a [role], I want [goal] so that [reason]'. Use Case chi tiết hơn, mô tả step-by-step interaction giữa Actor và hệ thống. Tester có thể dùng cả hai: user story để hiểu bối cảnh, use case để thiết kế test scenarios.",
+              "Use Case Testing: Thay vì chỉ test từng field/validation đơn lẻ, Use Case Testing tập trung test cả flow từ đầu đến cuối theo kịch bản thực tế của user. Ví dụ: 'User mua hàng' = Browse → Add to Cart → Checkout → Payment → Confirmation. Test Cases sẽ bám theo main success scenario và các alternate flows của Use Case.",
+              "User scenarios & Examples: Scenarios là các kịch bản cụ thể dựa trên use case, có thể bao gồm: roles khác nhau (Admin/User/Guest), data khác nhau, điều kiện đặc biệt (mạng chậm, session hết hạn, v.v.). Ví dụ: Use Case 'Login' có scenarios: login thành công, login sai mật khẩu 3 lần, login khi account bị lock, login với 2FA,..."
+            ],
+            concepts: [
+              "Use Case = Actor + Goal + Flow (steps) + Preconditions + Postconditions + Alternate flows.",
+              "Use Case Testing tập trung vào luồng người dùng (flows), không chỉ vào từng field riêng lẻ.",
+              "Một Use Case tốt giúp Tester dễ nhìn ra scenario và edge cases.",
+              "Khi đọc Use Case/Story, Tester nên chủ động nghĩ thêm các alternate/exception flows.",
+              "Use Case Testing rất phù hợp cho E2E và UAT testing."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Practice Use Case",
             exercises: [{
               title: "BÀI TẬP: Use Case Testing",
               duration: "2h",
-              tasks: ["Identify use cases", "Create test scenarios", "Write Test Cases", "Document"]
+              tasks: [
+                "Chọn 1–2 Use Cases thực tế: Ví dụ: (1) UC-LOGIN: User đăng nhập vào hệ thống, (2) UC-CHECKOUT: User đặt hàng và thanh toán. Viết mô tả Use Case theo format đơn giản: Tên, Actor, Mục tiêu, Preconditions, Main flow (steps), Alternate/Exception flows.",
+                "Từ Use Case → tạo Test Scenarios: Với mỗi Use Case, liệt kê các scenarios chính: (1) Happy path: tất cả điều kiện đúng, flow thành công, (2) 2–3 alternate flows (ví dụ: sai mật khẩu, hết hàng khi checkout, payment fail), (3) 1–2 exception flows (ví dụ: session hết hạn giữa chừng). Ghi lại từng scenario ở mức high-level (không cần chi tiết steps).",
+                "Chuyển Test Scenarios thành Test Cases: Chọn ít nhất 4–6 scenarios và viết đầy đủ thành Test Cases với format chuẩn: ID, Title, Preconditions, Steps, Expected Result. Đảm bảo mỗi test case bám sát flow của Use Case, không bỏ qua bước quan trọng nào.",
+                "Vẽ sơ đồ Use Case (optional nhưng khuyến khích): Dùng sơ đồ đơn giản: hình tròn cho hệ thống, stick figures cho Actors, các ovals cho Use Cases. Vẽ relationships (include/extend nếu muốn). Điều này giúp bạn nhìn tổng quan hệ thống và các luồng chính.",
+                "Document Use Case & Test Cases: Tạo một tài liệu ngắn (Notion/Docs) chứa: (1) Mô tả Use Case, (2) Danh sách Test Scenarios, (3) Bảng Test Cases chi tiết. Đây sẽ là asset hữu ích cho portfolio."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review use cases"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "Tóm tắt lại: Use Case là gì, Use Case Testing khác gì so với test theo từng field/requirement riêng lẻ. Viết ngắn gọn 7–10 dòng bằng lời của bạn.",
+                "Xem lại Use Case & Test Scenarios đã viết: Có alternate/exception flow nào quan trọng mà bạn bỏ sót không (ví dụ: timeout, mạng chậm, quyền hạn không đủ)? Ghi thêm 1–2 scenario nếu cần.",
+                "Tự đánh giá: Bạn thấy mình hiểu và áp dụng Use Case Testing đến mức nào (tự chấm 1–10)? Lần tới khi nhận user stories, bạn sẽ dùng Use Case Thinking như thế nào? Ghi lại 2–3 ý."
+              ]
+            }]
           }
         }),
         createDay("Thứ 3", "Error Guessing", 4, {
@@ -1246,20 +1371,44 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Hiểu Error Guessing", "✅ Identify common errors", "✅ Apply Error Guessing"],
           morning: {
             title: "Sáng (1.5h): Error Guessing Concepts",
-            content: ["Error Guessing là gì", "Common error patterns", "When to use"],
-            concepts: ["Error Guessing: Dựa vào kinh nghiệm", "Common errors: Null, Empty, Special chars"]
+            content: [
+              "Error Guessing là gì: Là kỹ thuật testing dựa vào kinh nghiệm, trực giác và hiểu biết về hệ thống để 'đoán' những chỗ dễ có lỗi và chủ động thử các input/cách sử dụng bất thường. Không dựa trên công thức cứng (như EP/BVA) mà dựa trên pattern lỗi mà tester từng thấy.",
+              "Common error patterns: Một số kiểu lỗi thường xuyên xuất hiện: (1) Null/Empty/Whitespace inputs, (2) Special characters (', \", <, >, &, emoji,...), (3) Very long strings, (4) Copy/paste từ Word/Excel, (5) Double click/double submit, (6) Refresh/Back browser giữa flow, (7) Mạng chậm/mất kết nối, (8) Session timeout, (9) Dữ liệu boundary nhưng không được xử lý (ví dụ số = 0, -1).",
+              "When to use: Error Guessing đặc biệt hữu ích: (1) Khi không có nhiều tài liệu/requirements rõ ràng, (2) Sau khi đã dùng các kỹ thuật có cấu trúc (EP/BVA, Decision Table, State Transition) và muốn tìm thêm edge cases, (3) Khi tester đã có kinh nghiệm với domain/công nghệ tương tự và biết chỗ 'hay vỡ'. Điều quan trọng: phải luôn document lại các guesses và kết quả, không 'test theo cảm hứng rồi quên'."
+            ],
+            concepts: [
+              "Error Guessing = kinh nghiệm + trực giác + hiểu biết về system/domain → đoán chỗ dễ lỗi.",
+              "Không thay thế cho các kỹ thuật formal (EP/BVA/Decision Table), mà là bổ sung sau khi đã cover cơ bản.",
+              "Các pattern lỗi phổ biến: Null/Empty, Special chars, Very long inputs, Double actions, Network/Session issues.",
+              "Tester càng có kinh nghiệm (đã thấy nhiều bug) thì Error Guessing càng mạnh.",
+              "Dù 'đoán', vẫn cần ghi lại test idea và kết quả rõ ràng như các test khác."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Practice Error Guessing",
             exercises: [{
               title: "BÀI TẬP: Error Guessing",
               duration: "2h",
-              tasks: ["Identify common errors", "Test edge cases", "Document findings"]
+              tasks: [
+                "Brainstorm common errors cho 1–2 forms/flows: Chọn một form (Login/Registration/Checkout) hoặc flow (Add to Cart, Payment). Dựa vào kinh nghiệm/cảm nhận, liệt kê danh sách 'những cách user có thể làm hỏng mọi thứ': nhập trống, nhập rất dài, copy/paste từ nguồn lạ, nhập ký tự đặc biệt, click liên tục, refresh giữa chừng,... Viết thành bảng 'Error Guessing Ideas'.",
+                "Thiết kế input cụ thể cho từng idea: Với mỗi idea, xác định input/action cụ thể: ví dụ: nhập 500 ký tự vào field 'Name', nhập `<script>alert(1)</script>` vào 'Comment', nhập `' OR 1=1 --` vào 'Username', click Submit liên tục 3 lần, refresh ở trang Review Order,... Document rõ ràng trong bảng: Idea → Input/Action cụ thể → Expected behavior (an toàn).",
+                "Thực thi Error Guessing trên hệ thống (hoặc demo site): Thử lần lượt các inputs/actions đã thiết kế. Quan sát kỹ: (1) Hệ thống có crash không, (2) Có thông báo lỗi lạ không, (3) Dữ liệu có bị lưu sai/bẩn không, (4) UI có vỡ không. Ghi lại mọi behavior bất thường, kể cả khi chưa chắc là bug hay yêu cầu.",
+                "Ghi lại findings: Tạo bảng 'Error Guessing Findings' với các cột: ID, Area/Field/Flow, Input/Action, Expected, Actual, Type (Functional/Security/UX/Performance), Severity, Notes. Điền tất cả kết quả bất thường. Nếu không có bug, ghi chú 'No issue' để giữ lịch sử.",
+                "Phân loại & suy nghĩ tiếp: Nhìn vào findings, xem pattern nào xuất hiện nhiều (ví dụ: nhiều vấn đề với very long strings hoặc với refresh). Ghi lại 3–5 insights: 'System này xử lý special chars ổn', 'Chưa xử lý double submit tốt', 'Chưa hiển thị lỗi rõ khi mất mạng',... Đây là input tốt cho việc cải thiện test design và cho discussions với dev/PO."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review error patterns"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "Tóm tắt lại: Error Guessing là gì, khác gì so với EP/BVA, khi nào nên dùng. Viết ngắn gọn 7–10 dòng bằng lời của bạn.",
+                "Xem lại 'Error Guessing Ideas' và 'Findings': Có idea nào còn tiềm năng chưa được test không (do hết thời gian)? Ghi thêm 1–2 idea để dùng cho lần test sau.",
+                "Tự đánh giá: Bạn thấy tư duy 'đoán lỗi' của mình đang ở mức nào (tự chấm 1–10)? Sau này khi làm project thật, bạn muốn xây dựng 'bug checklist' cá nhân như thế nào (từ kinh nghiệm riêng)? Ghi lại 2–3 ý."
+              ]
+            }]
           }
         }),
         createDay("Thứ 4", "Combining Techniques", 4, {
@@ -1267,20 +1416,43 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Combine EP + BVA", "✅ Combine Decision Table + State", "✅ Combine all"],
           morning: {
             title: "Sáng (1.5h): Combining Strategies",
-            content: ["When to combine", "EP + BVA", "Decision Table + State", "All techniques"],
-            concepts: ["Combine techniques: EP + BVA + Decision Table + State + Use Case + Error Guessing"]
+            content: [
+              "Khi nào cần kết hợp kỹ thuật: Trong thực tế, một feature hiếm khi chỉ dùng 1 kỹ thuật test design. Ví dụ: form nhập tuổi dùng EP+BVA; business rule tính phí dùng Decision Table; status đơn hàng dùng State Transition; luồng mua hàng dùng Use Case; các edge cases 'dị' dùng Error Guessing.",
+              "EP + BVA: EP giúp chia partitions, BVA giúp test biên của partitions quan trọng. Kết hợp giúp vừa giảm số lượng test vừa tìm được bug ở biên.",
+              "Decision Table + State Transition: Decision Table phù hợp với rules theo tổ hợp điều kiện, State Transition phù hợp với các trạng thái & chuyển đổi theo thời gian. Ví dụ: logic tính phí vận chuyển (Decision Table) + trạng thái đơn hàng (State Transition).",
+              "Use Case + Error Guessing: Use Case cho bạn skeleton các flow chính; Error Guessing giúp thêm các thử nghiệm 'dị' quanh flow đó (refresh, double submit, special chars...)."
+            ],
+            concepts: [
+              "Không có kỹ thuật nào là 'thần thánh' – sức mạnh đến từ việc dùng đúng kỹ thuật, đúng chỗ, và kết hợp hợp lý.",
+              "Một feature quan trọng thường cần: EP+BVA (fields), Decision Table (rules), State Transition (status), Use Case (flow), Error Guessing (edge cases)."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Practice Combining",
             exercises: [{
               title: "BÀI TẬP: Combine Techniques",
               duration: "2h",
-              tasks: ["Apply EP + BVA", "Apply Decision Table", "Apply State Transition", "Apply Use Case", "Apply Error Guessing"]
+              tasks: [
+                "Chọn 1 feature tương đối phức tạp (ví dụ: Registration with email verification, hoặc Checkout với voucher + shipping fee). Viết ngắn gọn yêu cầu chính (5–10 gạch đầu dòng).",
+                "Áp dụng EP+BVA cho các input fields quan trọng (age, password, amount, quantity,...). Viết vài test cases tiêu biểu cho mỗi field.",
+                "Áp dụng Decision Table cho 1 business rule (ví dụ: tính phí vận chuyển theo khu vực + giá trị đơn hàng + loại thành viên). Từ bảng này, tạo 4–6 test cases.",
+                "Áp dụng State Transition cho trạng thái của entity chính (ví dụ: Order: Pending → Confirmed → Shipped → Delivered/Cancelled). Viết vài test cases cho transitions hợp lệ + không hợp lệ.",
+                "Áp dụng Use Case + Error Guessing cho 1 flow E2E (ví dụ: Checkout): dùng Use Case để tạo 3–4 scenarios chính, sau đó thêm 3–5 Error Guessing ideas quanh flow (refresh, back, mất mạng, double submit,...).",
+                "Tổng hợp tất cả test cases vào một bảng, đánh dấu kỹ thuật chính được dùng cho mỗi test case (cột 'Technique'): EP/BVA/Decision Table/State/Use Case/Error Guessing."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review combination"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "Nhìn lại bảng test cases và cột 'Technique': Có kỹ thuật nào bạn chưa dùng nhiều không? Bạn có đang rely quá nhiều vào 1 kỹ thuật (ví dụ: EP) mà bỏ qua các kỹ thuật khác không?",
+                "Viết 5–7 dòng rút kinh nghiệm: với feature thực, bạn sẽ chọn kỹ thuật nào trước, kỹ thuật nào sau, và vì sao.",
+                "Tự chấm điểm sự 'đa dạng kỹ thuật' của mình (1–10) và ghi 2–3 ý để cải thiện."
+              ]
+            }]
           }
         }),
         createDay("Thứ 5", "Test Suite Optimization", 4, {
@@ -1288,20 +1460,43 @@ export const curriculumTesterComplete: Curriculum = {
           dailyGoals: ["✅ Optimize Test Cases", "✅ Remove duplicates", "✅ Maintain coverage"],
           morning: {
             title: "Sáng (1.5h): Optimization Strategies",
-            content: ["Remove duplicates", "Combine similar cases", "Prioritize", "Maintain coverage"],
-            concepts: ["Optimization: Giảm số lượng, maintain coverage"]
+            content: [
+              "Tại sao phải tối ưu test suite: Không thể chạy hàng ngàn test cases bằng tay mỗi sprint. Cần giảm bớt test cases trùng lặp, kém giá trị, tập trung vào test quan trọng nhưng vẫn giữ coverage.",
+              "Các chiến lược optimization: (1) Remove duplicates – bỏ test cases kiểm tra đúng 1 điều giống hệt nhau, (2) Combine similar cases – gộp nhiều cases giống nhau thành 1 case có steps/data linh hoạt, (3) Prioritize – đánh Priority và tập trung vào High/Critical khi thời gian ít, (4) Use regression pack – chọn một bộ 'must run' nhỏ gọn.",
+              "Giữ coverage khi tối ưu: Không xoá bừa bãi. Luôn kiểm tra lại coverage (qua RTM, qua mapping flows) sau khi bỏ/gộp test cases. Nếu coverage giảm nhiều ở chỗ critical, cần viết lại test tốt hơn, không đơn thuần xoá."
+            ],
+            concepts: [
+              "Optimization = ít test hơn nhưng thông minh hơn, không phải 'ít test cho nhanh'.",
+              "Mỗi test case nên có mục tiêu rõ, tránh trùng lặp mục tiêu với quá nhiều case khác.",
+              "Regression pack là tập con quan trọng nhất để chạy thường xuyên."
+            ]
           },
           afternoon: {
             title: "Chiều (2h): Practice Optimization",
             exercises: [{
               title: "BÀI TẬP: Optimize Test Suite",
               duration: "2h",
-              tasks: ["Review Test Cases", "Remove duplicates", "Combine similar", "Verify coverage"]
+              tasks: [
+                "Chọn một bộ test cases (~30–40 cases) bạn đã viết trước đó (Login/Registration/Checkout). Nếu không có, giả lập một danh sách gồm nhiều cases tương đối giống nhau.",
+                "Phân loại test cases: Gắn tag hoặc thêm cột 'Area' (Validation/Happy path/Negative/Boundary/Security/UI) và 'Priority' (High/Medium/Low).",
+                "Tìm duplicates & near-duplicates: Nhìn vào Title/Steps/Expected để tìm các test cases: (1) Gần như trùng nhau, (2) Chỉ khác data nhỏ nhưng mục tiêu giống hệt. Đánh dấu các cases này để merge hoặc xoá.",
+                "Kết hợp/gộp test cases: Viết lại 1 test case tổng quát có thể cover nhiều data (ví dụ: một test 'Login với invalid credentials' có bảng data: wrong username, wrong password, locked account). Xoá hoặc hạ Priority các case cũ trùng lặp.",
+                "Xây mini Regression Pack: Từ bộ test đã tối ưu, chọn ra ~15–20 test cases 'bắt buộc phải chạy' cho Regression. Đảm bảo pack này cover: happy paths chính, validations critical, flows và features high risk. Ghi lại tiêu chí bạn dùng để chọn.",
+                "Kiểm tra lại coverage: Dùng RTM hoặc mapping flows, xác nhận rằng sau khi optimize và chọn pack, các requirements/fl ows critical vẫn được cover. Nếu thấy lỗ hổng, thêm 1–2 test cases vào pack."
+              ]
             }]
           },
           evening: {
             title: "Tối (0.5h): Review",
-            exercises: [{ title: "REVIEW", duration: "30 phút", tasks: ["Review optimization"] }]
+            exercises: [{
+              title: "REVIEW",
+              duration: "30 phút",
+              tasks: [
+                "So sánh số lượng test cases trước và sau khi tối ưu, và số lượng cases trong Regression Pack. Ghi lại con số và cảm nhận: bạn có thấy bộ test gọn hơn nhưng vẫn 'chắc' không?",
+                "Viết 5–7 dòng về tiêu chí cá nhân của bạn khi quyết định giữ hoặc bỏ một test case.",
+                "Tự đánh giá: Bạn thấy mình đang optimize test suite theo hướng 'thông minh' hay chỉ 'cắt bớt'? Có gì cần cải thiện trong cách suy nghĩ? Ghi lại 2–3 ý."
+              ]
+            }]
           }
         }),
         createWeekendDay("Thứ 6", "Weekend Project - Comprehensive Test Design", {
@@ -1310,21 +1505,37 @@ export const curriculumTesterComplete: Curriculum = {
             exercises: [{
               title: "PHASE 1: Apply All Techniques",
               duration: "4h",
-              tasks: ["EP + BVA", "Decision Table", "State Transition", "Use Case", "Error Guessing"]
+              tasks: [
+                "Chọn một feature đủ thú vị (ví dụ: Registration với email verification, hoặc Order/Checkout đơn giản). Viết lại requirements ngắn gọn (10–15 điểm).",
+                "Dùng EP+BVA cho các input fields quan trọng, viết tập test cases tương ứng.",
+                "Dùng Decision Table cho 1–2 business rules (phí ship, giảm giá,...), convert thành test cases.",
+                "Dùng State Transition cho trạng thái chính (Order/User Status,...), viết test cases transitions valid/invalid.",
+                "Dùng Use Case + Error Guessing cho ít nhất 1 flow E2E, viết test cases tương ứng."
+              ]
             }]
           },
           afternoon: {
             exercises: [{
               title: "PHASE 2: Consolidate",
               duration: "4h",
-              tasks: ["Consolidate Test Cases", "Remove duplicates", "Organize"]
+              tasks: [
+                "Gom toàn bộ test cases vừa tạo vào một bảng duy nhất (Test Suite).",
+                "Gắn cột 'Technique' cho mỗi test case: EP/BVA/DT/State/UseCase/ErrorGuessing.",
+                "Dùng RTM/coverage thinking để kiểm tra: requirement nào chưa có test? Bổ sung nếu cần.",
+                "Nhóm test cases theo area/module/flow để dễ quản lý."
+              ]
             }]
           },
           evening: {
             exercises: [{
               title: "PHASE 3: Optimize & Report",
               duration: "4h",
-              tasks: ["Optimize Test Cases", "Calculate coverage", "Create comparison", "Prepare presentation"]
+              tasks: [
+                "Tối ưu Test Suite: loại bỏ/gộp các test trùng lặp, xây một Regression Pack gọn (~20–30 cases).",
+                "Tính một vài metrics cơ bản: #Requirements, Requirements Coverage%, #TestCases total, #TestCases trong Regression Pack, phân bố test cases theo kỹ thuật.",
+                "Tạo 1 tài liệu ngắn mô tả: (1) Feature & Scope, (2) Các kỹ thuật test design đã sử dụng, (3) Cách bạn tối ưu test suite, (4) Lý do bạn chọn các test trong Regression Pack. Đây là artefact mạnh cho portfolio.",
+                "Tự retrospective: Viết 5–10 dòng về cảm giác khi kết hợp nhiều kỹ thuật trong một project nhỏ – cái gì khó nhất, cái gì ‘click’ nhất với bạn, bạn muốn đào sâu kỹ thuật nào nữa."
+              ]
             }]
           }
         })
