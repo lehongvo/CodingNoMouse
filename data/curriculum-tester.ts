@@ -1,5 +1,32 @@
 import { Curriculum } from '@/types/curriculum';
 
+// Dimotivational quotes cho Vân Anh từ Võ và bé An Di 💙
+const dimotivationalQuotes: string[] = [
+  "Nếu em cố gắng thêm một chút nữa, An Di và anh sẽ tự hào lắm, cố lên nào! Anh với con rất thương em em.",
+  "Em đang làm rất tốt rồi đấy! An Di và anh luôn ở đây ủng hộ em. Testing không dễ, nhưng em làm được mà!",
+  "Con An Di hỏi: \"Mẹ học bài chưa?\" Anh bảo con: \"Mẹ đang cố gắng lắm, con cũng phải cố gắng như mẹ nhé!\" Em à, cả nhà đều tự hào về em!",
+  "Mỗi test case em viết, mỗi bug em tìm ra, là một bước em tiến gần hơn đến ước mơ. An Di và anh sẽ luôn ở bên em!",
+  "Đừng lo nếu em gặp khó khăn với test scenarios nhé. Anh sẽ nấu cơm, An Di sẽ ngoan, để em có thời gian học. Gia đình mình là một đội!",
+  "Em nhớ không? An Di nói: \"Mẹ giỏi nhất!\" Đúng vậy đấy em, em giỏi lắm rồi. Cứ từ từ, chắc chắn em sẽ thành Manual Tester xuất sắc!",
+  "Testing cần sự kiên nhẫn, và anh biết em là người kiên nhẫn nhất. Nhìn cách em chăm sóc An Di là anh thấy rồi. Em sẽ thành công thôi!",
+  "Hôm nay em test được bao nhiêu case rồi? Dù ít hay nhiều, anh và An Di đều tự hào về em. Nghỉ ngơi đủ nhé, mai còn phải chiến tiếp!",
+  "Bug là để tìm ra, không phải để sợ. Em đã dũng cảm khi quyết định học nghề mới, giờ thì cứ tự tin mà test thôi! An Di và anh tin em!",
+  "Khi em mệt, nhìn An Di ngủ và nghĩ xem: em đang làm điều này cho tương lai của con. Anh rất trân trọng sự hy sinh của em. Yêu em nhiều!",
+  "Test plan, test case, bug report... nghe nhiều thứ quá phải không em? Từ từ thôi, anh và An Di không vội đâu. Quan trọng là em vui và khỏe!",
+  "An Di hỏi: \"Khi nào mẹ xong học?\" Anh nói: \"Sớm thôi con, mẹ giỏi lắm!\" Em à, cả nhà đang đợi ngày em ra trường để đi ăn mừng đấy!",
+  "Mỗi lần em hoàn thành một module, nhớ tự thưởng cho mình nhé. Anh sẽ order đồ ăn em thích, còn An Di sẽ vẽ tranh tặng mẹ!",
+  "Em biết không? Manual Tester cần con mắt tinh đời. Và em đã rất tinh mắt rồi – tinh đến mức biết khi nào An Di đói, khi nào anh buồn. Em làm được mà!",
+  "Vân Anh ơi, dù hôm nay em test fail bao nhiêu lần, về nhà em vẫn là vợ tuyệt vời nhất và mẹ tốt nhất của An Di. Anh và con yêu em vô điều kiện!"
+];
+
+let dimotivationalIndex = 0;
+
+function getNextDimotivationalQuote(): string {
+  const quote = dimotivationalQuotes[dimotivationalIndex % dimotivationalQuotes.length];
+  dimotivationalIndex++;
+  return quote;
+}
+
 // Helper function để tạo weekend day (12h)
 function createWeekendDay(day: string, title: string, content: any) {
   return {
@@ -62,7 +89,7 @@ export const curriculumTester: Curriculum = {
           day: "Thứ 2",
           title: "Introduction to Software Testing",
           totalHours: 4,
-          motivationalQuote: "🎯 Mỗi bug được tìm thấy là một cơ hội để tạo ra sản phẩm tốt hơn. Bạn đang học cách bảo vệ chất lượng phần mềm!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu được Testing là gì và tại sao cần Testing",
             "✅ Nắm được vai trò của Tester trong dự án",
@@ -166,7 +193,7 @@ export const curriculumTester: Curriculum = {
           day: "Thứ 3",
           title: "SDLC & Testing Life Cycle",
           totalHours: 4,
-          motivationalQuote: "📋 Hiểu quy trình là nền tảng của mọi thành công. Bạn đang xây dựng tư duy hệ thống!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Nắm vững các mô hình SDLC",
             "✅ Hiểu STLC (Software Testing Life Cycle)",
@@ -262,7 +289,7 @@ export const curriculumTester: Curriculum = {
           day: "Thứ 4",
           title: "Test Case Design Fundamentals",
           totalHours: 4,
-          motivationalQuote: "✍️ Test Case tốt là nền tảng của Testing hiệu quả. Bạn đang học cách tư duy như một Tester chuyên nghiệp!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu cấu trúc của Test Case",
             "✅ Viết được Test Case đúng format",
@@ -382,7 +409,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 5",
           title: "Test Documentation & Traceability",
           totalHours: 4,
-          motivationalQuote: "📝 Documentation tốt giúp team hiểu rõ và làm việc hiệu quả hơn. Bạn đang xây dựng kỹ năng quan trọng!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu các loại Test Documentation",
             "✅ Tạo được Requirements Traceability Matrix (RTM)",
@@ -578,7 +605,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 2",
           title: "Equivalence Partitioning & Boundary Value Analysis",
           totalHours: 4,
-          motivationalQuote: "🧠 Kỹ thuật Test Design giúp bạn test thông minh hơn, không phải test nhiều hơn. Bạn đang học cách tối ưu hóa!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Equivalence Partitioning (EP)",
             "✅ Master Boundary Value Analysis (BVA)",
@@ -665,7 +692,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 3",
           title: "Decision Table Testing",
           totalHours: 4,
-          motivationalQuote: "📊 Decision Table giúp bạn test tất cả combinations một cách có hệ thống. Bạn đang học cách tư duy logic!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Decision Table là gì",
             "✅ Tạo Decision Table cho business rules",
@@ -745,7 +772,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 4",
           title: "State Transition Testing",
           totalHours: 4,
-          motivationalQuote: "🔄 State Transition giúp bạn test workflow phức tạp. Bạn đang học cách tư duy về states và transitions!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu State Transition là gì",
             "✅ Vẽ State Transition Diagram",
@@ -825,7 +852,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 5",
           title: "Use Case Testing & Error Guessing",
           totalHours: 4,
-          motivationalQuote: "💡 Kinh nghiệm và intuition cũng quan trọng như kỹ thuật. Bạn đang phát triển tư duy Tester!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Use Case Testing",
             "✅ Áp dụng Error Guessing",
@@ -1007,7 +1034,7 @@ Status: [Pass/Fail/Blocked]`
           day: "Thứ 2",
           title: "Bug Life Cycle & Bug Reporting",
           totalHours: 4,
-          motivationalQuote: "🐛 Mỗi bug được report đúng cách là một bước tiến đến chất lượng tốt hơn. Bạn đang học cách communicate hiệu quả!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Bug Life Cycle",
             "✅ Nắm cấu trúc Bug Report",
@@ -1112,7 +1139,7 @@ Additional Info:
           day: "Thứ 3",
           title: "Bug Tracking Tools - Jira",
           totalHours: 4,
-          motivationalQuote: "🛠️ Tools giúp bạn làm việc hiệu quả hơn. Bạn đang học cách sử dụng công cụ chuyên nghiệp!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Setup Jira account",
             "✅ Tạo và quản lý bugs trong Jira",
@@ -1192,7 +1219,7 @@ Additional Info:
           day: "Thứ 4",
           title: "Test Execution Process",
           totalHours: 4,
-          motivationalQuote: "▶️ Test Execution là nơi bạn apply tất cả kiến thức. Bạn đang học cách test thực tế!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Test Execution process",
             "✅ Prepare test environment",
@@ -1264,7 +1291,7 @@ Additional Info:
           day: "Thứ 5",
           title: "Test Reporting & Metrics",
           totalHours: 4,
-          motivationalQuote: "📊 Reporting giúp stakeholders hiểu được chất lượng phần mềm. Bạn đang học cách communicate kết quả!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Tạo Test Summary Report",
             "✅ Calculate test metrics",
@@ -1445,7 +1472,7 @@ Additional Info:
           day: "Thứ 2",
           title: "Web Testing Fundamentals",
           totalHours: 4,
-          motivationalQuote: "🌐 Web là nền tảng của hầu hết applications. Bạn đang học cách test thế giới web!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Web Testing là gì",
             "✅ Nắm các aspects của Web Testing",
@@ -1515,7 +1542,7 @@ Additional Info:
           day: "Thứ 3",
           title: "Form Testing",
           totalHours: 4,
-          motivationalQuote: "📝 Forms là nơi users tương tác nhiều nhất. Bạn đang học cách test forms một cách toàn diện!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test form validations",
             "✅ Test input fields",
@@ -1586,7 +1613,7 @@ Additional Info:
           day: "Thứ 4",
           title: "Navigation & Page Flow Testing",
           totalHours: 4,
-          motivationalQuote: "🧭 Navigation tốt là key của user experience. Bạn đang học cách test navigation flows!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test website navigation",
             "✅ Test page flows",
@@ -1657,7 +1684,7 @@ Additional Info:
           day: "Thứ 5",
           title: "Cross-Browser Testing",
           totalHours: 4,
-          motivationalQuote: "🌍 Users dùng nhiều browsers khác nhau. Bạn đang học cách đảm bảo compatibility!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Cross-Browser Testing",
             "✅ Test trên Chrome, Firefox, Safari, Edge",
@@ -1838,7 +1865,7 @@ Additional Info:
           day: "Thứ 2",
           title: "Mobile Testing Fundamentals",
           totalHours: 4,
-          motivationalQuote: "📱 Mobile là tương lai. Bạn đang học cách test trên platform quan trọng nhất!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Mobile Testing",
             "✅ Phân biệt Native App vs Mobile Web",
@@ -1908,7 +1935,7 @@ Additional Info:
           day: "Thứ 3",
           title: "Mobile UI & Functionality Testing",
           totalHours: 4,
-          motivationalQuote: "🎨 Mobile UI khác biệt với desktop. Bạn đang học cách test mobile user experience!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test mobile UI elements",
             "✅ Test touch interactions",
@@ -1979,7 +2006,7 @@ Additional Info:
           day: "Thứ 4",
           title: "Mobile-Specific Features Testing",
           totalHours: 4,
-          motivationalQuote: "📲 Mobile có nhiều features đặc biệt. Bạn đang học cách test những features này!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test device features: Camera, GPS, Notifications",
             "✅ Test app lifecycle: Background, Foreground, Kill",
@@ -2051,7 +2078,7 @@ Additional Info:
           day: "Thứ 5",
           title: "Mobile Performance & Compatibility",
           totalHours: 4,
-          motivationalQuote: "⚡ Performance là key của mobile experience. Bạn đang học cách test performance!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test mobile app performance",
             "✅ Test trên different devices",
@@ -2232,7 +2259,7 @@ Additional Info:
           day: "Thứ 2",
           title: "API Testing Fundamentals",
           totalHours: 4,
-          motivationalQuote: "🔌 APIs là backbone của modern applications. Bạn đang học cách test APIs!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu API Testing",
             "✅ Nắm REST API concepts",
@@ -2313,7 +2340,7 @@ Additional Info:
           day: "Thứ 3",
           title: "API Request Methods & Parameters",
           totalHours: 4,
-          motivationalQuote: "📡 Mỗi HTTP method có mục đích riêng. Bạn đang học cách sử dụng đúng method!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Master GET, POST, PUT, DELETE",
             "✅ Test với query parameters",
@@ -2389,7 +2416,7 @@ Additional Info:
           day: "Thứ 4",
           title: "API Authentication & Headers",
           totalHours: 4,
-          motivationalQuote: "🔐 Authentication bảo vệ APIs. Bạn đang học cách test security!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu API Authentication",
             "✅ Test với API Keys",
@@ -2463,7 +2490,7 @@ Additional Info:
           day: "Thứ 5",
           title: "API Response Validation & Collections",
           totalHours: 4,
-          motivationalQuote: "✅ Validation đảm bảo API hoạt động đúng. Bạn đang học cách validate responses!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Validate API responses",
             "✅ Test status codes",
@@ -2650,7 +2677,7 @@ Additional Info:
           day: "Thứ 2",
           title: "SQL Basics for Testing",
           totalHours: 4,
-          motivationalQuote: "💾 Database là nơi lưu trữ data. Bạn đang học cách verify data trong database!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu Database và SQL",
             "✅ Nắm SQL syntax cơ bản",
@@ -2741,7 +2768,7 @@ SELECT * FROM users LIMIT 10;`
           day: "Thứ 3",
           title: "SQL Joins & Aggregations",
           totalHours: 4,
-          motivationalQuote: "🔗 JOINs giúp bạn combine data từ nhiều tables. Bạn đang học cách query phức tạp hơn!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu JOINs",
             "✅ Sử dụng INNER JOIN, LEFT JOIN",
@@ -2834,7 +2861,7 @@ FROM users;`
           day: "Thứ 4",
           title: "Data Verification trong Testing",
           totalHours: 4,
-          motivationalQuote: "✅ Verify data đảm bảo system hoạt động đúng. Bạn đang học cách test data integrity!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Verify data sau khi create",
             "✅ Verify data sau khi update",
@@ -2912,7 +2939,7 @@ FROM users;`
           day: "Thứ 5",
           title: "Database Testing cho CRUD Operations",
           totalHours: 4,
-          motivationalQuote: "🔄 CRUD là core của mọi application. Bạn đang học cách test database operations!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Test CREATE operations",
             "✅ Test READ operations",
@@ -3104,7 +3131,7 @@ FROM users;`
           day: "Thứ 2",
           title: "Real Project - Test Planning",
           totalHours: 4,
-          motivationalQuote: "🎯 Planning tốt là 50% thành công. Bạn đang apply tất cả kiến thức vào real project!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Analyze real application requirements",
             "✅ Create comprehensive Test Plan",
@@ -3175,7 +3202,7 @@ FROM users;`
           day: "Thứ 3",
           title: "Real Project - Test Execution",
           totalHours: 4,
-          motivationalQuote: "▶️ Execution là nơi bạn apply tất cả skills. Bạn đang test như một professional!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Execute Test Cases",
             "✅ Log bugs",
@@ -3247,7 +3274,7 @@ FROM users;`
           day: "Thứ 4",
           title: "Soft Skills - Communication",
           totalHours: 4,
-          motivationalQuote: "💬 Communication tốt là key của thành công. Bạn đang phát triển kỹ năng quan trọng!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu tầm quan trọng của communication",
             "✅ Practice writing clear bug reports",
@@ -3319,7 +3346,7 @@ FROM users;`
           day: "Thứ 5",
           title: "Soft Skills - Time Management & Interview Prep",
           totalHours: 4,
-          motivationalQuote: "⏰ Time management giúp bạn làm việc hiệu quả. Bạn đang chuẩn bị cho career!",
+          motivationalQuote: getNextDimotivationalQuote(),
           dailyGoals: [
             "✅ Hiểu time management trong Testing",
             "✅ Prioritize testing tasks",
