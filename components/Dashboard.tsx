@@ -2,7 +2,7 @@
 
 import { useProgress } from '@/hooks/useProgress';
 import { Curriculum, Week } from '@/types/curriculum';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Checklist from './Checklist';
 import DayCard from './DayCard';
 import ProgressTracker from './ProgressTracker';
@@ -24,6 +24,26 @@ export default function Dashboard({
 }: DashboardProps) {
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const { getWeekProgress } = useProgress();
+  const weekDetailsRef = useRef<HTMLDivElement>(null);
+
+  // Auto scroll to week details when a week is selected
+  useEffect(() => {
+    if (selectedWeek !== null && weekDetailsRef.current) {
+      // Small delay to ensure DOM is updated and animation starts
+      setTimeout(() => {
+        // Try to scroll to goals section first, otherwise scroll to week details
+        const goalsElement = document.getElementById(`week-${selectedWeek}-goals`);
+        const targetElement = goalsElement || weekDetailsRef.current;
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }, 200);
+    }
+  }, [selectedWeek]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -55,7 +75,11 @@ export default function Dashboard({
 
         {/* Selected Week Details */}
         {selectedWeek !== null && (
-          <div className="mt-8 animate-fade-in">
+          <div 
+            ref={weekDetailsRef}
+            id={`week-${selectedWeek}`}
+            className="mt-8 animate-fade-in scroll-mt-24"
+          >
             <WeekDetails week={weeks[selectedWeek - 1]} />
           </div>
         )}
@@ -88,7 +112,7 @@ function WeekDetails({ week }: { week: Week }) {
           Tuần {week.week}: {week.title}
         </h2>
         {week.goals && (
-          <div className="mt-4">
+          <div className="mt-4" id={`week-${week.week}-goals`}>
             <h3 className="text-lg font-semibold mb-2 text-gray-300">Mục tiêu:</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-400">
               {week.goals.map((goal, idx) => (

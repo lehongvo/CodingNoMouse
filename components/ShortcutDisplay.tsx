@@ -7,22 +7,22 @@ interface ShortcutDisplayProps {
   title?: string;
 }
 
-export default function ShortcutDisplay({ shortcuts, title = 'Keyboard Shortcuts' }: ShortcutDisplayProps) {
+export default function ShortcutDisplay({ shortcuts, title = '⌨️ Keyboard Shortcuts' }: ShortcutDisplayProps) {
   if (!shortcuts || shortcuts.length === 0) return null;
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-5 border border-gray-700">
-      <h4 className="text-lg font-semibold text-yellow-400 mb-4">{title}</h4>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div>
+      <h4 className="text-sm font-bold text-yellow-400 mb-3">{title}</h4>
+      <div className="space-y-2">
         {shortcuts.map((shortcut, idx) => (
           <div
             key={idx}
-            className="bg-gray-900/50 rounded-lg p-3 flex items-center gap-3 hover:bg-gray-900/70 transition-colors"
+            className="bg-gray-900/60 rounded-lg p-3 flex items-center gap-3 hover:bg-gray-900/80 transition-colors border border-gray-700/50"
           >
-            <kbd className="px-3 py-1.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 text-yellow-400 rounded-md text-sm font-mono font-semibold whitespace-nowrap min-w-fit">
+            <kbd className="px-3 py-1.5 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/40 text-yellow-300 rounded-md text-xs font-mono font-bold whitespace-nowrap flex-shrink-0 shadow-sm">
               {shortcut.key}
             </kbd>
-            <span className="text-gray-300 text-sm flex-1">{shortcut.description}</span>
+            <span className="text-gray-300 text-sm flex-1 leading-relaxed">{shortcut.description}</span>
           </div>
         ))}
       </div>
