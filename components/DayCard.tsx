@@ -4,6 +4,7 @@ import { useProgress } from '@/hooks/useProgress';
 import { DayContent } from '@/types/curriculum';
 import ShortcutDisplay from './ShortcutDisplay';
 import ConceptDisplay from './ConceptDisplay';
+import ExerciseDisplay from './ExerciseDisplay';
 import { useState } from 'react';
 
 interface DayCardProps {
@@ -248,24 +249,12 @@ export default function DayCard({ day, week }: DayCardProps) {
             </div>
             <div className="p-5 space-y-4">
               {day.afternoon.exercises && day.afternoon.exercises.map((exercise: any, idx: number) => (
-                <div key={idx} className="bg-orange-500/5 border border-orange-500/20 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-3">
-                    <h5 className="font-bold text-white text-sm flex-1">{exercise.title}</h5>
-                    {exercise.duration && (
-                      <span className="text-xs text-orange-300 bg-orange-500/20 px-2.5 py-1 rounded-md border border-orange-500/30 font-semibold">
-                        ⏱️ {exercise.duration}
-                      </span>
-                    )}
-                  </div>
-                  <div className="space-y-2.5">
-                    {exercise.tasks.map((task: string, taskIdx: number) => (
-                      <div key={taskIdx} className="flex items-start gap-3 text-gray-300 text-sm">
-                        <span className="text-orange-400 mt-1 font-bold flex-shrink-0">▸</span>
-                        <span className="leading-relaxed">{task}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <ExerciseDisplay
+                  key={idx}
+                  title={exercise.title}
+                  duration={exercise.duration}
+                  tasks={exercise.tasks}
+                />
               ))}
             </div>
           </div>
@@ -294,17 +283,12 @@ export default function DayCard({ day, week }: DayCardProps) {
                 </div>
               )}
               {day.evening.exercises && day.evening.exercises.map((exercise: any, idx: number) => (
-                <div key={idx} className="bg-purple-500/5 border border-purple-500/20 rounded-lg p-4">
-                  <h5 className="font-bold text-white text-sm mb-3">{exercise.title}</h5>
-                  <div className="space-y-2.5">
-                    {exercise.tasks.map((task: string, taskIdx: number) => (
-                      <div key={taskIdx} className="flex items-start gap-3 text-gray-300 text-sm">
-                        <span className="text-purple-400 mt-1 font-bold flex-shrink-0">▸</span>
-                        <span className="leading-relaxed">{task}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <ExerciseDisplay
+                  key={idx}
+                  title={exercise.title}
+                  duration={exercise.duration}
+                  tasks={exercise.tasks}
+                />
               ))}
             </div>
           </div>
